@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView{
-            SampleList(samples: AstroColorSamples.core).navigationTitle("Astro Colors")
+            SampleList(sample: AstroColorSamples.astroUI).navigationTitle("Astro Colors")
         }
     }
 }

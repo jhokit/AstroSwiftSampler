@@ -33,9 +33,6 @@
 		7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7C479BDF2790E4B6002845E9 /* SampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BDE2790E4B6002845E9 /* SampleCell.swift */; };
 		7C479BE12790E66A002845E9 /* SampleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BE02790E66A002845E9 /* SampleList.swift */; };
-		7C917362279603CD002CDB01 /* ColorSampleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C917361279603CD002CDB01 /* ColorSampleSet.swift */; };
-		7C917363279603CD002CDB01 /* ColorSampleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C917361279603CD002CDB01 /* ColorSampleSet.swift */; };
-		7C917364279603CD002CDB01 /* ColorSampleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C917361279603CD002CDB01 /* ColorSampleSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +72,6 @@
 		7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroColorSamples.swift; sourceTree = "<group>"; };
 		7C479BDE2790E4B6002845E9 /* SampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCell.swift; sourceTree = "<group>"; };
 		7C479BE02790E66A002845E9 /* SampleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleList.swift; sourceTree = "<group>"; };
-		7C917361279603CD002CDB01 /* ColorSampleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSampleSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				7C479BCA2790DBB9002845E9 /* ColorSample.swift */,
-				7C917361279603CD002CDB01 /* ColorSampleSet.swift */,
 				7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */,
 				7C37A8C62791F7A500965F29 /* Preview Content */,
 			);
@@ -334,7 +329,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C479BA62790D954002845E9 /* ContentView.swift in Sources */,
-				7C917362279603CD002CDB01 /* ColorSampleSet.swift in Sources */,
 				7C479BCE2790DC2D002845E9 /* AstroColorSamples.swift in Sources */,
 				7C479BDF2790E4B6002845E9 /* SampleCell.swift in Sources */,
 				7C479BE12790E66A002845E9 /* SampleList.swift in Sources */,
@@ -348,7 +342,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C479BCF2790DC2D002845E9 /* AstroColorSamples.swift in Sources */,
-				7C917363279603CD002CDB01 /* ColorSampleSet.swift in Sources */,
 				7C37A8D22791F93F00965F29 /* SampleCell.swift in Sources */,
 				7C37A8D52791F93F00965F29 /* ContentView.swift in Sources */,
 				7C37A8D42791F93F00965F29 /* SampleList.swift in Sources */,
@@ -365,7 +358,6 @@
 				7C479BDC2790E069002845E9 /* ColorSample.swift in Sources */,
 				7C37A8CD2791F7A500965F29 /* ContentView.swift in Sources */,
 				7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */,
-				7C917364279603CD002CDB01 /* ColorSampleSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,32 +8,34 @@
 import SwiftUI
 
 struct SampleList: View {
-    var samples:[ColorSample]
-    var listName:String
+    var sample:ColorSample
     var body: some View {
         ScrollView{
             VStack(spacing:0) {
-                ForEach(samples, id: \.id) { colorSample in
-                    if colorSample.colorVariants == nil
-                    {
-                        SampleCell(sample: colorSample).frame(height:60)
-                    }
-                    else
-                    {
-                        NavigationLink(
-                            destination: SampleList(samples: colorSample.colorVariants!),
-                            label: {
-                                SampleCell(sample: colorSample).frame(height:60)
-                            })
+                if let colorVariants = sample.colorVariants
+                {
+                    ForEach(colorVariants, id: \.id) { colorSample in
+                        let subVariants = colorSample.colorVariants
+                        if (subVariants == nil){
+                            SampleCell(sample: colorSample).frame(height:60)
+                        }
+                        else {
+                            NavigationLink(
+                                destination: SampleList(sample: colorSample),
+                                label: {
+                                    SampleCell(sample: colorSample).frame(height:60)
+                                })
+                        }
                     }
                 }
-            }
-        }.navigationTitle(listName)
+            }.navigationTitle(sample.name)
+        }
     }
 }
 
+
 struct SampleList_Previews: PreviewProvider {
     static var previews: some View {
-        SampleList(samples: AstroColorSamples.core)
+        SampleList(sample: AstroColorSamples.astroUI)
     }
 }

@@ -16,5 +16,4 @@ struct ColorSample:Identifiable
     var name:String
     var color:Color
     var colorVariants:[ColorSample]?
-    var colorDetails:Int?
 }

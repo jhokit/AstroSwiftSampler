@@ -13,7 +13,7 @@ import SwiftUI
 
 struct AstroColorSamples
 {
-    static var corePrimary:[ColorSample] = [
+    static var corePrimary:ColorSample = ColorSample(name: "Astro UI Primary", color: Color.astroUIPrimary, colorVariants:  [
         ColorSample(name:"Astro UI Primary", color: Color.astroUIPrimary),
         ColorSample(name:"Astro UI Primary Darken 1", color: Color.astroUIPrimaryDarken1),
         ColorSample(name:"Astro UI Primary Darken 2", color: Color.astroUIPrimaryDarken2),
@@ -23,9 +23,9 @@ struct AstroColorSamples
         ColorSample(name:"Astro UI Primary Lighten 2", color: Color.astroUIPrimaryLighten2),
         ColorSample(name:"Astro UI Primary Lighten 3", color: Color.astroUIPrimaryLighten3),
         ColorSample(name:"Astro UI Primary Lighten 4", color: Color.astroUIPrimaryLighten4)
-    ]
+    ])
     
-    static var coreSecondary:[ColorSample] = [
+    static var coreSecondary:ColorSample = ColorSample(name: "Astro UI Secondary", color: Color.astroUISecondary, colorVariants: [
         ColorSample(name:"Astro UI Secondary", color: Color.astroUISecondary),
         ColorSample(name:"Astro UI Secondary Darken 1", color: Color.astroUISecondaryDarken1),
         ColorSample(name:"Astro UI Secondary Darken 2", color: Color.astroUISecondaryDarken2),
@@ -35,11 +35,11 @@ struct AstroColorSamples
         ColorSample(name:"Astro UI Secondary Lighten 2", color: Color.astroUISecondaryLighten2),
         ColorSample(name:"Astro UI Secondary Lighten 3", color: Color.astroUISecondaryLighten3),
         ColorSample(name:"Astro UI Secondary Lighten 4", color: Color.astroUISecondaryLighten4)
-    ]
+    ])
     
-    static var core:[ColorSample] = [
-        ColorSample(name:"Astro UI Primary", color: Color.astroUIPrimary, colorVariants: corePrimary),
-        ColorSample(name:"Astro UI Secondary", color: Color.astroUISecondary, colorVariants: coreSecondary),
-    ]
+    static var astroUI:ColorSample = ColorSample(name: "Astro UI", color: Color.astroUIPrimary, colorVariants: [
+        corePrimary,
+        coreSecondary
+    ])
 
 }
