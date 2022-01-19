@@ -37,9 +37,35 @@ struct AstroColorSamples
         ColorSample(name:"Astro UI Secondary Lighten 4", color: Color.astroUISecondaryLighten4)
     ])
     
-    static var astroUI:ColorSample = ColorSample(name: "Astro UI", color: Color.astroUIPrimary, colorVariants: [
+    static var coreTertiary:ColorSample = ColorSample(name: "Astro UI Tertiary", color: Color.astroUITertiary, colorVariants: [
+        ColorSample(name:"Astro UI Tertiary", color: Color.astroUITertiary),
+        ColorSample(name:"Astro UI Tertiary Darken 1", color: Color.astroUITertiaryDarken1),
+        ColorSample(name:"Astro UI Tertiary Darken 2", color: Color.astroUITertiaryDarken2),
+        ColorSample(name:"Astro UI Tertiary Darken 3", color: Color.astroUITertiaryDarken3),
+        ColorSample(name:"Astro UI Tertiary Darken 4", color: Color.astroUITertiaryDarken4),
+        ColorSample(name:"Astro UI Tertiary Lighten 1", color: Color.astroUITertiaryLighten1),
+        ColorSample(name:"Astro UI Tertiary Lighten 2", color: Color.astroUITertiaryLighten2),
+        ColorSample(name:"Astro UI Tertiary Lighten 3", color: Color.astroUITertiaryLighten3),
+        ColorSample(name:"Astro UI Tertiary Lighten 4", color: Color.astroUISecondaryLighten4)
+    ])
+
+    static var coreQuaternary:ColorSample = ColorSample(name: "Astro UI Quaternary", color: Color.astroUIQuaternary, colorVariants: [
+        ColorSample(name:"Astro UI Quaternary", color: Color.astroUIQuaternary),
+        ColorSample(name:"Astro UI Quaternary Darken 1", color: Color.astroUIQuaternaryDarken1),
+        ColorSample(name:"Astro UI Quaternary Darken 2", color: Color.astroUIQuaternaryDarken2),
+        ColorSample(name:"Astro UI Quaternary Darken 3", color: Color.astroUIQuaternaryDarken3),
+        ColorSample(name:"Astro UI Quaternary Darken 4", color: Color.astroUIQuaternaryDarken4),
+        ColorSample(name:"Astro UI Quaternary Lighten 1", color: Color.astroUIQuaternaryLighten1),
+        ColorSample(name:"Astro UI Quaternary Lighten 2", color: Color.astroUIQuaternaryLighten2),
+        ColorSample(name:"Astro UI Quaternary Lighten 3", color: Color.astroUIQuaternaryLighten3),
+        ColorSample(name:"Astro UI Quaternary Lighten 4", color: Color.astroUISecondaryLighten4)
+    ])
+
+    static var astroUI:ColorSample = ColorSample(name: "Astro Core", color: Color.astroUIPrimary, colorVariants: [
         corePrimary,
-        coreSecondary
+        coreSecondary,
+        coreTertiary,
+        coreQuaternary
     ])
 
 }

@@ -36,6 +36,12 @@ struct SampleList: View {
 
 struct SampleList_Previews: PreviewProvider {
     static var previews: some View {
-        SampleList(sample: AstroColorSamples.astroUI)
+        Group {
+            SampleList(sample: AstroColorSamples.astroUI)
+                .preferredColorScheme(.light)
+            SampleList(sample: AstroColorSamples.astroUI)
+                .preferredColorScheme(.dark)
+
+        }
     }
 }
