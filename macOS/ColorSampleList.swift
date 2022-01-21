@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct SampleList: View {
+struct ColorSampleList: View {
     var samples:[ColorSample]
     var body: some View {
         List(samples) { colorSample in
-            SampleCell(sample: colorSample).frame(minHeight:80
+            ColorSwatch(sample: colorSample).frame(minHeight:80
             )
         }
     }

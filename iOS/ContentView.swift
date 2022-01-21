@@ -9,11 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView{
-            ScrollView{
-                SampleList(sample: AstroColorSamples.astroUI)
+        TabView {
+            
+            NavigationView{
+                ScrollView{
+                    ColorSampleList(sample: AstroColorSamples.astroUI)
+                    Spacer()
+                    ColorSampleList(sample: AstroColorSamples.astroUI)
+                }.navigationBarTitle("Colors")
             }
-        }.navigationTitle("Astro Colors")
+            .tabItem {
+                Image(systemName: "paintpalette.fill")
+                Text("Colors")
+            }
+            
+            NavigationView{
+                ScrollView{
+                    Text("Symbols")
+                }.navigationBarTitle("Symbols")
+            }
+            .tabItem {
+                Image(systemName: "star")
+                Text("Symbols")
+            }
+        }
     }
 }
 

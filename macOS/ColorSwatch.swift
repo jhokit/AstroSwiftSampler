@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SampleCell: View {
+struct ColorSwatch: View {
     var sample:ColorSample
     var body: some View {
         VStack(alignment: .leading){
@@ -19,6 +19,6 @@ struct SampleCell: View {
 
 struct SampleCell_Previews: PreviewProvider {
     static var previews: some View {
-        SampleCell(sample: ColorSample(name:"Test",color: Color.red))
+        ColorSwatch(sample: ColorSample(name:"Test",color: Color.red))
     }
 }
