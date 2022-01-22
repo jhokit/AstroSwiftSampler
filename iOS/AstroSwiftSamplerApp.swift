@@ -11,7 +11,7 @@ import SwiftUI
 struct AstroSwiftSamplerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView()//.environmentObject(forcedColorScheme)
         }
     }
 }

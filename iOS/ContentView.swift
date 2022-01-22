@@ -7,18 +7,20 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    @AppStorage(colorSchemeAutomaticName) var colorSchemeAutomatic:ColorSchemeAutomatic = .automatic
+    
     var body: some View {
         TabView {
-            
             NavigationView{
                 ScrollView{
                     ColorSampleList(sample: AstroColorSamples.astroUI)
-                    Spacer()
-                    ColorSampleList(sample: AstroColorSamples.astroUI)
                 }.navigationBarTitle("Colors")
-            }
-            .tabItem {
+                    .toolbar {
+                        AutomaticColorToolbarContent()
+                    }
+            } .tabItem {
                 Image(systemName: "paintpalette.fill")
                 Text("Colors")
             }
@@ -32,9 +34,10 @@ struct ContentView: View {
                 Image(systemName: "star")
                 Text("Symbols")
             }
-        }
+        }.modifier(automaticColorScheme())
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

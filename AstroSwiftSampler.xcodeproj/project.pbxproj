@@ -33,6 +33,9 @@
 		7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7C479BDF2790E4B6002845E9 /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BDE2790E4B6002845E9 /* ColorSwatch.swift */; };
 		7C479BE12790E66A002845E9 /* ColorSampleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BE02790E66A002845E9 /* ColorSampleList.swift */; };
+		7CCC9F0F279C867E00D410FD /* ColorSchemeAutomatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC9F0E279C867E00D410FD /* ColorSchemeAutomatic.swift */; };
+		7CCC9F10279C867E00D410FD /* ColorSchemeAutomatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC9F0E279C867E00D410FD /* ColorSchemeAutomatic.swift */; };
+		7CCC9F11279C867E00D410FD /* ColorSchemeAutomatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC9F0E279C867E00D410FD /* ColorSchemeAutomatic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,7 @@
 		7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroColorSamples.swift; sourceTree = "<group>"; };
 		7C479BDE2790E4B6002845E9 /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
 		7C479BE02790E66A002845E9 /* ColorSampleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSampleList.swift; sourceTree = "<group>"; };
+		7CCC9F0E279C867E00D410FD /* ColorSchemeAutomatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeAutomatic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 			children = (
 				7C479BCA2790DBB9002845E9 /* ColorSample.swift */,
 				7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */,
+				7CCC9F0E279C867E00D410FD /* ColorSchemeAutomatic.swift */,
 				7C37A8C62791F7A500965F29 /* Preview Content */,
 			);
 			path = Shared;
@@ -328,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CCC9F0F279C867E00D410FD /* ColorSchemeAutomatic.swift in Sources */,
 				7C479BA62790D954002845E9 /* ContentView.swift in Sources */,
 				7C479BCE2790DC2D002845E9 /* AstroColorSamples.swift in Sources */,
 				7C479BDF2790E4B6002845E9 /* ColorSwatch.swift in Sources */,
@@ -341,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CCC9F10279C867E00D410FD /* ColorSchemeAutomatic.swift in Sources */,
 				7C479BCF2790DC2D002845E9 /* AstroColorSamples.swift in Sources */,
 				7C37A8D22791F93F00965F29 /* ColorSwatch.swift in Sources */,
 				7C37A8D52791F93F00965F29 /* ContentView.swift in Sources */,
@@ -357,6 +364,7 @@
 				7C37A8CC2791F7A500965F29 /* AstroSwiftSamplerApp.swift in Sources */,
 				7C479BDC2790E069002845E9 /* ColorSample.swift in Sources */,
 				7C37A8CD2791F7A500965F29 /* ContentView.swift in Sources */,
+				7CCC9F11279C867E00D410FD /* ColorSchemeAutomatic.swift in Sources */,
 				7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,6 +567,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -588,6 +597,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -714,8 +724,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RocketCommunicationsInc/AstroSwiftFoundation.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = newSemanticColors;
+				kind = branch;
 			};
 		};
 		7C479BC72790DA80002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftCore" */ = {
