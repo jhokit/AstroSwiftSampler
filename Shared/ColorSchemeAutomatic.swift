@@ -1,12 +1,12 @@
 //
 //  ColorSchemeAutomatic.swift
-//  AstroSwiftSampler
 //
-//  Created by rocketjeff on 1/22/22.
+//  Created by Jeff Hokit on 1/22/22.
 //
 
 import Foundation
 import SwiftUI
+
 
 // A variety of utilities to switch a View among automatic (system), light, and dark color schemes.
 //
@@ -23,7 +23,7 @@ import SwiftUI
 // The best solution is to leave a view's color scheme unmodified to use the system theme.
 
 // An enum that adds automatic mode, missing from ColorScheme
-enum ColorSchemeAutomatic:Int{
+public enum ColorSchemeAutomatic:Int{
     case automatic
     case light
     case dark
@@ -32,16 +32,19 @@ enum ColorSchemeAutomatic:Int{
 // The name of the AppStorage item that holds and stores the selected ColorSchemeAutomatic value.
 // Usage:
 //      @AppStorage(colorSchemeAutomaticName) var colorSchemeAutomatic:ColorSchemeAutomatic = .automatic
-let colorSchemeAutomaticName = "ColorSchemeAutomatic"
+public let colorSchemeAutomaticName = "ColorSchemeAutomatic"
 
 
 // A ViewModifier that applies the current value to a view
 // Usage:
-//      .modifier(automaticColorScheme())
-struct automaticColorScheme: ViewModifier {
+//      .modifier(colorSchemeAutomatic())
+public struct colorSchemeAutomatic: ViewModifier {
     @AppStorage(colorSchemeAutomaticName) var colorSchemeAutomatic:ColorSchemeAutomatic = .automatic
+    
+    public init(){
+    }
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         if (colorSchemeAutomatic == .light) {
             content.preferredColorScheme(.light)
         }
@@ -56,13 +59,20 @@ struct automaticColorScheme: ViewModifier {
 
 // ToolbarContent that adds a ToolbarItem and emits a menu to switch color schemes
 //               .toolbar {
-//                   AutomaticColorToolbarContent()
+//                   ColorSchemeAutomaticToolbarContent()
 //                }
-struct AutomaticColorToolbarContent: ToolbarContent  {
+public struct ColorSchemeAutomaticToolbarContent: ToolbarContent  {
     var placement:ToolbarItemPlacement = .automatic
     @AppStorage(colorSchemeAutomaticName) var colorSchemeAutomatic:ColorSchemeAutomatic = .automatic
 
-    var body: some ToolbarContent {
+    public init(placement:ToolbarItemPlacement){
+        self.placement = placement
+    }
+    
+    public init(){
+    }
+
+    public var body: some ToolbarContent {
         ToolbarItem(placement: placement)  {
 
             Menu(content: {
@@ -70,19 +80,34 @@ struct AutomaticColorToolbarContent: ToolbarContent  {
                 Button(action : {
                     colorSchemeAutomatic = .automatic
                 }) {
-                    Label("Automatic", systemImage: colorSchemeAutomatic == .automatic ? "checkmark" : "")
+                    if colorSchemeAutomatic == .automatic {
+                        Label("Automatic", systemImage:"checkmark")
+                    }
+                    else {
+                        Text("Automatic")
+                    }
                 }
                 
                 Button(action : {
                     colorSchemeAutomatic = .light
                 }) {
-                    Label("Light", systemImage: colorSchemeAutomatic == .light ? "checkmark" : "")
+                    if colorSchemeAutomatic == .light {
+                        Label("Light", systemImage:"checkmark")
+                    }
+                    else {
+                        Text("Light")
+                    }
                 }
 
                 Button(action : {
                     colorSchemeAutomatic = .dark
                 }) {
-                    Label("Dark", systemImage: colorSchemeAutomatic == .dark ? "checkmark" : "")
+                    if colorSchemeAutomatic == .dark {
+                        Label("Dark", systemImage:"checkmark")
+                    }
+                    else {
+                        Text("Dark")
+                    }
                 }
             })
             {
