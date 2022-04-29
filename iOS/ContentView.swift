@@ -13,6 +13,32 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationView{
+                List{
+                    NavigationLink(destination: PlainList()){ Text("Plain")
+                    }
+                    NavigationLink(destination: GroupedList()){ Text("Grouped")
+                    }
+                    NavigationLink(destination: InsetList()){ Text("Inset")
+                    }
+                    NavigationLink(destination: InsetGroupedList()){ Text("Inset Grouped")
+                    }
+                    
+                    NavigationLink(destination: FormView()){ Text("Form")
+                    }
+
+                    Text("VStack")
+                      //  Label("The answer" ,systemImage: "42.circle")
+                }.listStyle(.plain)
+                .navigationBarTitle("Lists")
+                    .toolbar {
+                        ColorSchemeAutomaticToolbarContent()
+                    }
+            } .tabItem {
+                Image(systemName: "list.bullet.rectangle.fill")
+                Text("Lists")
+            }
+            
+            NavigationView{
                 ScrollView{
                     ColorSampleList(sample: AstroColorSamples.astroUI)
                 }.navigationBarTitle("Colors")
@@ -28,6 +54,10 @@ struct ContentView: View {
                 ScrollView{
                     Text("Symbols")
                 }.navigationBarTitle("Symbols")
+                    .toolbar {
+                        ColorSchemeAutomaticToolbarContent()
+                    }
+
             }
             .tabItem {
                 Image(systemName: "star")
