@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct InsetGroupedList: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         List{
             Section(header: Text("Time Zones"), footer: Text("West to East")){
@@ -15,15 +18,17 @@ struct InsetGroupedList: View {
             Text("Mountain")
             Text("Central")
             Text("Eastern")
-            }
+            }.listRowBackground(Color.astroUISecondaryGroupedBackground(colorScheme)) // applying this to the Group doesn't work
             
             Section(header: Text("Cities")){
             Text("San Luis Obispo")
             Text("Denver")
             Text("St. Louis")
             Text("Baltimore")
-            }
-        }.listStyle(.insetGrouped)
+            }.listRowBackground(Color.astroUISecondaryGroupedBackground(colorScheme)) // applying this to the Group doesn't work
+        }
+        .background(Color.astroUIGroupedBackground(colorScheme)) // set the background color for both Lists
+        .listStyle(.grouped)  // set the style for both Lists
         .navigationBarTitle("Inset Grouped")
     }
 }

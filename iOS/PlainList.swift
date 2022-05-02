@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct PlainList: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         List{
-           // Label("Pacific" ,systemImage: "42.circle")
-
-            Text("Pacific")
-            Text("Mountain")
-            Text("Central")
-            Text("Eastern")
-          //  Label("The answer" ,systemImage: "42.circle")
-        }.listStyle(.plain)
+            Group{
+                Text("Pacific")
+                Text("Mountain")
+                Text("Central")
+                Text("Eastern")
+            }.listRowBackground(Color.astroUIBackground(colorScheme))
+        }
+        .background(Color.astroUIBackground(colorScheme))
+        .listStyle(.plain)
         .navigationBarTitle("Plain")
     }
 }

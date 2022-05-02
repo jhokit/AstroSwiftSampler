@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FormView: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+
     @State var firstName: String = ""
     @State var lastName: String = ""
     @State var enrolled: Bool = false
@@ -17,20 +20,22 @@ struct FormView: View {
         Form{
             Section(header: Text("Name"))
             {
-            TextField("First Name", text: $firstName)
-            TextField("Last Name", text: $lastName)
-            }
+                TextField("First Name", text: $firstName)
+                TextField("Last Name", text: $lastName)
+            }.listRowBackground(Color.astroUISecondaryGroupedBackground(colorScheme)) // applying this to the Group doesn't work
             
             Section(header: Text("Options"), footer: notifications ? Text("Notification will be sent by email"):Text(""))
             {
-            Toggle(isOn: $enrolled) {
-                Text("Enrolled")
-            }
-            Toggle(isOn: $notifications) {
-                Text("Notifications")
-            }
-            }
-        }.navigationBarTitle("Form")
+                Toggle(isOn: $enrolled) {
+                    Text("Enrolled")
+                }
+                Toggle(isOn: $notifications) {
+                    Text("Notifications")
+                }
+            }.listRowBackground(Color.astroUISecondaryGroupedBackground(colorScheme)) // applying this to the Group doesn't work
+        }
+        .background(Color.astroUIGroupedBackground(colorScheme)) // set the background color for both Lists
+        .navigationBarTitle("Form")
     }
 }
 

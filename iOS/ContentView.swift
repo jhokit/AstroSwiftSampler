@@ -10,30 +10,33 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         TabView {
             NavigationView{
                 List{
-                    NavigationLink(destination: PlainList()){ Text("Plain")
-                    }
-                    NavigationLink(destination: GroupedList()){ Text("Grouped")
-                    }
-                    NavigationLink(destination: InsetList()){ Text("Inset")
-                    }
-                    NavigationLink(destination: InsetGroupedList()){ Text("Inset Grouped")
-                    }
-                    
-                    NavigationLink(destination: FormView()){ Text("Form")
-                    }
-
-                    Text("VStack")
-                      //  Label("The answer" ,systemImage: "42.circle")
-                }.listStyle(.plain)
+                    Group{
+                        NavigationLink(destination: PlainList()){ Text("Plain")
+                        }
+                        NavigationLink(destination: GroupedList()){ Text("Grouped")
+                        }
+                        NavigationLink(destination: InsetList()){ Text("Inset")
+                        }
+                        NavigationLink(destination: InsetGroupedList()){ Text("Inset Grouped")
+                        }
+                        NavigationLink(destination: FormView()){ Text("Form")
+                        }
+                        //Text("VStack")
+                    }.listRowBackground(Color.astroUIBackground(colorScheme))
+                }
+                //
+                .background(Color.astroUIBackground(colorScheme))
+                .listStyle(.plain)
                 .navigationBarTitle("Lists")
-                    .toolbar {
-                        ColorSchemeAutomaticToolbarContent()
-                    }
-            } .tabItem {
+            }
+            
+            .tabItem {
                 Image(systemName: "list.bullet.rectangle.fill")
                 Text("Lists")
             }
@@ -42,9 +45,6 @@ struct ContentView: View {
                 ScrollView{
                     ColorSampleList(sample: AstroColorSamples.astroUI)
                 }.navigationBarTitle("Colors")
-                    .toolbar {
-                        ColorSchemeAutomaticToolbarContent()
-                    }
             } .tabItem {
                 Image(systemName: "paintpalette.fill")
                 Text("Colors")
@@ -54,16 +54,12 @@ struct ContentView: View {
                 ScrollView{
                     Text("Symbols")
                 }.navigationBarTitle("Symbols")
-                    .toolbar {
-                        ColorSchemeAutomaticToolbarContent()
-                    }
-
             }
             .tabItem {
                 Image(systemName: "star")
                 Text("Symbols")
             }
-        }.modifier(colorSchemeAutomatic())
+        }
     }
 }
 
@@ -71,5 +67,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.light)
+        ContentView()
+            .preferredColorScheme(.dark)
     }
 }
