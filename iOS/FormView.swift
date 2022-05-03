@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct FormView: View {
-    
     @Environment(\.colorScheme) var colorScheme
 
     @State var firstName: String = ""

@@ -38,6 +38,9 @@
 		7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7C479BDF2790E4B6002845E9 /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BDE2790E4B6002845E9 /* ColorSwatch.swift */; };
 		7C479BE12790E66A002845E9 /* ColorSampleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BE02790E66A002845E9 /* ColorSampleList.swift */; };
+		7CF86EF828216E4900D554DF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF86EF728216E4900D554DF /* SampleData.swift */; };
+		7CF86EF928216E4900D554DF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF86EF728216E4900D554DF /* SampleData.swift */; };
+		7CF86EFA28216E4900D554DF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF86EF728216E4900D554DF /* SampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,7 @@
 		7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroColorSamples.swift; sourceTree = "<group>"; };
 		7C479BDE2790E4B6002845E9 /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
 		7C479BE02790E66A002845E9 /* ColorSampleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSampleList.swift; sourceTree = "<group>"; };
+		7CF86EF728216E4900D554DF /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleData.swift; path = Shared/SampleData.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				7C479BCA2790DBB9002845E9 /* ColorSample.swift */,
+				7CF86EF728216E4900D554DF /* SampleData.swift */,
 				7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */,
 				7C37A8C62791F7A500965F29 /* Preview Content */,
 			);
@@ -350,6 +355,7 @@
 				7C1716D7281C6F7B00EA3DFA /* FormView.swift in Sources */,
 				7C1716CF281C57E800EA3DFA /* PlainList.swift in Sources */,
 				7C479BCE2790DC2D002845E9 /* AstroColorSamples.swift in Sources */,
+				7CF86EF828216E4900D554DF /* SampleData.swift in Sources */,
 				7C479BDF2790E4B6002845E9 /* ColorSwatch.swift in Sources */,
 				7C479BE12790E66A002845E9 /* ColorSampleList.swift in Sources */,
 				7C479BA42790D954002845E9 /* AstroSwiftSamplerApp.swift in Sources */,
@@ -362,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C479BCF2790DC2D002845E9 /* AstroColorSamples.swift in Sources */,
+				7CF86EF928216E4900D554DF /* SampleData.swift in Sources */,
 				7C37A8D22791F93F00965F29 /* ColorSwatch.swift in Sources */,
 				7C37A8D52791F93F00965F29 /* ContentView.swift in Sources */,
 				7C37A8D42791F93F00965F29 /* ColorSampleList.swift in Sources */,
@@ -377,6 +384,7 @@
 				7C37A8CC2791F7A500965F29 /* AstroSwiftSamplerApp.swift in Sources */,
 				7C479BDC2790E069002845E9 /* ColorSample.swift in Sources */,
 				7C37A8CD2791F7A500965F29 /* ContentView.swift in Sources */,
+				7CF86EFA28216E4900D554DF /* SampleData.swift in Sources */,
 				7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,7 +541,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rocketcom.AstroSwiftSampler;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -563,7 +571,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rocketcom.AstroSwiftSampler;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -595,7 +603,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rocketcom.AstroSwiftSampler;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -625,7 +633,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rocketcom.AstroSwiftSampler;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -651,7 +659,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rocketcom.AstroSwiftSampler;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				SDKROOT = appletvos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -679,7 +687,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rocketcom.AstroSwiftSampler;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				SDKROOT = appletvos;
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -8,31 +8,27 @@
 import SwiftUI
 
 struct GroupedList: View {
-    
     @Environment(\.colorScheme) var colorScheme
-
+    @ObservedObject private var zones = Zones()
+    @ObservedObject private var cities = Cities()
+    
     var body: some View {
-       Group{
-            List{
-                Section(header: Text("Time Zones"), footer: Text("West to East")){
-                Text("Pacific")
-                Text("Mountain")
-                Text("Central")
-                Text("Eastern")
-                }.listRowBackground(Color.astroUISecondaryGroupedBackground(colorScheme)) // applying this to the Group doesn't work
-                
-                Section(header: Text("Cities")){
-                Text("San Luis Obispo")
-                Text("Denver")
-                Text("St. Louis")
-                Text("Baltimore")
-                }.listRowBackground(Color.astroUISecondaryGroupedBackground(colorScheme)) // applying this to the Group doesn't work
+        List{
+            Section(header: Text("Time Zones"), footer: Text("West to East")){
+                ForEach(zones.zones){ zone in
+                    Text(zone.name).listRowBackground(Color.astroUISecondaryGroupedBackground(colorScheme))
+                }
+            }
+            
+            Section(header: Text("Cities")){
+                ForEach(cities.cities){ city in
+                    Text(city.name).listRowBackground(Color.astroUISecondaryGroupedBackground(colorScheme))
+                }
+            }
         }
-        .background(Color.astroUIGroupedBackground(colorScheme)) // set the background color for both Lists
-        .listStyle(.grouped)  // set the style for both Lists
+        .listStyle(.grouped)  // set the style for both Sections
+        .background(Color.astroUIGroupedBackground(colorScheme)) // set the background color for both Sections
         .navigationBarTitle("Grouped")
-        }
-        
     }
 }
 
