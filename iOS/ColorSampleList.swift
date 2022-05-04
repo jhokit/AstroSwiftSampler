@@ -10,6 +10,7 @@ import SwiftUI
 struct ColorSampleList: View {
     var sample:ColorSample
     var body: some View {
+        ScrollView{
         VStack(spacing:0) {
             if let colorVariants = sample.colorVariants
             {
@@ -27,7 +28,10 @@ struct ColorSampleList: View {
                     }
                 }
             }
-        }//.navigationTitle(sample.name)
+            Spacer()
+        }
+        }.background(Color.astroUIBackground)
+        .navigationTitle(sample.name)
     }
 }
 
@@ -35,9 +39,9 @@ struct ColorSampleList: View {
 struct SampleList_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ColorSampleList(sample: AstroColorSamples.astroUI)
+            ColorSampleList(sample: AstroColorSamples.astroCore)
                 .preferredColorScheme(.light)
-            ColorSampleList(sample: AstroColorSamples.astroUI)
+            ColorSampleList(sample: AstroColorSamples.astroCore)
                 .preferredColorScheme(.dark)
 
         }

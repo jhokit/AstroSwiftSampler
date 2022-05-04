@@ -20,7 +20,7 @@ struct AstroSwiftSamplerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView().tint(.astroUITint).accentColor(.astroUITint)
+            ContentView().tint(.astroUIAccent).accentColor(.astroUIAccent)
         }
     }
 }

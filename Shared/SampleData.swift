@@ -49,7 +49,7 @@ class Cities: ObservableObject {
     static func loadCities() -> [Item] {
         return [
             Item(name: "San Luis Obispo"),
-            Item(name: "Mountain"),
+            Item(name: "Denver"),
             Item(name: "St. Louis"),
             Item(name: "Baltimore"),
         ]

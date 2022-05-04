@@ -157,8 +157,8 @@ struct AstroColorSamples
         ColorSample(name:"Astro UI Hot Orange 800", color: Color.astroUIHotOrange800),
         ColorSample(name:"Astro UI Hot Orange 900", color: Color.astroUIHotOrange900),
     ])
-
-    static var astroUI:ColorSample = ColorSample(name: "Astro Core", color: Color.astroUIDarkBlue500, colorVariants: [
+    
+    static var astroCore:ColorSample = ColorSample(name: "Core Colors", color: Color.astroUIDarkBlue500, colorVariants: [
         darkBlue,
         brightBlue,
         grey,
@@ -175,4 +175,13 @@ struct AstroColorSamples
         hotOrange
     ])
 
+    static var astroSemantic:ColorSample = ColorSample(name: "Semantic Colors", color: Color.astroUIDarkBlue500, colorVariants: [
+        ColorSample(name:"Background", color: Color.astroUIBackground),
+        ColorSample(name:"SecondaryBackground", color: Color.astroUISecondaryBackground),
+        ColorSample(name:"Tertiary Background", color: Color.astroUITertiaryBackground),
+        ColorSample(name:"Grouped Background", color: Color.astroUIGroupedBackground),
+        ColorSample(name:"Secondary Grouped Background", color: Color.astroUISecondaryGroupedBackground),
+        ColorSample(name:"Tertiary Grouped Background", color: Color.astroUITertiaryGroupedBackground),
+        ColorSample(name:"Tint", color: Color.astroUIAccent)
+    ])
 }

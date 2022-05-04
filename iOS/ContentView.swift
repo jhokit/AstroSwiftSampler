@@ -12,41 +12,44 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
+            
+            /* LISTS */
             NavigationView{
                 List{
                     Group{
-                        NavigationLink(destination: PlainList()){ Text("Plain")
-                        }
-                        NavigationLink(destination: GroupedList()){ Text("Grouped")
-                        }
-                        NavigationLink(destination: InsetList()){ Text("Inset")
-                        }
-                        NavigationLink(destination: InsetGroupedList()){ Text("Inset Grouped")
-                        }
-                        NavigationLink(destination: FormView()){ Text("Form")
-                        }
-                    }.listRowBackground(Color.astroUIBackground)
+                        NavigationLink(destination: PlainList()){ Text("Plain") }
+                        NavigationLink(destination: GroupedList()){ Text("Grouped")}
+                        NavigationLink(destination: InsetList()){ Text("Inset")}
+                        NavigationLink(destination: InsetGroupedList()){ Text("Inset Grouped")}
+                        NavigationLink(destination: FormView()){ Text("Form")}
+                    }.listRowBackground(Color.astroUIBackground) // apply to a Group because it doesn't work to apply to a List
                 }
-                //
                 .background(Color.astroUIBackground)
                 .listStyle(.plain)
                 .navigationBarTitle("Lists")
             }
-            
             .tabItem {
                 Image(systemName: "list.bullet.rectangle.fill")
                 Text("Lists")
             }
             
+            /* COLORS */
             NavigationView{
-                ScrollView{
-                    ColorSampleList(sample: AstroColorSamples.astroUI)
-                }.navigationBarTitle("Colors")
-            } .tabItem {
+                List{
+                    Group{
+                        NavigationLink(destination: ColorSampleList(sample: AstroColorSamples.astroSemantic)) { Text("Semantic Colors")}
+                        NavigationLink(destination: ColorSampleList(sample: AstroColorSamples.astroCore)) { Text("Core Colors")}
+                    }.listRowBackground(Color.astroUIBackground)
+                }
+                .background(Color.astroUIBackground)
+                .listStyle(.plain)
+                .navigationBarTitle("Colors")
+            }.tabItem {
                 Image(systemName: "paintpalette.fill")
                 Text("Colors")
             }
             
+            /* SYMBOLS */
             NavigationView{
                 ScrollView{
                     Text("Symbols")
