@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct PlainList: View {
-    @Environment(\.colorScheme) var colorScheme
     @ObservedObject private var zones = Zones()
     
     var body: some View {
         List(zones.zones){ zone in
-            Text(zone.name).listRowBackground(Color.astroUIBackground(colorScheme))
+            Text(zone.name).listRowBackground(Color.astroUIBackground)
         }
-        .background(Color.astroUIBackground(colorScheme))
+        .background(Color.astroUIBackground)
         .listStyle(.plain)
         .navigationBarTitle("Plain")
     }

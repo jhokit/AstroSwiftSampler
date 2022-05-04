@@ -10,8 +10,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @Environment(\.colorScheme) var colorScheme
-    
     var body: some View {
         TabView {
             NavigationView{
@@ -27,11 +25,10 @@ struct ContentView: View {
                         }
                         NavigationLink(destination: FormView()){ Text("Form")
                         }
-                        //Text("VStack")
-                    }.listRowBackground(Color.astroUIBackground(colorScheme))
+                    }.listRowBackground(Color.astroUIBackground)
                 }
                 //
-                .background(Color.astroUIBackground(colorScheme))
+                .background(Color.astroUIBackground)
                 .listStyle(.plain)
                 .navigationBarTitle("Lists")
             }

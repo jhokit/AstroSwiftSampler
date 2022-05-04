@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RocketCommunicationsInc/AstroSwiftCore",
       "state" : {
-        "revision" : "31af2dc5ff25b03e0c69fbdd1ffb43bcbd86f4da",
-        "version" : "1.1.0"
+        "branch" : "newColors",
+        "revision" : "9fdfa95a0ec8cbf4aec71857a3ed733f5431780c"
       }
     },
     {
@@ -15,7 +15,7 @@
       "location" : "https://github.com/RocketCommunicationsInc/AstroSwiftFoundation.git",
       "state" : {
         "branch" : "newSemanticColors",
-        "revision" : "78f28904f1e2c20f09d46ebd1a61413e177e8d15"
+        "revision" : "12aad47c25c1237751f1defa45ec7d80a746d1fe"
       }
     }
   ],

@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct InsetList: View {
-    @Environment(\.colorScheme) var colorScheme
     @ObservedObject private var zones = Zones()
 
     var body: some View {
         List(zones.zones){ zone in
-            Text(zone.name).listRowBackground(Color.astroUIBackground(colorScheme))
-            }.background(Color.astroUIBackground(colorScheme))
+            Text(zone.name).listRowBackground(Color.astroUIBackground)
+        }.background(Color.astroUIBackground)
             .listStyle(.inset)
             .navigationBarTitle("Inset")
     }
