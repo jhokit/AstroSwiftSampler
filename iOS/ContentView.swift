@@ -51,9 +51,8 @@ struct ContentView: View {
             
             /* SYMBOLS */
             NavigationView{
-                ScrollView{
-                    Text("Symbols")
-                }.navigationBarTitle("Symbols")
+                SymbolGrid()
+                .navigationBarTitle("Symbols")
             }
             .tabItem {
                 Image(systemName: "star")
