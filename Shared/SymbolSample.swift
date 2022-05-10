@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import AstroSwiftFoundation
 
 struct SymbolSample:Identifiable
 {
     let id: UUID = UUID()
     var name:String
+    var status:AstroStatus?
 }

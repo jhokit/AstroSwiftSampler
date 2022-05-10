@@ -9,18 +9,27 @@ import SwiftUI
 import AstroSwiftFoundation
 
 struct SymbolGrid: View {
-    @State var columnCount = 2
-    var body: some View {
-        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: columnCount)
-        ScrollView{
-            LazyVGrid(columns:columns){
-                Image.astroStatusOff.renderingMode(.original)
-                Image.astroStatusSerious.foregroundColor(Color.astroStatusSerious)
-                Image("serious").foregroundColor(Color.astroStatusSerious)
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
 
-            }
-        }.background(Color.astroUIBackground)
-    }
+    var body: some View {
+        
+        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: (horizontalSizeClass == .compact) ? 2 : 3)
+            LazyVGrid(columns:columns){
+                Section("Status"){
+                    ForEach(AstroSymbolSamples.statusSymbols, id: \.id) { symbolSample in
+                        SymbolTile(sample: symbolSample)
+                    }
+                }
+                
+                Section("Icons"){
+                    ForEach(AstroSymbolSamples.standardSymbols, id: \.id) { symbolSample in
+                        SymbolTile(sample: symbolSample)
+                    }
+                }
+
+            }.padding().background(Color.astroUIBackground)
+        }
+    
 }
 
 struct SymbolGrid_Previews: PreviewProvider {
@@ -29,3 +38,5 @@ struct SymbolGrid_Previews: PreviewProvider {
         SymbolGrid()
     }
 }
+
+

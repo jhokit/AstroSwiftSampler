@@ -51,9 +51,13 @@ struct ContentView: View {
             
             /* SYMBOLS */
             NavigationView{
-                SymbolGrid()
+                ScrollView{
+                    SymbolGrid()
+                }
+                .background(Color.astroUIBackground)
                 .navigationBarTitle("Symbols")
-            }
+               
+            }.navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Image(systemName: "star")
                 Text("Symbols")
