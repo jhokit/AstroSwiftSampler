@@ -8,36 +8,57 @@
 import SwiftUI
 
 struct FormView: View {
-    @State var firstName: String = ""
-    @State var lastName: String = ""
-    @State var enrolled: Bool = false
-    @State var notifications: Bool = true
+    @State var name: String = ""
+    @State var password: String = ""
+    @State var toggleValue: Bool = true
+    @State private var sliderValue: Double = 100
+    @State private var day: String = ""
+    private var prog = Progress(totalUnitCount: 2)
 
     var body: some View {
         Form{
-            Section(header: Text("Name"))
+            Section(header: Text("Text Fields"))
             {
-                TextField("First Name", text: $firstName)
-                TextField("Last Name", text: $lastName)
-            }.listRowBackground(Color.astroUISecondaryGroupedBackground) // applying this to the Group doesn't work
+                TextField("Name", text: $name)
+                SecureField("Password", text: $password)
+            }.listRowBackground(Color.astroUISecondaryGroupedBackground)
             
-            Section(header: Text("Options"), footer: notifications ? Text("Notification will be sent by email"):Text(""))
+            Section(header: Text("Controls"))
             {
-                Toggle(isOn: $enrolled) {
-                    Text("Enrolled")
+                Toggle(isOn: $toggleValue) {
+                    Text("Toggle")
                 }
-                Toggle(isOn: $notifications) {
-                    Text("Notifications")
+            
+                Slider(value: $sliderValue, in: 0...200) {
+                    Text("Slider")
+                } minimumValueLabel: {
+                    Image(systemName: "tortoise")
+                } maximumValueLabel: {
+                    Image(systemName: "hare")
                 }
-            }.listRowBackground(Color.astroUISecondaryGroupedBackground) // applying this to the Group doesn't work
+                
+                ProgressView(prog)//.padding(.bottom, 30)
+                Link("Wikipedia Link", destination: URL(string: "https://www.wikipedia.org")!)
+                
+                Menu("Days Menu") {
+                              Button("Monday") { self.day = "Monday" }
+                              Button("Tuesday") { self.day = "Tuesday" }
+                              Button("Wednesday") { self.day = "Wednesday" }
+                              Button("Thursday") { self.day = "Thursday" }
+                              Button("Friday") { self.day = "Friday" }
+                          }
+                
+            }.listRowBackground(Color.astroUISecondaryGroupedBackground)
         }
-        .background(Color.astroUIGroupedBackground) // set the background color for both Lists
-        .navigationBarTitle("Form")
+        .onAppear(perform: {prog.becomeCurrent(withPendingUnitCount: 1) ; prog.resignCurrent()})
+        .background(Color.astroUIGroupedBackground) // set the background color for both sections
+        .navigationBarTitle("Form with Controls")
     }
 }
 
 struct Form_Previews: PreviewProvider {
     static var previews: some View {
         FormView()
+            .preferredColorScheme(.dark)
     }
 }

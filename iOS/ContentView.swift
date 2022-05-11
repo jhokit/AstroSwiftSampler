@@ -8,21 +8,54 @@
 import SwiftUI
 
 
+struct Tag2: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .tag(2)
+        }
+}
+
+extension View {
+    func tag2() -> some View {
+        modifier(Tag2())
+    }
+}
+
+
+//struct astroBackground: ViewModifier {
+//    func body(content: Content) -> some View {
+//        content
+//            .listRowBackground(1 == 1 ? Color.astroUISecondaryBackground : Color.astroUIBackground)
+//        }
+//}
+
 struct ContentView: View {
-    
+    @State private var selected: Int? = nil
     var body: some View {
         TabView {
             
             /* LISTS */
             NavigationView{
                 List{
-                    Group{
-                        NavigationLink(destination: PlainList()){ Text("Plain") }
-                        NavigationLink(destination: GroupedList()){ Text("Grouped")}
-                        NavigationLink(destination: InsetList()){ Text("Inset")}
-                        NavigationLink(destination: InsetGroupedList()){ Text("Inset Grouped")}
-                        NavigationLink(destination: FormView()){ Text("Form")}
-                    }.listRowBackground(Color.astroUIBackground) // apply to a Group because it doesn't work to apply to a List
+                    NavigationLink("Plain", tag: 2, selection: $selected) {
+                        PlainList()
+                    }.listRowBackground(selected == 2 ? Color.astroUISecondaryBackground : Color.astroUIBackground)
+
+                    NavigationLink("Grouped", tag: 3, selection: $selected) {
+                        GroupedList()
+                    }.listRowBackground(selected == 3 ? Color.astroUISecondaryBackground : Color.astroUIBackground)
+
+                    NavigationLink("Inset", tag: 4, selection: $selected) {
+                        InsetList()
+                    }.listRowBackground(selected == 4 ? Color.astroUISecondaryBackground : Color.astroUIBackground)
+
+                    NavigationLink("Inset Grouped", tag: 5, selection: $selected) {
+                        InsetGroupedList()
+                    }.listRowBackground(selected == 5 ? Color.astroUISecondaryBackground : Color.astroUIBackground)
+
+                    NavigationLink("Form with Controls", tag: 6, selection: $selected) {
+                        FormView()
+                    }.listRowBackground(selected == 6 ? Color.astroUISecondaryBackground : Color.astroUIBackground)
                 }
                 .background(Color.astroUIBackground)
                 .listStyle(.plain)
@@ -36,10 +69,13 @@ struct ContentView: View {
             /* COLORS */
             NavigationView{
                 List{
-                    Group{
-                        NavigationLink(destination: ColorSampleList(sample: AstroColorSamples.astroSemantic)) { Text("Semantic Colors")}
-                        NavigationLink(destination: ColorSampleList(sample: AstroColorSamples.astroCore)) { Text("Core Colors")}
-                    }.listRowBackground(Color.astroUIBackground)
+                    NavigationLink("Semantic Colors", tag: 1, selection: $selected) {
+                        ColorSampleList(sample: AstroColorSamples.astroSemantic)
+                    }.listRowBackground(selected == 1 ? Color.astroUISecondaryBackground : Color.astroUIBackground)
+
+                    NavigationLink("Core Colors", tag: 2, selection: $selected) {
+                        ColorSampleList(sample: AstroColorSamples.astroCore)
+                    }.listRowBackground(selected == 2 ? Color.astroUISecondaryBackground : Color.astroUIBackground)
                 }
                 .background(Color.astroUIBackground)
                 .listStyle(.plain)
