@@ -10,34 +10,24 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        Text("hello world")
-        /*
         TabView {
-                Text("Lists")
-            }
-            
-            .tabItem {
-                Image(systemName: "list.bullet.rectangle.fill")
-                Text("Lists")
-            }
-            
-            NavigationView{
-                Text("Colors")
-            } .tabItem {
-                Image(systemName: "paintpalette.fill")
-                Text("Colors")
-            }
-            
-            NavigationView{
-                ScrollView{
+            Text("UI Elements Coming Soon")
+                .tabItem {
+                    Image(systemName: "slider.horizontal.below.rectangle")
+                    Text("UI Elements")
+                }
+                
+            Text("Colors Coming Soon")
+                .tabItem {
+                    Image(systemName: "paintpalette.fill")
+                    Text("Colors")
+                }
+            Text("Symbols Coming Soon")
+                .tabItem {
+                    Image(systemName: "star")
                     Text("Symbols")
-                }.navigationBarTitle("Symbols")
-            }
-            .tabItem {
-                Image(systemName: "star")
-                Text("Symbols")
-            }
-        }*/
+                }
+        }.background(Color.astroUIBackground)
     }
 }
 

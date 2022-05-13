@@ -33,8 +33,6 @@
 		7C479BCF2790DC2D002845E9 /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7C479BD22790DEDD002845E9 /* AstroSwiftFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7C479BD12790DEDD002845E9 /* AstroSwiftFoundation */; };
 		7C479BD42790DEE1002845E9 /* AstroSwiftCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7C479BD32790DEE1002845E9 /* AstroSwiftCore */; };
-		7C479BD52790DEE7002845E9 /* Astro Sampler.app in Resources */ = {isa = PBXBuildFile; fileRef = 7C479B9B2790D954002845E9 /* Astro Sampler.app */; };
-		7C479BD82790DEEB002845E9 /* Astro Sampler.app in Resources */ = {isa = PBXBuildFile; fileRef = 7C479BA12790D954002845E9 /* Astro Sampler.app */; };
 		7C479BDC2790E069002845E9 /* ColorSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCA2790DBB9002845E9 /* ColorSample.swift */; };
 		7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7C479BDF2790E4B6002845E9 /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BDE2790E4B6002845E9 /* ColorSwatch.swift */; };
@@ -55,23 +53,6 @@
 		7CF86EFC2821D18800D554DF /* AstroSwiftFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7CF86EFB2821D18800D554DF /* AstroSwiftFoundation */; };
 		7CF86EFE2821D18E00D554DF /* AstroSwiftCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7CF86EFD2821D18E00D554DF /* AstroSwiftCore */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7C479BD62790DEE7002845E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C479B8F2790D954002845E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7C479B9A2790D954002845E9;
-			remoteInfo = "AstroSwiftColors (iOS)";
-		};
-		7C479BD92790DEEB002845E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C479B8F2790D954002845E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7C479BA02790D954002845E9;
-			remoteInfo = "AstroSwiftColors (macOS)";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7C1716CE281C57E800EA3DFA /* PlainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainList.swift; sourceTree = "<group>"; };
@@ -315,8 +296,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7C479BD72790DEE7002845E9 /* PBXTargetDependency */,
-				7C479BDA2790DEEB002845E9 /* PBXTargetDependency */,
 			);
 			name = "AstroSwiftSampler (tvOS)";
 			packageProductDependencies = (
@@ -394,9 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C37A8CB2791F7A500965F29 /* Preview Assets.xcassets in Resources */,
-				7C479BD52790DEE7002845E9 /* Astro Sampler.app in Resources */,
 				7C37A8CA2791F7A500965F29 /* Assets.xcassets in Resources */,
-				7C479BD82790DEEB002845E9 /* Astro Sampler.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,19 +437,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7C479BD72790DEE7002845E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7C479B9A2790D954002845E9 /* AstroSwiftSampler (iOS) */;
-			targetProxy = 7C479BD62790DEE7002845E9 /* PBXContainerItemProxy */;
-		};
-		7C479BDA2790DEEB002845E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7C479BA02790D954002845E9 /* AstroSwiftSampler (macOS) */;
-			targetProxy = 7C479BD92790DEEB002845E9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7C479BAA2790D954002845E9 /* Debug */ = {
@@ -720,7 +684,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AstroSwiftColors/Preview Content\"";
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -748,7 +711,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AstroSwiftColors/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
