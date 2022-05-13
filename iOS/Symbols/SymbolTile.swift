@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SymbolTile: View {
     var sample:SymbolSample
+    @Binding var weight:Font.Weight
+    @Binding var font:Font
 
     var body: some View {
         ZStack{
@@ -16,21 +18,21 @@ struct SymbolTile: View {
             VStack{
                 if let status = sample.status
                 {
-                    Image.imageForAstroStatus(status).foregroundColor(Color.colorForAstroStatus(status)).font(.title).padding(2)
+                    Text(Image.imageForAstroStatus(status)).foregroundColor(Color.colorForAstroStatus(status)).fontWeight(weight).font(font).padding(2)
                 }
                 else
                 {
-                    Image.astroImage(sample.name).font(.title).padding(2)
+                    Text(Image.astroImage(sample.name)).fontWeight(weight).font(font).padding(2)
                 }
                 Text(sample.name).font(.caption).padding(2)
             }
         }.frame(minHeight:90)
     }
 }
-
-struct SymbolTile_Previews: PreviewProvider {
-    static var previews: some View {
-        SymbolTile(sample: SymbolSample(name: "astro.caution"))
-    }
-}
+//
+//struct SymbolTile_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SymbolTile(sample: SymbolSample(name: "astro.caution"),weight: .regular)
+//    }
+//}
 
