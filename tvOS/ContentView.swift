@@ -11,22 +11,11 @@ struct ContentView: View {
     var body: some View {
         
         TabView {
-            Text("UI Elements Coming Soon")
-                .tabItem {
-                    Image(systemName: "slider.horizontal.below.rectangle")
-                    Text("UI Elements")
-                }
-                
-            Text("Colors Coming Soon")
-                .tabItem {
-                    Image(systemName: "paintpalette.fill")
-                    Text("Colors")
-                }
-            Text("Symbols Coming Soon")
-                .tabItem {
-                    Image(systemName: "star")
-                    Text("Symbols")
-                }
+            UIElements()
+            
+            Colors()
+            
+            Symbols()
         }.background(Color.astroUIBackground)
     }
 }

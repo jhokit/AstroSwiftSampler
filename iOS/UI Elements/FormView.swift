@@ -30,7 +30,7 @@ struct FormView: View {
                 }.listRowBackground(Color.astroUISecondaryGroupedBackground)
             }
             .background(Color.astroUIGroupedBackground) // set the background color for both sections
-            .navigationBarTitle("Form ")
+            .navigationBarTitle("Form")
             
         }
     }

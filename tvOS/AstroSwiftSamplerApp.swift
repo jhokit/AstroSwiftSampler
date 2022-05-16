@@ -11,7 +11,8 @@ import SwiftUI
 struct AstroSwiftSamplerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().tint(.astroUIAccent).accentColor(.astroUIAccent)
         }
     }
 }
+
