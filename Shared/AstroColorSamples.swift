@@ -184,4 +184,15 @@ struct AstroColorSamples
         ColorSample(name:"Tertiary Grouped Background", color: Color.astroUITertiaryGroupedBackground),
         ColorSample(name:"Tint", color: Color.astroUIAccent)
     ])
+    
+    static var astroStatus:ColorSample = ColorSample(name: "Status Colors", color: Color.astroStatusNormal, colorVariants: [
+        ColorSample(name:"Off", color: Color.astroStatusOff),
+        ColorSample(name:"Standby", color: Color.astroStatusStandby),
+        ColorSample(name:"Normal", color: Color.astroStatusNormal),
+        ColorSample(name:"Caution", color: Color.astroStatusCaution),
+        ColorSample(name:"Serious", color: Color.astroStatusSerious),
+        ColorSample(name:"Critical", color: Color.astroStatusCritical),
+    ])
+
 }
+

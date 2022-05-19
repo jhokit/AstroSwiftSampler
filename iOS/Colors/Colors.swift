@@ -31,6 +31,25 @@ struct Colors: View {
                         }
                     }
                 }
+                
+                HStack{Text("Status").font(.footnote).padding().frame(height:70) ; Spacer()}
+                if let semanticColors = AstroColorSamples.astroStatus.colorVariants
+                {
+                    ForEach(semanticColors, id: \.id) { colorSample in
+                        let subVariants = colorSample.colorVariants
+                        if (subVariants == nil){
+                            ColorSwatch(sample: colorSample).frame(height:60)
+                        }
+                        else {
+                            NavigationLink(
+                                destination: ColorSampleList(sample: colorSample),
+                                label: {
+                                    ColorSwatch(sample: colorSample).frame(height:60)
+                                })
+                        }
+                    }
+                }
+
 
                 HStack{Text("CORE").font(.footnote).padding() ; Spacer()}
                 if let coreColors = AstroColorSamples.astroCore.colorVariants

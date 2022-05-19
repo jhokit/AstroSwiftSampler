@@ -8,9 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selected: Int? = 1
+
     var body: some View {
-        NavigationView{
-            SampleList(samples: AstroColorSamples.sharedInstance.corePrimary).navigationTitle("Astro Primary")
+        
+        NavigationView {
+            List{
+                NavigationLink(tag: 1, selection: self.$selected) {
+                    Text("Elements").background(Color.astroUIBackground)
+                } label: {
+                    Label("UIElements", systemImage: "slider.horizontal.below.rectangle")
+                }
+
+                NavigationLink(tag: 2, selection: self.$selected) {
+                    ColorGrid()
+                } label: {
+                    Label("Colors", systemImage: "paintpalette")
+                }
+                
+                NavigationLink(tag: 3, selection: self.$selected) {
+                    Text("Symbols")
+                } label: {
+                    Label("Symbols", systemImage: "star")
+                }
+
+            }.listStyle(.sidebar).frame(minWidth:100)
         }
     }
 }
