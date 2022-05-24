@@ -27,7 +27,7 @@ struct ContentView: View {
                 }
                 
                 NavigationLink(tag: 3, selection: self.$selected) {
-                    Text("Symbols")
+                    SymbolGrid()
                 } label: {
                     Label("Symbols", systemImage: "star")
                 }

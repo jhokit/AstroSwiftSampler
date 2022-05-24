@@ -33,6 +33,8 @@
 		7C479BDC2790E069002845E9 /* ColorSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCA2790DBB9002845E9 /* ColorSample.swift */; };
 		7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7C479BDF2790E4B6002845E9 /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BDE2790E4B6002845E9 /* ColorSwatch.swift */; };
+		7C485CE12836EACA00237652 /* SymbolGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C485CE02836EACA00237652 /* SymbolGrid.swift */; };
+		7C485CE32836EAD800237652 /* SymbolTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C485CE22836EAD800237652 /* SymbolTile.swift */; };
 		7C625130283307080055F51C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62512F283307080055F51C /* Colors.swift */; };
 		7C6251322833077C0055F51C /* ColorGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6251312833077C0055F51C /* ColorGrid.swift */; };
 		7C6251342833078F0055F51C /* ColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6251332833078F0055F51C /* ColorTile.swift */; };
@@ -86,6 +88,8 @@
 		7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroColorSamples.swift; sourceTree = "<group>"; };
 		7C479BDE2790E4B6002845E9 /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
 		7C479BE02790E66A002845E9 /* ColorSampleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSampleList.swift; sourceTree = "<group>"; };
+		7C485CE02836EACA00237652 /* SymbolGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
+		7C485CE22836EAD800237652 /* SymbolTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTile.swift; sourceTree = "<group>"; };
 		7C62512F283307080055F51C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7C6251312833077C0055F51C /* ColorGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGrid.swift; sourceTree = "<group>"; };
 		7C6251332833078F0055F51C /* ColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTile.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 			children = (
 				7C37A8CF2791F93F00965F29 /* AstroSwiftSamplerApp.swift */,
 				7C37A8D12791F93F00965F29 /* ContentView.swift */,
+				7C485CE42836EAE200237652 /* Symbol */,
 				7C485CDF2836E42900237652 /* Color */,
 				7C479BA32790D954002845E9 /* macOS.entitlements */,
 				7C65DAA52836B82500E2FA3F /* Assets.xcassets */,
@@ -232,6 +237,15 @@
 				7C65DAA3283443BE00E2FA3F /* ColorTile.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		7C485CE42836EAE200237652 /* Symbol */ = {
+			isa = PBXGroup;
+			children = (
+				7C485CE02836EACA00237652 /* SymbolGrid.swift */,
+				7C485CE22836EAD800237652 /* SymbolTile.swift */,
+			);
+			path = Symbol;
 			sourceTree = "<group>";
 		};
 		7C62512E283305DD0055F51C /* Symbol */ = {
@@ -458,12 +472,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C479BCF2790DC2D002845E9 /* AstroColorSamples.swift in Sources */,
+				7C485CE32836EAD800237652 /* SymbolTile.swift in Sources */,
 				7CF86EF928216E4900D554DF /* SampleData.swift in Sources */,
 				7C65DAA4283443BE00E2FA3F /* ColorTile.swift in Sources */,
 				7C37A8D52791F93F00965F29 /* ContentView.swift in Sources */,
 				7C84AB8C28297CBA001D3256 /* SymbolSample.swift in Sources */,
 				7C65DAA22834439300E2FA3F /* ColorGrid.swift in Sources */,
 				7C37A8D32791F93F00965F29 /* AstroSwiftSamplerApp.swift in Sources */,
+				7C485CE12836EACA00237652 /* SymbolGrid.swift in Sources */,
 				7C479BCC2790DBB9002845E9 /* ColorSample.swift in Sources */,
 				7C84AB8A28297CB5001D3256 /* AstroSymbolSamples.swift in Sources */,
 			);
