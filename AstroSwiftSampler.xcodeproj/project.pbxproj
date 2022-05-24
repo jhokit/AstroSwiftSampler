@@ -43,6 +43,7 @@
 		7C65DAA22834439300E2FA3F /* ColorGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C65DAA12834439300E2FA3F /* ColorGrid.swift */; };
 		7C65DAA4283443BE00E2FA3F /* ColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C65DAA3283443BE00E2FA3F /* ColorTile.swift */; };
 		7C65DAA62836B82500E2FA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C65DAA52836B82500E2FA3F /* Assets.xcassets */; };
+		7C75E610283D6B2E00F50298 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C75E60F283D6B2E00F50298 /* UIElements.swift */; };
 		7C7D6F6E282EBB7E0015D7F0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D6F6D282EBB7E0015D7F0 /* UIElements.swift */; };
 		7C7D6F70282EBC340015D7F0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D6F6F282EBC340015D7F0 /* Colors.swift */; };
 		7C7D6F72282EBCB50015D7F0 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D6F71282EBCB50015D7F0 /* Symbols.swift */; };
@@ -97,6 +98,7 @@
 		7C65DAA12834439300E2FA3F /* ColorGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGrid.swift; sourceTree = "<group>"; };
 		7C65DAA3283443BE00E2FA3F /* ColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTile.swift; sourceTree = "<group>"; };
 		7C65DAA52836B82500E2FA3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7C75E60F283D6B2E00F50298 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		7C7D6F6D282EBB7E0015D7F0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		7C7D6F6F282EBC340015D7F0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7C7D6F71282EBCB50015D7F0 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
@@ -146,7 +148,7 @@
 				7C37A8C52791F7A500965F29 /* Assets.xcassets */,
 				7C37A8C82791F7A500965F29 /* AstroSwiftSamplerApp.swift */,
 				7C37A8C92791F7A500965F29 /* ContentView.swift */,
-				7C625136283310C00055F51C /* UIElements.swift */,
+				7C75E60E283D6AF400F50298 /* UI Elements */,
 				7C625135283307970055F51C /* Colors */,
 				7C62512E283305DD0055F51C /* Symbol */,
 			);
@@ -201,6 +203,7 @@
 			children = (
 				7C37A8CF2791F93F00965F29 /* AstroSwiftSamplerApp.swift */,
 				7C37A8D12791F93F00965F29 /* ContentView.swift */,
+				7C75E60F283D6B2E00F50298 /* UIElements.swift */,
 				7C485CE42836EAE200237652 /* Symbol */,
 				7C485CDF2836E42900237652 /* Color */,
 				7C479BA32790D954002845E9 /* macOS.entitlements */,
@@ -266,6 +269,14 @@
 				7C62512F283307080055F51C /* Colors.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		7C75E60E283D6AF400F50298 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				7C625136283310C00055F51C /* UIElements.swift */,
+			);
+			path = "UI Elements";
 			sourceTree = "<group>";
 		};
 		7C84AB812829720F001D3256 /* UI Elements */ = {
@@ -481,6 +492,7 @@
 				7C37A8D32791F93F00965F29 /* AstroSwiftSamplerApp.swift in Sources */,
 				7C485CE12836EACA00237652 /* SymbolGrid.swift in Sources */,
 				7C479BCC2790DBB9002845E9 /* ColorSample.swift in Sources */,
+				7C75E610283D6B2E00F50298 /* UIElements.swift in Sources */,
 				7C84AB8A28297CB5001D3256 /* AstroSymbolSamples.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

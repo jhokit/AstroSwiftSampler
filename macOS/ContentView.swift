@@ -15,7 +15,7 @@ struct ContentView: View {
         NavigationView {
             List{
                 NavigationLink(tag: 1, selection: self.$selected) {
-                    Text("Elements").background(Color.astroUIBackground)
+                    UIElements()
                 } label: {
                     Label("UIElements", systemImage: "slider.horizontal.below.rectangle")
                 }
