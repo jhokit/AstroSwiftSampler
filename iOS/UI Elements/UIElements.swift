@@ -12,10 +12,11 @@ struct UIElements: View {
     @State var toggleValue: Bool = true
     @State private var sliderValue: Double = 100
     @State private var day: String = ""
-    private var prog = Progress(totalUnitCount: 2)
     @State private var isShowingSpinner = false
     @State private var isShowingAlert = false
     @ObservedObject private var fruits = Fruits()
+    @State private var progressValue: Double = 3
+    let progressTotal:Double = 5
 
     var body: some View {
         /* UI Elements */
@@ -35,7 +36,9 @@ struct UIElements: View {
                         Image(systemName: "hare")
                     }
                     
-                    ProgressView(prog)//.padding(.bottom, 30)
+
+                    ProgressView("Progress", value: progressValue, total: progressTotal)
+
                     ProgressView()
                     
                     Link("External Link", destination: URL(string: "https://www.wikipedia.org")!)
@@ -75,7 +78,6 @@ struct UIElements: View {
                 }.listRowBackground(Color.astroUISecondaryGroupedBackground)
 
             }
-            .onAppear(perform: {prog.becomeCurrent(withPendingUnitCount: 1) ; prog.resignCurrent()})
             .alert("Sample Alert", isPresented: $isShowingAlert) {
                 Button("Continue", role: .cancel) {}
             } message: {

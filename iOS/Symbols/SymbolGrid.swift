@@ -11,11 +11,11 @@ import AstroSwiftFoundation
 struct SymbolGrid: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
     @State private var weight:Font.Weight = .regular
-    @State private var font:Font = .title
+    @State private var font:Font = .body
 
     var body: some View {
         
-        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: (horizontalSizeClass == .compact) ? 2 : 3)
+        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: (horizontalSizeClass == .compact) ? 1 : 2)
         LazyVGrid(columns:columns){
             Section("Status"){
                 ForEach(AstroSymbolSamples.statusSymbols, id: \.id) { symbolSample in
@@ -58,7 +58,7 @@ struct SymbolGrid: View {
                             FontButton(currentFont:$font, myFont: .subheadline, myFontName:"Subheadline")
                             FontButton(currentFont:$font, myFont: .body, myFontName:"Body")
                         }
-                        Group // group to get around the swift UI limit of 10 static items, ugh
+                        Group // group to get around the swift UI limit of 10 static items
                         {
                             FontButton(currentFont:$font, myFont: .callout, myFontName:"Callout")
                             FontButton(currentFont:$font, myFont: .footnote, myFontName:"Footnote")
