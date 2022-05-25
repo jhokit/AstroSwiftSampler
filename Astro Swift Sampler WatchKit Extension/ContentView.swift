@@ -11,24 +11,30 @@ import AstroSwiftFoundation
 struct ContentView: View {
     var body: some View {
         List{
-            NavigationLink() {
-               Text("hello")// UIElements()
-            } label: {
-                Label("UIElements", systemImage: "slider.horizontal.below.rectangle")
+            Group{
+                NavigationLink() {
+                   Text("hello")// UIElements()
+                } label: {
+                    Label("UIElements", systemImage: "slider.horizontal.below.rectangle")
+                    }
+                
+                NavigationLink() {
+                    Colors()
+                } label: {
+                    Label("Colors", systemImage: "paintpalette")
+                }
+                
+                NavigationLink() {
+                    Text("hello")//SymbolGrid()
+                } label: {
+                    Label("Symbols", systemImage: "star")
+                }
             }
+            .listRowBackground(RoundedRectangle(cornerRadius: 10.0, style:.continuous) // apply Astro color and re-apply shape
+                .background(Color.clear)
+                .foregroundColor(.astroUISecondaryBackground))
 
-            NavigationLink() {
-                Text("hello")//ColorGrid()
-            } label: {
-                Label("Colors", systemImage: "paintpalette")
-            }
-            
-            NavigationLink() {
-                Text("hello")//SymbolGrid()
-            } label: {
-                Label("Symbols", systemImage: "star")
-            }
-        }.background(Color.astroUIBackground).listRowBackground(Color.astroUISecondaryBackground)
+        }.background(Color.astroUIBackground)
     }
 }
 
