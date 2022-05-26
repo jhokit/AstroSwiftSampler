@@ -14,21 +14,11 @@ struct Colors: View {
         NavigationView{
             ScrollView{
             VStack(spacing:0) {
-                HStack{Text("SEMANTIC").font(.footnote).padding().frame(height:70) ; Spacer()}
+                HStack{Text("Semantic").font(.footnote).padding().frame(height:70) ; Spacer()}
                 if let semanticColors = AstroColorSamples.astroSemantic.colorVariants
                 {
                     ForEach(semanticColors, id: \.id) { colorSample in
-                        let subVariants = colorSample.colorVariants
-                        if (subVariants == nil){
-                            ColorSwatch(sample: colorSample).frame(height:60)
-                        }
-                        else {
-                            NavigationLink(
-                                destination: ColorSampleList(sample: colorSample),
-                                label: {
-                                    ColorSwatch(sample: colorSample).frame(height:60)
-                                })
-                        }
+                        ColorSwatch(sample: colorSample).frame(height:60)
                     }
                 }
                 
@@ -36,22 +26,21 @@ struct Colors: View {
                 if let semanticColors = AstroColorSamples.astroStatus.colorVariants
                 {
                     ForEach(semanticColors, id: \.id) { colorSample in
-                        let subVariants = colorSample.colorVariants
-                        if (subVariants == nil){
-                            ColorSwatch(sample: colorSample).frame(height:60)
-                        }
-                        else {
-                            NavigationLink(
-                                destination: ColorSampleList(sample: colorSample),
-                                label: {
-                                    ColorSwatch(sample: colorSample).frame(height:60)
-                                })
-                        }
+                        ColorSwatch(sample: colorSample).frame(height:60)
                     }
                 }
 
+                
+                HStack{Text("Classification").font(.footnote).padding().frame(height:70) ; Spacer()}
+                if let classificationColors = AstroColorSamples.astroClassification.colorVariants
+                {
+                    ForEach(classificationColors, id: \.id) { colorSample in
+                        ColorSwatch(sample: colorSample).frame(height:60)
+                    }
+                }
 
-                HStack{Text("CORE").font(.footnote).padding() ; Spacer()}
+                
+                HStack{Text("Core").font(.footnote).padding() ; Spacer()}
                 if let coreColors = AstroColorSamples.astroCore.colorVariants
                 {
                     ForEach(coreColors, id: \.id) { colorSample in

@@ -72,6 +72,7 @@
 		7CB99344283EDE1A00DD8A1E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB99343283EDE1A00DD8A1E /* Colors.swift */; };
 		7CB99345283EDEE100DD8A1E /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7CB99346283EDEF400DD8A1E /* ColorSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCA2790DBB9002845E9 /* ColorSample.swift */; };
+		7CCCDD3E283FFC5F00B12EBE /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCDD3D283FFC5F00B12EBE /* ColorSwatch.swift */; };
 		7CE893D52832A85500F2CEF6 /* SymbolGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE893D42832A85500F2CEF6 /* SymbolGrid.swift */; };
 		7CE893D72832A86E00F2CEF6 /* SymbolTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE893D62832A86E00F2CEF6 /* SymbolTile.swift */; };
 		7CE893D92832A88A00F2CEF6 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE893D82832A88A00F2CEF6 /* Symbols.swift */; };
@@ -204,6 +205,8 @@
 		7C84AB8628297B61001D3256 /* SymbolSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolSample.swift; sourceTree = "<group>"; };
 		7C84AB8828297BAD001D3256 /* AstroSymbolSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroSymbolSamples.swift; sourceTree = "<group>"; };
 		7CB99343283EDE1A00DD8A1E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7CCCDD3D283FFC5F00B12EBE /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
+		7CCCDD3F2840001600B12EBE /* Astro-Swift-Sampler-WatchKit-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Astro-Swift-Sampler-WatchKit-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		7CE893D42832A85500F2CEF6 /* SymbolGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
 		7CE893D62832A86E00F2CEF6 /* SymbolTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTile.swift; sourceTree = "<group>"; };
 		7CE893D82832A88A00F2CEF6 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
@@ -412,6 +415,7 @@
 		7C75E61A283D7C1500F50298 /* Astro Swift Sampler WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				7CCCDD3F2840001600B12EBE /* Astro-Swift-Sampler-WatchKit-App-Info.plist */,
 				7C75E61B283D7C1600F50298 /* Assets.xcassets */,
 			);
 			path = "Astro Swift Sampler WatchKit App";
@@ -423,6 +427,7 @@
 				7C75E626283D7C1600F50298 /* AstroSwiftSamplerApp.swift */,
 				7C75E628283D7C1600F50298 /* ContentView.swift */,
 				7CB99343283EDE1A00DD8A1E /* Colors.swift */,
+				7CCCDD3D283FFC5F00B12EBE /* ColorSwatch.swift */,
 				7C75E62A283D7C1600F50298 /* NotificationController.swift */,
 				7C75E62C283D7C1700F50298 /* NotificationView.swift */,
 				7C75E62E283D7C1700F50298 /* ComplicationController.swift */,
@@ -836,6 +841,7 @@
 				7CB99346283EDEF400DD8A1E /* ColorSample.swift in Sources */,
 				7CB99345283EDEE100DD8A1E /* AstroColorSamples.swift in Sources */,
 				7C75E62D283D7C1700F50298 /* NotificationView.swift in Sources */,
+				7CCCDD3E283FFC5F00B12EBE /* ColorSwatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1193,9 +1199,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Astro Swift Sampler WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Swift Sampler WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Astro_Swift_Sampler_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKWatchOnly = YES;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1225,9 +1231,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Astro Swift Sampler WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Swift Sampler WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Astro_Swift_Sampler_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKWatchOnly = YES;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1257,8 +1263,10 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Astro_Swift_Sampler_WatchKit_Extension;
+				INFOPLIST_FILE = "Astro-Swift-Sampler-WatchKit-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Swift Sampler WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.rocketcom.Astro-Swift-Sampler";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1282,8 +1290,10 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Astro_Swift_Sampler_WatchKit_Extension;
+				INFOPLIST_FILE = "Astro-Swift-Sampler-WatchKit-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Swift Sampler WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.rocketcom.Astro-Swift-Sampler";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";

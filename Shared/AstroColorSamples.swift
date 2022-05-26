@@ -193,6 +193,14 @@ struct AstroColorSamples
         ColorSample(name:"Serious", color: Color.astroStatusSerious),
         ColorSample(name:"Critical", color: Color.astroStatusCritical),
     ])
-
+    
+    static var astroClassification:ColorSample = ColorSample(name: "Classification Colors", color: Color.astroStatusNormal, colorVariants: [
+        ColorSample(name:"Unclassified", color: Color.astroClassificationUnclassified),
+        ColorSample(name:"CUI", color: Color.astroClassificationCUI),
+        ColorSample(name:"Confidential", color: Color.astroClassificationConfidential),
+        ColorSample(name:"Secret", color: Color.astroClassificationSecret),
+        ColorSample(name:"Top Secret", color: Color.astroClassificationTopSecret),
+        ColorSample(name:"Top Secret SCI", color: Color.astroClassificationTopSecretSCI),
+    ])
 }
 

@@ -37,6 +37,15 @@ struct ColorGrid: View {
                     }
                 }
                 
+                Section("Status"){
+                    if let colorVariants = AstroColorSamples.astroClassification.colorVariants
+                    {
+                        ForEach(colorVariants, id: \.id) { colorSample in
+                            ColorTile(sample: colorSample, weight: $weight, font:$font)
+                        }
+                    }
+                }
+
                 Section("Core"){
                     if let colorVariants = AstroColorSamples.astroCore.colorVariants
                     {
