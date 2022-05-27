@@ -25,7 +25,7 @@ struct ContentView: View {
                 }
                 
                 NavigationLink() {
-                    Text("hello")//SymbolGrid()
+                    Symbols()
                 } label: {
                     Label("Symbols", systemImage: "star")
                 }

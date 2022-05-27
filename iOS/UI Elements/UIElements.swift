@@ -6,17 +6,17 @@
 //
 
 import SwiftUI
+import AstroSwiftFoundation
 
 struct UIElements: View {
     @State private var selected: Int? = nil
     @State var toggleValue: Bool = true
     @State private var sliderValue: Double = 100
-    @State private var day: String = ""
-    @State private var isShowingSpinner = false
     @State private var isShowingAlert = false
     @ObservedObject private var fruits = Fruits()
     @State private var progressValue: Double = 3
     let progressTotal:Double = 5
+    @State private var status:AstroStatus = AstroStatus.Normal
 
     var body: some View {
         /* UI Elements */
@@ -24,10 +24,17 @@ struct UIElements: View {
             Form {
                 
                 Section("Controls"){
+                    
+                    // Toggle and Status
                     Toggle(isOn: $toggleValue) {
                         Text("Toggle")
                     }
-                    
+                    HStack{
+                        Text("Status")
+                        Status(instatus:$status)
+                        Spacer()
+                    }
+
                     Slider(value: $sliderValue, in: 0...200) {
                         Text("Slider")
                     } minimumValueLabel: {
@@ -77,6 +84,14 @@ struct UIElements: View {
                     }.listRowBackground(selected == 6 ? Color.astroUITertiaryGroupedBackground : Color.astroUISecondaryGroupedBackground)
                 }.listRowBackground(Color.astroUISecondaryGroupedBackground)
 
+            }
+            .onChange(of: toggleValue) { newValue in // Link the change of the toggle control to the status control
+                if (toggleValue){
+                    status = .Normal
+                }
+                else {
+                    status = .Off
+                }
             }
             .alert("Sample Alert", isPresented: $isShowingAlert) {
                 Button("Continue", role: .cancel) {}

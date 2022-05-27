@@ -31,8 +31,3 @@ struct SymbolTile: View {
     }
 }
 
-//struct SymbolTile_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SymbolTile()
-//    }
-//}

@@ -69,6 +69,10 @@
 		7C84AB8B28297CB6001D3256 /* AstroSymbolSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8828297BAD001D3256 /* AstroSymbolSamples.swift */; };
 		7C84AB8C28297CBA001D3256 /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
 		7C84AB8D28297CBA001D3256 /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
+		7C8C8CBE28416FDF0014E9AD /* SymbolRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C8CBC28416FDB0014E9AD /* SymbolRow.swift */; };
+		7C8C8CC028416FFB0014E9AD /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C8CBF28416FFB0014E9AD /* Symbols.swift */; };
+		7C8C8CC2284171EF0014E9AD /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
+		7C8C8CC3284171F50014E9AD /* AstroSymbolSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8828297BAD001D3256 /* AstroSymbolSamples.swift */; };
 		7CB9933F283EDC4200DD8A1E /* Astro Swift Sampler WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7C75E616283D7C1500F50298 /* Astro Swift Sampler WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7CB99344283EDE1A00DD8A1E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB99343283EDE1A00DD8A1E /* Colors.swift */; };
 		7CB99345283EDEE100DD8A1E /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
@@ -206,6 +210,11 @@
 		7C84AB84282972AA001D3256 /* SymbolGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
 		7C84AB8628297B61001D3256 /* SymbolSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolSample.swift; sourceTree = "<group>"; };
 		7C84AB8828297BAD001D3256 /* AstroSymbolSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroSymbolSamples.swift; sourceTree = "<group>"; };
+		7C8C8CBC28416FDB0014E9AD /* SymbolRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolRow.swift; sourceTree = "<group>"; };
+		7C8C8CBF28416FFB0014E9AD /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		7C8C8CC4284178CC0014E9AD /* AstroSwiftSampler--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AstroSwiftSampler--iOS--Info.plist"; sourceTree = "<group>"; };
+		7C8C8CC5284179070014E9AD /* AstroSwiftSampler--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AstroSwiftSampler--macOS--Info.plist"; sourceTree = "<group>"; };
+		7C8C8CC62841792C0014E9AD /* AstroSwiftSampler--tvOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AstroSwiftSampler--tvOS--Info.plist"; sourceTree = "<group>"; };
 		7CB99343283EDE1A00DD8A1E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7CCCDD3D283FFC5F00B12EBE /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
 		7CCCDD3F2840001600B12EBE /* Astro-Swift-Sampler-WatchKit-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Astro-Swift-Sampler-WatchKit-App-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -276,8 +285,8 @@
 				7C37A8C82791F7A500965F29 /* AstroSwiftSamplerApp.swift */,
 				7C37A8C92791F7A500965F29 /* ContentView.swift */,
 				7C75E60E283D6AF400F50298 /* UI Elements */,
-				7C625135283307970055F51C /* Colors */,
 				7C62512E283305DD0055F51C /* Symbol */,
+				7C625135283307970055F51C /* Color */,
 			);
 			path = tvOS;
 			sourceTree = "<group>";
@@ -293,6 +302,9 @@
 		7C479B8E2790D954002845E9 = {
 			isa = PBXGroup;
 			children = (
+				7C8C8CC62841792C0014E9AD /* AstroSwiftSampler--tvOS--Info.plist */,
+				7C8C8CC5284179070014E9AD /* AstroSwiftSampler--macOS--Info.plist */,
+				7C8C8CC4284178CC0014E9AD /* AstroSwiftSampler--iOS--Info.plist */,
 				7C479BDB2790E04D002845E9 /* Shared */,
 				7C479B932790D954002845E9 /* iOS */,
 				7C479BA22790D954002845E9 /* macOS */,
@@ -312,7 +324,7 @@
 				7C479B942790D954002845E9 /* AstroSwiftSamplerApp.swift */,
 				7C479B952790D954002845E9 /* ContentView.swift */,
 				7C84AB812829720F001D3256 /* UI Elements */,
-				7C84AB832829724D001D3256 /* Symbols */,
+				7C84AB832829724D001D3256 /* Symbol */,
 				7C84AB8228297243001D3256 /* Colors */,
 				7C479B962790D954002845E9 /* Assets.xcassets */,
 			);
@@ -338,7 +350,7 @@
 			children = (
 				7C37A8CF2791F93F00965F29 /* AstroSwiftSamplerApp.swift */,
 				7C37A8D12791F93F00965F29 /* ContentView.swift */,
-				7C75E60F283D6B2E00F50298 /* UIElements.swift */,
+				7C8C8CBA28416F8E0014E9AD /* UI Elements */,
 				7C485CE42836EAE200237652 /* Symbol */,
 				7C485CDF2836E42900237652 /* Color */,
 				7C479BA32790D954002845E9 /* macOS.entitlements */,
@@ -396,14 +408,14 @@
 			path = Symbol;
 			sourceTree = "<group>";
 		};
-		7C625135283307970055F51C /* Colors */ = {
+		7C625135283307970055F51C /* Color */ = {
 			isa = PBXGroup;
 			children = (
 				7C6251312833077C0055F51C /* ColorGrid.swift */,
 				7C6251332833078F0055F51C /* ColorTile.swift */,
 				7C62512F283307080055F51C /* Colors.swift */,
 			);
-			path = Colors;
+			path = Color;
 			sourceTree = "<group>";
 		};
 		7C70D9E628411EBE00D14813 /* Color */ = {
@@ -437,7 +449,8 @@
 			children = (
 				7C75E626283D7C1600F50298 /* AstroSwiftSamplerApp.swift */,
 				7C75E628283D7C1600F50298 /* ContentView.swift */,
-				7C70D9E728411FC700D14813 /* UIElements.swift */,
+				7C8C8CBB28416FA00014E9AD /* UI Elements */,
+				7C8C8CC1284170000014E9AD /* Symbol */,
 				7C70D9E628411EBE00D14813 /* Color */,
 				7C75E62A283D7C1600F50298 /* NotificationController.swift */,
 				7C75E62C283D7C1700F50298 /* NotificationView.swift */,
@@ -498,14 +511,39 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
-		7C84AB832829724D001D3256 /* Symbols */ = {
+		7C84AB832829724D001D3256 /* Symbol */ = {
 			isa = PBXGroup;
 			children = (
 				7C84AB84282972AA001D3256 /* SymbolGrid.swift */,
 				7C3DE59D282AE40500C5A02B /* SymbolTile.swift */,
 				7C7D6F71282EBCB50015D7F0 /* Symbols.swift */,
 			);
-			path = Symbols;
+			path = Symbol;
+			sourceTree = "<group>";
+		};
+		7C8C8CBA28416F8E0014E9AD /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				7C75E60F283D6B2E00F50298 /* UIElements.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		7C8C8CBB28416FA00014E9AD /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				7C70D9E728411FC700D14813 /* UIElements.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		7C8C8CC1284170000014E9AD /* Symbol */ = {
+			isa = PBXGroup;
+			children = (
+				7C8C8CBF28416FFB0014E9AD /* Symbols.swift */,
+				7C8C8CBC28416FDB0014E9AD /* SymbolRow.swift */,
+			);
+			path = Symbol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -850,10 +888,14 @@
 				7C75E62F283D7C1700F50298 /* ComplicationController.swift in Sources */,
 				7C70D9E828411FC700D14813 /* UIElements.swift in Sources */,
 				7C75E627283D7C1600F50298 /* AstroSwiftSamplerApp.swift in Sources */,
+				7C8C8CC2284171EF0014E9AD /* SymbolSample.swift in Sources */,
 				7CB99346283EDEF400DD8A1E /* ColorSample.swift in Sources */,
+				7C8C8CBE28416FDF0014E9AD /* SymbolRow.swift in Sources */,
 				7CB99345283EDEE100DD8A1E /* AstroColorSamples.swift in Sources */,
+				7C8C8CC028416FFB0014E9AD /* Symbols.swift in Sources */,
 				7C75E62D283D7C1700F50298 /* NotificationView.swift in Sources */,
 				7CCCDD3E283FFC5F00B12EBE /* ColorSwatch.swift in Sources */,
+				7C8C8CC3284171F50014E9AD /* AstroSymbolSamples.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1032,6 +1074,7 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AstroSwiftSampler--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1062,6 +1105,7 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AstroSwiftSampler--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1097,6 +1141,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AstroSwiftSampler--macOS--Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1127,6 +1172,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AstroSwiftSampler--macOS--Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1153,6 +1199,7 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AstroSwiftSampler--tvOS--Info.plist";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1181,6 +1228,7 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AstroSwiftSampler--tvOS--Info.plist";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
