@@ -48,7 +48,7 @@ struct Colors: View {
                                     ForEach(subVariants, id: \.id) { colorSample in
                                         ColorSwatch(sample: colorSample)
                                     }
-                                }.background(Color.astroUIBackground)
+                                }
                                     .navigationTitle(colorSample.name)
                             }
                             label: {
@@ -65,7 +65,7 @@ struct Colors: View {
                     }
                 }
             }
-        }.background(Color.astroUIBackground)
+        }
         .navigationTitle("Colors")
     }
 }

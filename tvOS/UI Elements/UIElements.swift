@@ -14,7 +14,8 @@ struct UIElements: View {
     @State var toggleValue: Bool = true
     @State private var selected: Int? = nil
     @State private var day: String = ""
-    private var prog = Progress(totalUnitCount: 2)
+    @State private var progressValue: Double = 3
+    let progressTotal:Double = 5
     @State private var isShowingSpinner = false
     @State private var isShowingAlert = false
     @ObservedObject private var fruits = Fruits()
@@ -25,7 +26,7 @@ struct UIElements: View {
             
             // Left side, giant image filler
             ZStack {
-                Image(systemName: "slider.horizontal.below.rectangle").resizable().frame(width:400, height:400).scaledToFill()
+                Image(systemName: "switch.2").resizable().frame(width:400, height:400).scaledToFill().foregroundColor(Color(UIColor.secondaryLabel))
             }.frame(width:1920/2, height:400)
             
             // Right side, a form of many UI Elements
@@ -43,7 +44,7 @@ struct UIElements: View {
                 }
                 
                 // Two kinds of progress
-                ProgressView(prog)//.padding(.bottom, 30)
+                ProgressView("Progress", value: progressValue, total: progressTotal)
                 ProgressView()
                 
                 // Link
@@ -54,7 +55,6 @@ struct UIElements: View {
                     isShowingAlert = true
                 }
             }
-            .onAppear(perform: {prog.becomeCurrent(withPendingUnitCount: 1) ; prog.resignCurrent()})
             .alert("Sample Alert", isPresented: $isShowingAlert) {
                 Button("Continue", role: .cancel) {}
             } message: {
@@ -64,7 +64,7 @@ struct UIElements: View {
         }.navigationBarTitle("Form")
         .background(Color.astroUIBackground) // Set the background color for the whole page
         .tabItem {
-            Image(systemName: "slider.horizontal.below.rectangle")
+            Image(systemName: "switch.2")
             Text("UI Elements")
         }
         .onChange(of: toggleValue) { newValue in // Link the change of the toggle control to the status control

@@ -88,7 +88,7 @@ struct UIElements: View {
             .navigationBarTitle("UI Elements")
         }
         .tabItem {
-            Image(systemName: "slider.horizontal.below.square.filled.and.square")
+            Image(systemName: "switch.2")
             Text("UI Elements")
         }
     }

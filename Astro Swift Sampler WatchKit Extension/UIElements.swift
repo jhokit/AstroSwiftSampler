@@ -1,9 +1,11 @@
 //
 //  UIElements.swift
-//  AstroSwiftSampler (macOS)
+//  Astro Swift Sampler WatchKit Extension
 //
-//  Created by rocketjeff on 5/24/22.
+//  Created by rocketjeff on 5/27/22.
 //
+
+import SwiftUI
 
 import SwiftUI
 import AstroSwiftFoundation
@@ -19,17 +21,13 @@ struct UIElements: View {
     
     var body: some View {
         
-        VStack {
-            Form {
+            List {
                 // Text
                 Group{
                     TextField("Name:", text: $name).frame(maxWidth:300)
                     SecureField("Password:", text: $password).frame(maxWidth:300)
-                    Divider()
-                }
 
-                // Toggle and Status
-                Group{
+                    // Toggle and Status
                     Toggle(isOn: $toggleValue) {
                         Text("Toggle")
                     }
@@ -38,33 +36,25 @@ struct UIElements: View {
                     Text("Status")
                     Status(instatus:$status)
                     Spacer()
-                            
                     }
-                    Divider()
-                }
 
-                // Two kinds of progress
-                Group{
+                    // Two kinds of progress
                     ProgressView("Progress", value: progressValue, total: progressTotal)
-                    ProgressView().padding(.bottom, 8)
-                    Divider()
-                }
+                    ProgressView()
                 
-                // Link
-                Group{
+                    // Link
                     Link("External Link", destination: URL(string: "https://www.astrouxds.com")!)
-                    Divider()
-                }
                 
                 
-                // Button and Alert
-                Group{
+                    // Button and Alert
                     Button(LocalizedStringKey("Show Alert")) {
                         isShowingAlert = true
                     }
                 }
-
-            }.padding()
+                .listRowBackground(RoundedRectangle(cornerRadius: 10.0, style:.continuous) // apply Astro color and re-apply shape, this works on Group but not List
+                .background(Color.clear)
+                .foregroundColor(.astroUIBackground))
+            }
             .alert("Sample Alert", isPresented: $isShowingAlert) {
                 Button("Continue", role: .cancel) {}
             } message: {
@@ -77,10 +67,8 @@ struct UIElements: View {
                 else {
                     status = .Off
                 }
-            }.padding()
-            Spacer()
-        } .background(Color.astroUIBackground) // Set the background color for the whole page
-
-        
+            }
+            .navigationTitle("UI Elements")
     }
+        
 }

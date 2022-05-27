@@ -43,6 +43,7 @@
 		7C65DAA22834439300E2FA3F /* ColorGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C65DAA12834439300E2FA3F /* ColorGrid.swift */; };
 		7C65DAA4283443BE00E2FA3F /* ColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C65DAA3283443BE00E2FA3F /* ColorTile.swift */; };
 		7C65DAA62836B82500E2FA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C65DAA52836B82500E2FA3F /* Assets.xcassets */; };
+		7C70D9E828411FC700D14813 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70D9E728411FC700D14813 /* UIElements.swift */; };
 		7C75E610283D6B2E00F50298 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C75E60F283D6B2E00F50298 /* UIElements.swift */; };
 		7C75E61C283D7C1600F50298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C75E61B283D7C1600F50298 /* Assets.xcassets */; };
 		7C75E622283D7C1600F50298 /* Astro Swift Sampler WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7C75E621283D7C1600F50298 /* Astro Swift Sampler WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -180,6 +181,7 @@
 		7C65DAA12834439300E2FA3F /* ColorGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGrid.swift; sourceTree = "<group>"; };
 		7C65DAA3283443BE00E2FA3F /* ColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTile.swift; sourceTree = "<group>"; };
 		7C65DAA52836B82500E2FA3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7C70D9E728411FC700D14813 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		7C75E60F283D6B2E00F50298 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		7C75E616283D7C1500F50298 /* Astro Swift Sampler WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astro Swift Sampler WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C75E61B283D7C1600F50298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -404,6 +406,15 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		7C70D9E628411EBE00D14813 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				7CB99343283EDE1A00DD8A1E /* Colors.swift */,
+				7CCCDD3D283FFC5F00B12EBE /* ColorSwatch.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
 		7C75E60E283D6AF400F50298 /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,8 +437,8 @@
 			children = (
 				7C75E626283D7C1600F50298 /* AstroSwiftSamplerApp.swift */,
 				7C75E628283D7C1600F50298 /* ContentView.swift */,
-				7CB99343283EDE1A00DD8A1E /* Colors.swift */,
-				7CCCDD3D283FFC5F00B12EBE /* ColorSwatch.swift */,
+				7C70D9E728411FC700D14813 /* UIElements.swift */,
+				7C70D9E628411EBE00D14813 /* Color */,
 				7C75E62A283D7C1600F50298 /* NotificationController.swift */,
 				7C75E62C283D7C1700F50298 /* NotificationView.swift */,
 				7C75E62E283D7C1700F50298 /* ComplicationController.swift */,
@@ -837,6 +848,7 @@
 				7CB99344283EDE1A00DD8A1E /* Colors.swift in Sources */,
 				7C75E629283D7C1600F50298 /* ContentView.swift in Sources */,
 				7C75E62F283D7C1700F50298 /* ComplicationController.swift in Sources */,
+				7C70D9E828411FC700D14813 /* UIElements.swift in Sources */,
 				7C75E627283D7C1600F50298 /* AstroSwiftSamplerApp.swift in Sources */,
 				7CB99346283EDEF400DD8A1E /* ColorSample.swift in Sources */,
 				7CB99345283EDEE100DD8A1E /* AstroColorSamples.swift in Sources */,

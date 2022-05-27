@@ -12,7 +12,7 @@ struct AstroSwiftSamplerApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                ContentView().tint(.astroUIAccent).accentColor(.astroUIAccent)//  must also set tint color in Assets
             }
         }
 
