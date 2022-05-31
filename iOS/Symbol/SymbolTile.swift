@@ -24,7 +24,7 @@ struct SymbolTile: View {
                 {
                     Text(Image.astroImage(sample.name)).fontWeight(weight).font(font).padding(.leading,8)
                 }
-                Text(sample.name).font(font)
+                Text(sample.name).fontWeight(weight).font(font)
                 Spacer()
             }
         }.frame(minHeight:70)
