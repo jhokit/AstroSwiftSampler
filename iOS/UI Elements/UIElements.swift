@@ -25,6 +25,8 @@ struct UIElements: View {
                 
                 Section("Controls"){
                     
+                   // Tag(title:"test")
+
                     // Toggle and Status
                     Toggle(isOn: $toggleValue) {
                         Text("Toggle")

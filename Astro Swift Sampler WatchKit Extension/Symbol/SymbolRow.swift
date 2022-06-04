@@ -23,7 +23,7 @@ struct SymbolRow: View {
                 }
                 Text(sample.name)
                 Spacer()
-            }
+            }.font(.body)
     }
 }
 

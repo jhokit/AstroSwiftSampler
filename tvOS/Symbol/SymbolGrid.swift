@@ -10,11 +10,11 @@ import SwiftUI
 struct SymbolGrid: View {
 
     @State private var weight:Font.Weight = .regular
-    @State private var font:Font = .title
+    @State private var font:Font = .body
     
     var body: some View {
         
-        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 4)
+        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 3)
         LazyVGrid(columns:columns, spacing: 18){
             Section("Status"){
                 ForEach(AstroSymbolSamples.statusSymbols, id: \.id) { symbolSample in

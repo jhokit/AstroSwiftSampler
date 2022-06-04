@@ -16,17 +16,18 @@ struct SymbolTile: View {
         
         ZStack{
             Rectangle().fill(Color.astroUISecondaryBackground).cornerRadius(6)
-            VStack{
+            HStack(spacing:8){
                 if let status = sample.status
                 {
-                    Text(Image.imageForAstroStatus(status)).foregroundColor(Color.colorForAstroStatus(status)).fontWeight(weight).font(font).padding(.top,8)
+                    Text(Image.imageForAstroStatus(status)).foregroundColor(Color.colorForAstroStatus(status)).fontWeight(weight).font(font)//.padding(.top,8)
                 }
                 else
                 {
-                    Text(Image.astroImage(sample.name)).fontWeight(weight).font(font).padding(.top,8)
+                    Text(Image.astroImage(sample.name)).fontWeight(weight).font(font)//.padding(.top,8)
                 }
-                Text(sample.name).fontWeight(weight).font(.caption).padding(.bottom,8)
-            }
+                Text(sample.name).fontWeight(weight).font(.body)//.padding(.bottom,8)
+                Spacer()
+            }.padding(8).padding(.leading,10)
         }.frame(minHeight:90)
     }
 }

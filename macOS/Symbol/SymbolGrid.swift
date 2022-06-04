@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SymbolGrid: View {
     @State private var weight:Font.Weight = .regular
-    @State private var font:Font = .title
+    @State private var font:Font = .body
     
     var body: some View {
         
