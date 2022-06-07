@@ -212,12 +212,11 @@
 		7C84AB8828297BAD001D3256 /* AstroSymbolSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroSymbolSamples.swift; sourceTree = "<group>"; };
 		7C8C8CBC28416FDB0014E9AD /* SymbolRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolRow.swift; sourceTree = "<group>"; };
 		7C8C8CBF28416FFB0014E9AD /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
-		7C8C8CC4284178CC0014E9AD /* AstroSwiftSampler--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AstroSwiftSampler--iOS--Info.plist"; sourceTree = "<group>"; };
-		7C8C8CC5284179070014E9AD /* AstroSwiftSampler--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AstroSwiftSampler--macOS--Info.plist"; sourceTree = "<group>"; };
-		7C8C8CC62841792C0014E9AD /* AstroSwiftSampler--tvOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AstroSwiftSampler--tvOS--Info.plist"; sourceTree = "<group>"; };
+		7C8C8CC4284178CC0014E9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C8C8CC5284179070014E9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C8C8CC62841792C0014E9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CB99343283EDE1A00DD8A1E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7CCCDD3D283FFC5F00B12EBE /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
-		7CCCDD3F2840001600B12EBE /* Astro-Swift-Sampler-WatchKit-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Astro-Swift-Sampler-WatchKit-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		7CE893D42832A85500F2CEF6 /* SymbolGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
 		7CE893D62832A86E00F2CEF6 /* SymbolTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTile.swift; sourceTree = "<group>"; };
 		7CE893D82832A88A00F2CEF6 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
@@ -287,7 +286,7 @@
 				7C62512E283305DD0055F51C /* Symbol */,
 				7C625135283307970055F51C /* Color */,
 				7C37A8C52791F7A500965F29 /* Assets.xcassets */,
-				7C8C8CC62841792C0014E9AD /* AstroSwiftSampler--tvOS--Info.plist */,
+				7C8C8CC62841792C0014E9AD /* Info.plist */,
 			);
 			path = tvOS;
 			sourceTree = "<group>";
@@ -325,7 +324,7 @@
 				7C84AB832829724D001D3256 /* Symbol */,
 				7C84AB8228297243001D3256 /* Colors */,
 				7C479B962790D954002845E9 /* Assets.xcassets */,
-				7C8C8CC4284178CC0014E9AD /* AstroSwiftSampler--iOS--Info.plist */,
+				7C8C8CC4284178CC0014E9AD /* Info.plist */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -354,7 +353,7 @@
 				7C485CDF2836E42900237652 /* Color */,
 				7C479BA32790D954002845E9 /* macOS.entitlements */,
 				7C65DAA52836B82500E2FA3F /* Assets.xcassets */,
-				7C8C8CC5284179070014E9AD /* AstroSwiftSampler--macOS--Info.plist */,
+				7C8C8CC5284179070014E9AD /* Info.plist */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -439,7 +438,6 @@
 			isa = PBXGroup;
 			children = (
 				7C75E61B283D7C1600F50298 /* Assets.xcassets */,
-				7CCCDD3F2840001600B12EBE /* Astro-Swift-Sampler-WatchKit-App-Info.plist */,
 			);
 			path = "Astro Swift Sampler WatchKit App";
 			sourceTree = "<group>";
@@ -1076,7 +1074,7 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AstroSwiftSampler--iOS--Info.plist";
+				INFOPLIST_FILE = iOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Sampler";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1108,7 +1106,7 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AstroSwiftSampler--iOS--Info.plist";
+				INFOPLIST_FILE = iOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Sampler";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1145,7 +1143,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AstroSwiftSampler--macOS--Info.plist";
+				INFOPLIST_FILE = macOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Sampler";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1177,7 +1175,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AstroSwiftSampler--macOS--Info.plist";
+				INFOPLIST_FILE = macOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Sampler";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1205,7 +1203,7 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AstroSwiftSampler--tvOS--Info.plist";
+				INFOPLIST_FILE = tvOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Sampler";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
@@ -1235,7 +1233,7 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AstroSwiftSampler--tvOS--Info.plist";
+				INFOPLIST_FILE = tvOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Sampler";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
@@ -1331,7 +1329,7 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Astro_Swift_Sampler_WatchKit_Extension;
-				INFOPLIST_FILE = "Astro-Swift-Sampler-WatchKit-App-Info.plist";
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Sampler";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.rocketcom.Astro-Swift-Sampler";
@@ -1358,7 +1356,7 @@
 				DEVELOPMENT_TEAM = H4S8Z5V45T;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Astro_Swift_Sampler_WatchKit_Extension;
-				INFOPLIST_FILE = "Astro-Swift-Sampler-WatchKit-App-Info.plist";
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Sampler";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.rocketcom.Astro-Swift-Sampler";
