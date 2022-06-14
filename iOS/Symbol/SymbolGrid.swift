@@ -14,7 +14,6 @@ struct SymbolGrid: View {
     @State private var font:Font = .body
 
     var body: some View {
-        
         let columns:[GridItem] = Array(repeating: .init(.flexible()), count: (horizontalSizeClass == .compact) ? 1 : 2)
         LazyVGrid(columns:columns){
             Section("Status"){

@@ -13,11 +13,24 @@
 		7C1716D5281C5A5E00EA3DFA /* InsetGrouped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1716D4281C5A5E00EA3DFA /* InsetGrouped.swift */; };
 		7C1716D7281C6F7B00EA3DFA /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1716D6281C6F7B00EA3DFA /* FormView.swift */; };
 		7C37A8CA2791F7A500965F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C37A8C52791F7A500965F29 /* Assets.xcassets */; };
-		7C37A8CB2791F7A500965F29 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C37A8C72791F7A500965F29 /* Preview Assets.xcassets */; };
 		7C37A8CC2791F7A500965F29 /* AstroSwiftSamplerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37A8C82791F7A500965F29 /* AstroSwiftSamplerApp.swift */; };
 		7C37A8CD2791F7A500965F29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37A8C92791F7A500965F29 /* ContentView.swift */; };
 		7C37A8D32791F93F00965F29 /* AstroSwiftSamplerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37A8CF2791F93F00965F29 /* AstroSwiftSamplerApp.swift */; };
 		7C37A8D52791F93F00965F29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37A8D12791F93F00965F29 /* ContentView.swift */; };
+		7C3DCFB02853EB0E00CEEEC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C3DCFA42853EB0E00CEEEC5 /* Preview Assets.xcassets */; };
+		7C3DCFB12853EB0E00CEEEC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C3DCFA42853EB0E00CEEEC5 /* Preview Assets.xcassets */; };
+		7C3DCFB22853EB0E00CEEEC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C3DCFA42853EB0E00CEEEC5 /* Preview Assets.xcassets */; };
+		7C3DCFB32853EB0E00CEEEC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C3DCFA42853EB0E00CEEEC5 /* Preview Assets.xcassets */; };
+		7C3DCFC02853F12D00CEEEC5 /* ColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BDE2790E4B6002845E9 /* ColorTile.swift */; };
+		7C3DCFC42853F43500CEEEC5 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DCFC32853F43500CEEEC5 /* SampleData.swift */; };
+		7C3DCFC52853F43500CEEEC5 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DCFC32853F43500CEEEC5 /* SampleData.swift */; };
+		7C3DCFC62853F43500CEEEC5 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DCFC32853F43500CEEEC5 /* SampleData.swift */; };
+		7C3DCFC72853F43500CEEEC5 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DCFC32853F43500CEEEC5 /* SampleData.swift */; };
+		7C3DCFCC2853FC6300CEEEC5 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DCFCB2853FC6300CEEEC5 /* Sizes.swift */; };
+		7C3DCFCD2853FC6300CEEEC5 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DCFCB2853FC6300CEEEC5 /* Sizes.swift */; };
+		7C3DCFCE2853FC6300CEEEC5 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DCFCB2853FC6300CEEEC5 /* Sizes.swift */; };
+		7C3DCFCF2853FC6300CEEEC5 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DCFCB2853FC6300CEEEC5 /* Sizes.swift */; };
+		7C3DCFD02854042200CEEEC5 /* SymbolTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DE59D282AE40500C5A02B /* SymbolTile.swift */; };
 		7C3DE59E282AE40500C5A02B /* SymbolTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DE59D282AE40500C5A02B /* SymbolTile.swift */; };
 		7C479BA42790D954002845E9 /* AstroSwiftSamplerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479B942790D954002845E9 /* AstroSwiftSamplerApp.swift */; };
 		7C479BA62790D954002845E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479B952790D954002845E9 /* ContentView.swift */; };
@@ -32,14 +45,13 @@
 		7C479BD42790DEE1002845E9 /* AstroSwiftCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7C479BD32790DEE1002845E9 /* AstroSwiftCore */; };
 		7C479BDC2790E069002845E9 /* ColorSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCA2790DBB9002845E9 /* ColorSample.swift */; };
 		7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
-		7C479BDF2790E4B6002845E9 /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BDE2790E4B6002845E9 /* ColorSwatch.swift */; };
+		7C479BDF2790E4B6002845E9 /* ColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BDE2790E4B6002845E9 /* ColorTile.swift */; };
 		7C485CE12836EACA00237652 /* SymbolGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C485CE02836EACA00237652 /* SymbolGrid.swift */; };
 		7C485CE32836EAD800237652 /* SymbolTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C485CE22836EAD800237652 /* SymbolTile.swift */; };
 		7C625130283307080055F51C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62512F283307080055F51C /* Colors.swift */; };
 		7C6251322833077C0055F51C /* ColorGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6251312833077C0055F51C /* ColorGrid.swift */; };
-		7C6251342833078F0055F51C /* ColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6251332833078F0055F51C /* ColorTile.swift */; };
 		7C625137283310C00055F51C /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C625136283310C00055F51C /* UIElements.swift */; };
-		7C65DAA02834420500E2FA3F /* ColorSampleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BE02790E66A002845E9 /* ColorSampleList.swift */; };
+		7C65DAA02834420500E2FA3F /* ColorGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BE02790E66A002845E9 /* ColorGrid.swift */; };
 		7C65DAA22834439300E2FA3F /* ColorGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C65DAA12834439300E2FA3F /* ColorGrid.swift */; };
 		7C65DAA4283443BE00E2FA3F /* ColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C65DAA3283443BE00E2FA3F /* ColorTile.swift */; };
 		7C65DAA62836B82500E2FA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C65DAA52836B82500E2FA3F /* Assets.xcassets */; };
@@ -79,11 +91,7 @@
 		7CB99346283EDEF400DD8A1E /* ColorSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCA2790DBB9002845E9 /* ColorSample.swift */; };
 		7CCCDD3E283FFC5F00B12EBE /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCDD3D283FFC5F00B12EBE /* ColorSwatch.swift */; };
 		7CE893D52832A85500F2CEF6 /* SymbolGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE893D42832A85500F2CEF6 /* SymbolGrid.swift */; };
-		7CE893D72832A86E00F2CEF6 /* SymbolTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE893D62832A86E00F2CEF6 /* SymbolTile.swift */; };
 		7CE893D92832A88A00F2CEF6 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE893D82832A88A00F2CEF6 /* Symbols.swift */; };
-		7CF86EF828216E4900D554DF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF86EF728216E4900D554DF /* SampleData.swift */; };
-		7CF86EF928216E4900D554DF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF86EF728216E4900D554DF /* SampleData.swift */; };
-		7CF86EFA28216E4900D554DF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF86EF728216E4900D554DF /* SampleData.swift */; };
 		7CF86EFC2821D18800D554DF /* AstroSwiftFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7CF86EFB2821D18800D554DF /* AstroSwiftFoundation */; };
 		7CF86EFE2821D18E00D554DF /* AstroSwiftCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7CF86EFD2821D18E00D554DF /* AstroSwiftCore */; };
 /* End PBXBuildFile section */
@@ -158,11 +166,13 @@
 		7C1716D4281C5A5E00EA3DFA /* InsetGrouped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGrouped.swift; sourceTree = "<group>"; };
 		7C1716D6281C6F7B00EA3DFA /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		7C37A8C52791F7A500965F29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7C37A8C72791F7A500965F29 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7C37A8C82791F7A500965F29 /* AstroSwiftSamplerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstroSwiftSamplerApp.swift; sourceTree = "<group>"; };
 		7C37A8C92791F7A500965F29 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7C37A8CF2791F93F00965F29 /* AstroSwiftSamplerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstroSwiftSamplerApp.swift; sourceTree = "<group>"; };
 		7C37A8D12791F93F00965F29 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7C3DCFA42853EB0E00CEEEC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7C3DCFC32853F43500CEEEC5 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		7C3DCFCB2853FC6300CEEEC5 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		7C3DE59C282ABDB200C5A02B /* AstroSwiftFoundation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AstroSwiftFoundation; path = ../AstroSwiftFoundation; sourceTree = "<group>"; };
 		7C3DE59D282AE40500C5A02B /* SymbolTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTile.swift; sourceTree = "<group>"; };
 		7C479B942790D954002845E9 /* AstroSwiftSamplerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroSwiftSamplerApp.swift; sourceTree = "<group>"; };
@@ -174,13 +184,12 @@
 		7C479BB62790D998002845E9 /* Astro Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astro Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C479BCA2790DBB9002845E9 /* ColorSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSample.swift; sourceTree = "<group>"; };
 		7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroColorSamples.swift; sourceTree = "<group>"; };
-		7C479BDE2790E4B6002845E9 /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
-		7C479BE02790E66A002845E9 /* ColorSampleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSampleList.swift; sourceTree = "<group>"; };
+		7C479BDE2790E4B6002845E9 /* ColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTile.swift; sourceTree = "<group>"; };
+		7C479BE02790E66A002845E9 /* ColorGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGrid.swift; sourceTree = "<group>"; };
 		7C485CE02836EACA00237652 /* SymbolGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
 		7C485CE22836EAD800237652 /* SymbolTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTile.swift; sourceTree = "<group>"; };
 		7C62512F283307080055F51C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7C6251312833077C0055F51C /* ColorGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGrid.swift; sourceTree = "<group>"; };
-		7C6251332833078F0055F51C /* ColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTile.swift; sourceTree = "<group>"; };
 		7C625136283310C00055F51C /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		7C65DAA12834439300E2FA3F /* ColorGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGrid.swift; sourceTree = "<group>"; };
 		7C65DAA3283443BE00E2FA3F /* ColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTile.swift; sourceTree = "<group>"; };
@@ -220,7 +229,6 @@
 		7CE893D42832A85500F2CEF6 /* SymbolGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
 		7CE893D62832A86E00F2CEF6 /* SymbolTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTile.swift; sourceTree = "<group>"; };
 		7CE893D82832A88A00F2CEF6 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
-		7CF86EF728216E4900D554DF /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleData.swift; path = Shared/SampleData.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,12 +299,26 @@
 			path = tvOS;
 			sourceTree = "<group>";
 		};
-		7C37A8C62791F7A500965F29 /* Preview Content */ = {
+		7C3DCFC22853F40A00CEEEC5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				7C37A8C72791F7A500965F29 /* Preview Assets.xcassets */,
+				7C3DCFC32853F43500CEEEC5 /* SampleData.swift */,
+				7C479BCA2790DBB9002845E9 /* ColorSample.swift */,
+				7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */,
+				7C84AB8628297B61001D3256 /* SymbolSample.swift */,
+				7C84AB8828297BAD001D3256 /* AstroSymbolSamples.swift */,
 			);
-			path = "Preview Content";
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7C3DCFCA2853FB0600CEEEC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C3DCFCB2853FC6300CEEEC5 /* Sizes.swift */,
+				7C479BDE2790E4B6002845E9 /* ColorTile.swift */,
+				7C3DE59D282AE40500C5A02B /* SymbolTile.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7C479B8E2790D954002845E9 = {
@@ -369,12 +391,9 @@
 		7C479BDB2790E04D002845E9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				7CF86EF728216E4900D554DF /* SampleData.swift */,
-				7C479BCA2790DBB9002845E9 /* ColorSample.swift */,
-				7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */,
-				7C84AB8628297B61001D3256 /* SymbolSample.swift */,
-				7C84AB8828297BAD001D3256 /* AstroSymbolSamples.swift */,
-				7C37A8C62791F7A500965F29 /* Preview Content */,
+				7C3DCFC22853F40A00CEEEC5 /* Data */,
+				7C3DCFCA2853FB0600CEEEC5 /* Views */,
+				7C3DCFA42853EB0E00CEEEC5 /* Preview Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -411,7 +430,6 @@
 			isa = PBXGroup;
 			children = (
 				7C6251312833077C0055F51C /* ColorGrid.swift */,
-				7C6251332833078F0055F51C /* ColorTile.swift */,
 				7C62512F283307080055F51C /* Colors.swift */,
 			);
 			path = Color;
@@ -503,8 +521,7 @@
 			isa = PBXGroup;
 			children = (
 				7C7D6F6F282EBC340015D7F0 /* Colors.swift */,
-				7C479BE02790E66A002845E9 /* ColorSampleList.swift */,
-				7C479BDE2790E4B6002845E9 /* ColorSwatch.swift */,
+				7C479BE02790E66A002845E9 /* ColorGrid.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -513,7 +530,6 @@
 			isa = PBXGroup;
 			children = (
 				7C84AB84282972AA001D3256 /* SymbolGrid.swift */,
-				7C3DE59D282AE40500C5A02B /* SymbolTile.swift */,
 				7C7D6F71282EBCB50015D7F0 /* Symbols.swift */,
 			);
 			path = Symbol;
@@ -755,6 +771,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3DCFB02853EB0E00CEEEC5 /* Preview Assets.xcassets in Resources */,
 				7C479BA82790D954002845E9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,6 +780,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3DCFB12853EB0E00CEEEC5 /* Preview Assets.xcassets in Resources */,
 				7C65DAA62836B82500E2FA3F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -771,7 +789,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C37A8CB2791F7A500965F29 /* Preview Assets.xcassets in Resources */,
+				7C3DCFB22853EB0E00CEEEC5 /* Preview Assets.xcassets in Resources */,
 				7C37A8CA2791F7A500965F29 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -789,6 +807,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C75E634283D7C1700F50298 /* Preview Assets.xcassets in Resources */,
+				7C3DCFB32853EB0E00CEEEC5 /* Preview Assets.xcassets in Resources */,
 				7C75E631283D7C1700F50298 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -814,9 +833,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C65DAA02834420500E2FA3F /* ColorSampleList.swift in Sources */,
+				7C65DAA02834420500E2FA3F /* ColorGrid.swift in Sources */,
 				7C1716D5281C5A5E00EA3DFA /* InsetGrouped.swift in Sources */,
 				7C7D6F70282EBC340015D7F0 /* Colors.swift in Sources */,
+				7C3DCFC42853F43500CEEEC5 /* SampleData.swift in Sources */,
 				7C1716D1281C59B300EA3DFA /* GroupedList.swift in Sources */,
 				7C1716D3281C59E400EA3DFA /* InsetList.swift in Sources */,
 				7C84AB8728297B61001D3256 /* SymbolSample.swift in Sources */,
@@ -825,11 +845,11 @@
 				7C1716CF281C57E800EA3DFA /* PlainList.swift in Sources */,
 				7C479BCE2790DC2D002845E9 /* AstroColorSamples.swift in Sources */,
 				7C7D6F72282EBCB50015D7F0 /* Symbols.swift in Sources */,
-				7CF86EF828216E4900D554DF /* SampleData.swift in Sources */,
 				7C7D6F6E282EBB7E0015D7F0 /* UIElements.swift in Sources */,
 				7C84AB85282972AA001D3256 /* SymbolGrid.swift in Sources */,
-				7C479BDF2790E4B6002845E9 /* ColorSwatch.swift in Sources */,
+				7C479BDF2790E4B6002845E9 /* ColorTile.swift in Sources */,
 				7C84AB8928297BAD001D3256 /* AstroSymbolSamples.swift in Sources */,
+				7C3DCFCC2853FC6300CEEEC5 /* Sizes.swift in Sources */,
 				7C479BA42790D954002845E9 /* AstroSwiftSamplerApp.swift in Sources */,
 				7C479BCB2790DBB9002845E9 /* ColorSample.swift in Sources */,
 				7C3DE59E282AE40500C5A02B /* SymbolTile.swift in Sources */,
@@ -842,11 +862,12 @@
 			files = (
 				7C479BCF2790DC2D002845E9 /* AstroColorSamples.swift in Sources */,
 				7C485CE32836EAD800237652 /* SymbolTile.swift in Sources */,
-				7CF86EF928216E4900D554DF /* SampleData.swift in Sources */,
 				7C65DAA4283443BE00E2FA3F /* ColorTile.swift in Sources */,
 				7C37A8D52791F93F00965F29 /* ContentView.swift in Sources */,
 				7C84AB8C28297CBA001D3256 /* SymbolSample.swift in Sources */,
+				7C3DCFCD2853FC6300CEEEC5 /* Sizes.swift in Sources */,
 				7C65DAA22834439300E2FA3F /* ColorGrid.swift in Sources */,
+				7C3DCFC52853F43500CEEEC5 /* SampleData.swift in Sources */,
 				7C37A8D32791F93F00965F29 /* AstroSwiftSamplerApp.swift in Sources */,
 				7C485CE12836EACA00237652 /* SymbolGrid.swift in Sources */,
 				7C479BCC2790DBB9002845E9 /* ColorSample.swift in Sources */,
@@ -863,15 +884,16 @@
 				7C625130283307080055F51C /* Colors.swift in Sources */,
 				7C479BDC2790E069002845E9 /* ColorSample.swift in Sources */,
 				7C6251322833077C0055F51C /* ColorGrid.swift in Sources */,
+				7C3DCFD02854042200CEEEC5 /* SymbolTile.swift in Sources */,
 				7C625137283310C00055F51C /* UIElements.swift in Sources */,
+				7C3DCFCE2853FC6300CEEEC5 /* Sizes.swift in Sources */,
 				7C37A8CD2791F7A500965F29 /* ContentView.swift in Sources */,
 				7C84AB8D28297CBA001D3256 /* SymbolSample.swift in Sources */,
-				7CE893D72832A86E00F2CEF6 /* SymbolTile.swift in Sources */,
 				7CE893D92832A88A00F2CEF6 /* Symbols.swift in Sources */,
-				7CF86EFA28216E4900D554DF /* SampleData.swift in Sources */,
+				7C3DCFC02853F12D00CEEEC5 /* ColorTile.swift in Sources */,
 				7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */,
 				7C84AB8B28297CB6001D3256 /* AstroSymbolSamples.swift in Sources */,
-				7C6251342833078F0055F51C /* ColorTile.swift in Sources */,
+				7C3DCFC62853F43500CEEEC5 /* SampleData.swift in Sources */,
 				7CE893D52832A85500F2CEF6 /* SymbolGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -884,6 +906,7 @@
 				7CB99344283EDE1A00DD8A1E /* Colors.swift in Sources */,
 				7C75E629283D7C1600F50298 /* ContentView.swift in Sources */,
 				7C75E62F283D7C1700F50298 /* ComplicationController.swift in Sources */,
+				7C3DCFCF2853FC6300CEEEC5 /* Sizes.swift in Sources */,
 				7C70D9E828411FC700D14813 /* UIElements.swift in Sources */,
 				7C75E627283D7C1600F50298 /* AstroSwiftSamplerApp.swift in Sources */,
 				7C8C8CC2284171EF0014E9AD /* SymbolSample.swift in Sources */,
@@ -893,6 +916,7 @@
 				7C8C8CC028416FFB0014E9AD /* Symbols.swift in Sources */,
 				7C75E62D283D7C1700F50298 /* NotificationView.swift in Sources */,
 				7CCCDD3E283FFC5F00B12EBE /* ColorSwatch.swift in Sources */,
+				7C3DCFC72853F43500CEEEC5 /* SampleData.swift in Sources */,
 				7C8C8CC3284171F50014E9AD /* AstroSymbolSamples.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

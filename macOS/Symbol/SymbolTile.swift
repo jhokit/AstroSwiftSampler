@@ -23,9 +23,9 @@ struct SymbolTile: View {
                 }
                 else
                 {
-                    Text(Image.astroImage(sample.name)).fontWeight(weight).font(font).padding(.top,8)
+                    Text(Image.astroImage(sample.title)).fontWeight(weight).font(font).padding(.top,8)
                 }
-                Text(sample.name).font(.caption).padding(.bottom,8)
+                Text(sample.title).font(.caption).padding(.bottom,8)
             }
         }.frame(minHeight:150)
     }

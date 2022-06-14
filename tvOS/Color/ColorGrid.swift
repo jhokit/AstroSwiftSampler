@@ -9,19 +9,21 @@ import SwiftUI
 
 struct ColorGrid: View {
 
-    @State private var weight:Font.Weight = .regular
-    @State private var font:Font = .title
+//    @State private var weight:Font.Weight = .regular
+//    @State private var font:Font = .title
     
     var body: some View {
         
-        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 4)
+        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 3)
         LazyVGrid(columns:columns, spacing: 18){
             Section("Semantic"){
                 if let colorVariants = AstroColorSamples.astroSemantic.colorVariants
                 {
                     ForEach(colorVariants, id: \.id) { colorSample in
                         Button(action: {}) {
-                            ColorTile(sample: colorSample, weight: $weight, font:$font)
+                            
+                           // ColorTile(sample: colorSample, weight: $weight, font:$font)
+                            ColorTile(sample: colorSample)
                         }
                         .buttonStyle(PlainTileStyle())
                     }
@@ -33,7 +35,8 @@ struct ColorGrid: View {
                 {
                     ForEach(colorVariants, id: \.id) { colorSample in
                         Button(action: {}) {
-                            ColorTile(sample: colorSample, weight: $weight, font:$font)
+                            //ColorTile(sample: colorSample, weight: $weight, font:$font)
+                            ColorTile(sample: colorSample)
                         }
                         .buttonStyle(PlainTileStyle())
                     }

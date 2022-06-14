@@ -9,68 +9,60 @@ import SwiftUI
 
 struct Colors: View {
     @State private var selected: Int? = nil
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
 
     var body: some View {
+        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: (horizontalSizeClass == .compact) ? 1 : 3)
+
         NavigationView{
             ScrollView{
-            VStack(spacing:0) {
-                HStack{Text("Semantic").font(.footnote).padding().frame(height:70) ; Spacer()}
-                if let semanticColors = AstroColorSamples.astroSemantic.colorVariants
-                {
-                    ForEach(semanticColors, id: \.id) { colorSample in
-                        ColorSwatch(sample: colorSample).frame(height:60)
+                LazyVGrid(columns:columns) {
+                Section("Semantic") {
+                    ForEach(AstroColorSamples.astroSemantic.colorVariants!, id: \.id) { colorSample in
+                        ColorTile(sample: colorSample)
                     }
                 }
-                
-                HStack{Text("Status").font(.footnote).padding().frame(height:70) ; Spacer()}
-                if let semanticColors = AstroColorSamples.astroStatus.colorVariants
-                {
-                    ForEach(semanticColors, id: \.id) { colorSample in
-                        ColorSwatch(sample: colorSample).frame(height:60)
-                    }
-                }
-
-                
-                HStack{Text("Classification").font(.footnote).padding().frame(height:70) ; Spacer()}
-                if let classificationColors = AstroColorSamples.astroClassification.colorVariants
-                {
-                    ForEach(classificationColors, id: \.id) { colorSample in
-                        ColorSwatch(sample: colorSample).frame(height:60)
-                    }
-                }
-
-                
-                HStack{Text("Core").font(.footnote).padding() ; Spacer()}
-                if let coreColors = AstroColorSamples.astroCore.colorVariants
-                {
-                    ForEach(coreColors, id: \.id) { colorSample in
-                        let subVariants = colorSample.colorVariants
-                        if (subVariants == nil){
-                            ColorSwatch(sample: colorSample).frame(height:60)
-                        }
-                        else {
-                            NavigationLink(
-                                destination: ColorSampleList(sample: colorSample),
-                                label: {
-                                    ColorSwatch(sample: colorSample).frame(height:60)
-                                })
+                    
+                    Section("Status") {
+                        ForEach(AstroColorSamples.astroStatus.colorVariants!, id: \.id) { colorSample in
+                            ColorTile(sample: colorSample)
                         }
                     }
-                }
+
+           
+                    Section("Classification") {
+                        ForEach(AstroColorSamples.astroClassification.colorVariants!, id: \.id) { colorSample in
+                            ColorTile(sample: colorSample)
+                        }
+                    }
+
+                    Section("Core") {
+                        ForEach(AstroColorSamples.astroCore.colorVariants!, id: \.id) { colorSample in
+                            let subVariants = colorSample.colorVariants
+                            if (subVariants == nil){
+                                ColorTile(sample: colorSample)
+                            }
+                            else {
+                                NavigationLink(
+                                    destination: ColorGrid(sample: colorSample),
+                                    label: {
+                                        ColorTile(sample: colorSample)
+                                    })
+                            }
+                        }
+                    }
+
+                
+           
+                
             }
 
-//                NavigationLink("Semantic Colors", tag: 1, selection: $selected) {
-//                    ColorSampleList(sample: AstroColorSamples.astroSemantic)
-//                }.listRowBackground(selected == 1 ? Color.astroUISecondaryBackground : Color.astroUIBackground)
-//
-//                NavigationLink("Core Colors", tag: 2, selection: $selected) {
-//                    ColorSampleList(sample: AstroColorSamples.astroCore)
-//                }.listRowBackground(selected == 2 ? Color.astroUISecondaryBackground : Color.astroUIBackground)
             }
             .background(Color.astroUIBackground)
 //            .listStyle(.plain)
             .navigationBarTitle("Colors")
-        }.tabItem {
+        }.navigationViewStyle(StackNavigationViewStyle())
+            .tabItem {
             Image(systemName: "paintpalette.fill")
             Text("Colors")
         }
