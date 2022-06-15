@@ -40,7 +40,6 @@ struct ColorTile: View {
 struct SampleCell_Previews: PreviewProvider {
     static var previews: some View {
         ColorTile(sample: ColorSample(name:"Test",color: Color.red))
-        LayerTile(sample: ColorSample(name:"Test",color: Color.red)).frame(minHeight:100)
     }
 }
 
