@@ -147,6 +147,7 @@ struct LayerTile: View {
 struct LayerTile_Previews: PreviewProvider {
     static var previews: some View {
         LayerTile(sample: ColorSample(name:"Test",color: Color.red))
+
     }
 }
 
