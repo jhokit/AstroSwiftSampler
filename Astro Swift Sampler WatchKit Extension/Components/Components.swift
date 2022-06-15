@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftUI
 import AstroSwiftFoundation
 
-struct UIElements: View {
+struct Components: View {
     @State var name: String = ""
     @State var password: String = ""
     @State var toggleValue: Bool = true
@@ -34,7 +34,7 @@ struct UIElements: View {
                     
                     HStack{
                     Text("Status")
-                    Status(instatus:$status)
+                        Status($status)
                     Spacer()
                     }
 
@@ -68,7 +68,7 @@ struct UIElements: View {
                     status = .Off
                 }
             }
-            .navigationTitle("UI Elements")
+            .navigationTitle("Components")
     }
         
 }

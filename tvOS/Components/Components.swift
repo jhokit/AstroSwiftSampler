@@ -8,7 +8,7 @@
 import SwiftUI
 import AstroSwiftFoundation
 
-struct UIElements: View {
+struct Components: View {
     @State var name: String = ""
     @State var password: String = ""
     @State var toggleValue: Bool = true
@@ -29,13 +29,13 @@ struct UIElements: View {
                 Image(systemName: "switch.2").resizable().frame(width:400, height:400).scaledToFill().foregroundColor(Color(UIColor.secondaryLabel))
             }.frame(width:1920/2, height:400)
             
-            // Right side, a form of many UI Elements
+            // Right side, a form of many Components
             Form{
                 // Status
                 HStack{
                     Text("Status")
                     Spacer()
-                    Status(instatus:$status)
+                    Status($status)
                 }
                 
                 // Toggle
@@ -65,7 +65,7 @@ struct UIElements: View {
         .background(Color.astroUIBackground) // Set the background color for the whole page
         .tabItem {
             Image(systemName: "switch.2")
-            Text("UI Elements")
+            Text("Components")
         }
         .onChange(of: toggleValue) { newValue in // Link the change of the toggle control to the status control
             if (toggleValue){

@@ -13,9 +13,9 @@ struct ContentView: View {
         List{
             Group{
                 NavigationLink() {
-                   UIElements()
+                   Components()
                 } label: {
-                    Label("UI Elements", systemImage: "switch.2")
+                    Label("Components", systemImage: "switch.2")
                     }
                 
                 NavigationLink() {

@@ -8,7 +8,7 @@
 import SwiftUI
 import AstroSwiftFoundation
 
-struct UIElements: View {
+struct Components: View {
     @State private var selected: Int? = nil
     @State var toggleValue: Bool = true
     @State private var sliderValue: Double = 100
@@ -16,25 +16,54 @@ struct UIElements: View {
     @ObservedObject private var fruits = Fruits()
     @State private var progressValue: Double = 3
     let progressTotal:Double = 5
-    @State private var status:AstroStatus = AstroStatus.Normal
+ //   @State private var status:AstroStatus = AstroStatus.Normal
 
     var body: some View {
-        /* UI Elements */
+        /* Components */
         NavigationView{
             Form {
+    
+                Section("Astro Components"){
+                    HStack{
+                        Text("Status")
+                        Spacer()
+                        Status(Binding.constant(AstroStatus.Off))
+                        Status(Binding.constant(AstroStatus.Standby))
+                        Status(Binding.constant(AstroStatus.Normal))
+                        Status(Binding.constant(AstroStatus.Caution))
+                        Status(Binding.constant(AstroStatus.Serious))
+                        Status(Binding.constant(AstroStatus.Critical))
+                    }
+           
+                    let columns:[GridItem] = [GridItem(.flexible(),alignment: .trailing), GridItem(.flexible(),alignment: .trailing)]
+                    VStack{
+                        HStack{
+                            Text("Status Tag")
+                            Spacer()
+                        }
+                        LazyVGrid(columns:columns) {
+                            Tag(text:AstroStatus.Off.description,status: .Off)
+                            Tag(text:AstroStatus.Standby.description,status: .Standby)
+                            Tag(text:AstroStatus.Caution.description,status: .Caution)
+                            Tag(text:AstroStatus.Normal.description,status: .Normal)
+                            Tag(text:AstroStatus.Serious.description,status: .Serious)
+                            Tag(text:AstroStatus.Critical.description,status: .Critical)
+                        }
+                    }
+
+                    HStack{
+                        Text("Tag")
+                        Spacer()
+                        Tag(text:"Hello")
+                    }
+                }.listRowBackground(Color.astroUISecondaryGroupedBackground)
                 
-                Section("Controls"){
+                Section("System Components"){
                     
-                   // Tag(title:"test")
 
                     // Toggle and Status
                     Toggle(isOn: $toggleValue) {
                         Text("Toggle")
-                    }
-                    HStack{
-                        Text("Status")
-                        Status(instatus:$status)
-                        Spacer()
                     }
 
                     Slider(value: $sliderValue, in: 0...200) {
@@ -50,7 +79,7 @@ struct UIElements: View {
 
                     ProgressView()
                     
-                    Link("External Link", destination: URL(string: "https://www.wikipedia.org")!)
+                    Link("External Link", destination: URL(string: "https://www.astrouxds.com")!)
                     
                     Menu("Menu") {
                         ForEach(fruits.fruits){ fruit in
@@ -87,14 +116,6 @@ struct UIElements: View {
                 }.listRowBackground(Color.astroUISecondaryGroupedBackground)
 
             }
-            .onChange(of: toggleValue) { newValue in // Link the change of the toggle control to the status control
-                if (toggleValue){
-                    status = .Normal
-                }
-                else {
-                    status = .Off
-                }
-            }
             .alert("Sample Alert", isPresented: $isShowingAlert) {
                 Button("Continue", role: .cancel) {}
             } message: {
@@ -102,17 +123,17 @@ struct UIElements: View {
             }
             .background(Color.astroUIGroupedBackground) // set the background color for both sections
             .listStyle(.plain)
-            .navigationBarTitle("UI Elements")
+            .navigationBarTitle("Components")
         }
         .tabItem {
             Image(systemName: "switch.2")
-            Text("UI Elements")
+            Text("Components")
         }
     }
 }
 
 struct UIElements_Previews: PreviewProvider {
     static var previews: some View {
-        UIElements()
+        Components()
     }
 }
