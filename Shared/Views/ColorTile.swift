@@ -17,7 +17,7 @@ struct ColorTile: View {
                 .padding(6)
                 .foregroundColor(Color(.label))
                 .font(.body)
-                .background(.ultraThinMaterial).cornerRadius(radius)
+                .background(.thinMaterial).cornerRadius(radius)
             Spacer()
             #if os(iOS) // only show the navigation arrow on iOS until fall 2022 OS's offer navigaiton on all platforms
             if sample.colorVariants != nil {
@@ -35,33 +35,9 @@ struct ColorTile: View {
 }
 
 
-struct LayerTile: View {
-    var sample:ColorSample
-    @ScaledMetric(relativeTo:.body) var radius = Sizes.cornerRadius
-    
-    var body: some View {
-        HStack{
-            VStack{
-            Text(sample.name)
-                .padding(6)
-                .foregroundColor(Color(.label))
-                .font(.body)
-                .background(.ultraThinMaterial).cornerRadius(radius)
-                Spacer()
-            }
-            Spacer()
-        }
-        .padding(.leading,10)
-        .padding([.top,.bottom],8)
-        .background(sample.color)
-        .cornerRadius(radius)
-    }
-}
-
 struct SampleCell_Previews: PreviewProvider {
     static var previews: some View {
         ColorTile(sample: ColorSample(name:"Test",color: Color.red))
-        LayerTile(sample: ColorSample(name:"Test",color: Color.red)).frame(minHeight:100)
     }
 }
 
