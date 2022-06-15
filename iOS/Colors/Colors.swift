@@ -78,36 +78,34 @@ struct LayersView: View {
     @Environment(\.dismiss) var dismiss
     @ScaledMetric var cellHeight = 80
     @ScaledMetric var insetPadding = 20
-    
+    var defaultSample = ColorSample(name:"Test",color: Color.red) // used when a sample fails to load
     var body: some View {
         NavigationView{
             VStack(){
                 // Background Stack
                 ZStack(alignment: .bottom){
-                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants![0])
+                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants?[0] ?? defaultSample)
                         .frame(height:cellHeight * 3)
-                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants![1])
+                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants?[1] ?? defaultSample)
                         .frame(height:cellHeight * 2)
                         .padding([.leading,.trailing,.bottom],insetPadding)
-                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants![2])
+                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants?[2] ?? defaultSample)
                         .frame(height:cellHeight)
                         .padding([.leading,.trailing,.bottom],insetPadding*2)
                 }
                 
-                
                 // Grouped Background Stack
                 ZStack(alignment: .bottom){
-                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants![3])
+                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants?[3] ?? defaultSample)
                         .frame(height:cellHeight * 3)
-                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants![4])
+                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants?[4] ?? defaultSample)
                         .frame(height:cellHeight * 2)
                         .padding([.leading,.trailing,.bottom],insetPadding)
-                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants![5])
+                    LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants?[5] ?? defaultSample)
                         .frame(height:cellHeight)
                         .padding([.leading,.trailing,.bottom],insetPadding*2)
                 }
                 Spacer()
-                
             }
             .background(Color.astroUIBackground)
             .navigationBarTitle("Layers")
