@@ -17,6 +17,18 @@ struct Colors: View {
         NavigationView{
             ScrollView{
                 LazyVGrid(columns:columns) {
+                    
+                    Section("Layers") {
+                        ZStack(alignment: .bottom){
+                            LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants![0]).frame(minHeight:200)//.padding(.bottom,0)
+                            LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants![1]).frame(maxHeight:130)
+                                .padding([.leading,.trailing],20).padding(.bottom,20)
+                            LayerTile(sample: AstroColorSamples.astroSemantic.colorVariants![2]).frame(maxHeight:50
+                            ).padding([.leading,.trailing],40).padding(.bottom,40)
+
+                        }
+                    }
+
                 Section("Semantic") {
                     ForEach(AstroColorSamples.astroSemantic.colorVariants!, id: \.id) { colorSample in
                         ColorTile(sample: colorSample)
@@ -72,5 +84,6 @@ struct Colors: View {
 struct Colors_Previews: PreviewProvider {
     static var previews: some View {
         Colors()
+            
     }
 }
