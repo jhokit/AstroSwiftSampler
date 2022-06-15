@@ -34,7 +34,7 @@ struct Components: View {
                     
                     HStack{
                     Text("Status")
-                        Status($status)
+                        Status(status)
                     Spacer()
                     }
 

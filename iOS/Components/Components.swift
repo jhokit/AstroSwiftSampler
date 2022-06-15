@@ -27,12 +27,12 @@ struct Components: View {
                     HStack{
                         Text("Status")
                         Spacer()
-                        Status(Binding.constant(AstroStatus.Off))
-                        Status(Binding.constant(AstroStatus.Standby))
-                        Status(Binding.constant(AstroStatus.Normal))
-                        Status(Binding.constant(AstroStatus.Caution))
-                        Status(Binding.constant(AstroStatus.Serious))
-                        Status(Binding.constant(AstroStatus.Critical))
+                        Status(AstroStatus.Off)
+                        Status(AstroStatus.Standby)
+                        Status(AstroStatus.Normal)
+                        Status(AstroStatus.Caution)
+                        Status(AstroStatus.Serious)
+                        Status(AstroStatus.Critical)
                     }
            
                     let columns:[GridItem] = [GridItem(.flexible(),alignment: .trailing), GridItem(.flexible(),alignment: .trailing)]

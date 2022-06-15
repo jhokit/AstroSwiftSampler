@@ -21,66 +21,84 @@ struct Components: View {
         
         VStack {
             Form {
-                // Text
-                Group{
-                    TextField("Name:", text: $name).frame(maxWidth:300)
-                    SecureField("Password:", text: $password).frame(maxWidth:300)
-                    Divider()
-                }
-
-                // Toggle and Status
-                Group{
-                    Toggle(isOn: $toggleValue) {
-                        Text("Toggle")
+                // Astro Components
+                VStack(alignment: .leading,spacing:15){
+                    // Status
+                    Text("Status")
+                    HStack{
+                        Status(AstroStatus.Off)
+                        Status(AstroStatus.Standby)
+                        Status(AstroStatus.Normal)
+                        Status(AstroStatus.Caution)
+                        Status(AstroStatus.Serious)
+                        Status(AstroStatus.Critical)
+                        Spacer()
                     }
                     
-                    HStack{
-                    Text("Status")
-                        Status($status)
-                    Spacer()
-                            
+                    // Status Tag
+                    VStack(alignment: .leading){
+                        Text("Status Tag")
+                        HStack(spacing:15){
+                            Tag(text:AstroStatus.Off.description,status: .Off)
+                            Tag(text:AstroStatus.Standby.description,status: .Standby)
+                            Tag(text:AstroStatus.Caution.description,status: .Caution)
+                            Spacer()
+                        }
+                        
+                        HStack(spacing:15){
+                            Tag(text:AstroStatus.Normal.description,status: .Normal)
+                            Tag(text:AstroStatus.Serious.description,status: .Serious)
+                            Tag(text:AstroStatus.Critical.description,status: .Critical)
+                            Spacer()
+                        }
                     }
-                    Divider()
+                    
+                    //Tag
+                    VStack(alignment: .leading){
+                        Text("Tag")
+                        HStack{
+                            Tag(text:"Hello")
+                            Spacer()
+                        }
+                    }
                 }
+            }
+            .padding()
+            
+            Divider()
 
-                // Two kinds of progress
-                Group{
-                    ProgressView("Progress", value: progressValue, total: progressTotal)
-                    ProgressView().padding(.bottom, 8)
-                    Divider()
+            // System Components
+            VStack(alignment: .leading,spacing:15){
+                
+                // Toggle
+                Toggle(isOn: $toggleValue) {
+                    Text("Toggle")
                 }
                 
+                // Two kinds of progress
+                ProgressView("Progress", value: progressValue, total: progressTotal)
+                ProgressView().padding(.bottom, 8)
+                
                 // Link
-                Group{
-                    Link("External Link", destination: URL(string: "https://www.astrouxds.com")!)
-                    Divider()
-                }
+                Link("External Link", destination: URL(string: "https://www.astrouxds.com")!)
                 
                 
                 // Button and Alert
-                Group{
-                    Button(LocalizedStringKey("Show Alert")) {
-                        isShowingAlert = true
-                    }
+                Button(LocalizedStringKey("Show Alert")) {
+                    isShowingAlert = true
                 }
-
+                
             }.padding()
             .alert("Sample Alert", isPresented: $isShowingAlert) {
                 Button("Continue", role: .cancel) {}
             } message: {
                 Text("Hello")
             }
-            .onChange(of: toggleValue) { newValue in // Link the change of the toggle control to the status control
-                if (toggleValue){
-                    status = .Normal
-                }
-                else {
-                    status = .Off
-                }
-            }.padding()
+            
+            
             Spacer()
-        } .background(Color.astroUIBackground) // Set the background color for the whole page
-
+        }.background(Color.astroUIBackground) // Set the background color for the whole page
+        
         
     }
 }

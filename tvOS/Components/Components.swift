@@ -35,7 +35,7 @@ struct Components: View {
                 HStack{
                     Text("Status")
                     Spacer()
-                    Status($status)
+                    Status(status)
                 }
                 
                 // Toggle
