@@ -13,7 +13,7 @@ struct SymbolGrid: View {
     
     var body: some View {
         
-        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 4)
+        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 3)
         
         ScrollView{
             
@@ -38,8 +38,8 @@ struct SymbolGrid: View {
                 
             }
             .padding()
-            .background(Color.astroUIBackground)
         }
+        .background(Color.astroUIBackground)
     }
 }
 struct SymbolGrid_Previews: PreviewProvider {

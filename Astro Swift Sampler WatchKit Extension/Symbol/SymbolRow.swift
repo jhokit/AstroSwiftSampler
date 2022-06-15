@@ -15,11 +15,11 @@ struct SymbolRow: View {
             HStack{
                 if let status = sample.status
                 {
-                    Text(Image.imageForAstroStatus(status)).foregroundColor(Color.colorForAstroStatus(status))//.padding(.leading,8)
+                    Text(Image.imageForAstroStatus(status)).foregroundColor(Color.colorForAstroStatus(status))
                 }
                 else
                 {
-                    Text(Image.astroImage(sample.name))//.padding(.leading,8)
+                    Text(Image.astroImage(sample.name))
                 }
                 Text(sample.name)
                 Spacer()

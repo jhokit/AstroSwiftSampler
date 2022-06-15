@@ -9,7 +9,7 @@ import SwiftUI
 
 
 
-struct ColorSwatch: View {
+struct ColorRow: View {
     var sample:ColorSample
     var body: some View {
         Text(sample.name)
@@ -23,6 +23,6 @@ struct ColorSwatch: View {
 
 struct SampleCell_Previews: PreviewProvider {
     static var previews: some View {
-        ColorSwatch(sample: ColorSample(name:"Test",color: Color.red)).frame(height: 60)
+        ColorRow(sample: ColorSample(name:"Test",color: Color.red)).frame(height: 60)
     }
 }
