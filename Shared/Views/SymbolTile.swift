@@ -18,11 +18,11 @@ struct SymbolTile: View {
         HStack{
             if let status = sample.status
             {
-                Text(Image.imageForAstroStatus(status)).foregroundColor(Color.colorForAstroStatus(status)).fontWeight(weight).font(font).padding(.leading,4)
+                Text(Image.imageForAstroStatus(status)).foregroundColor(Color.colorForAstroStatus(status)).fontWeight(weight).font(font)
             }
             else
             {
-                Text(Image.astroImage(sample.name)).fontWeight(weight).font(font).padding(.leading,8)
+                Text(Image.astroImage(sample.name)).fontWeight(weight).font(font)
             }
             Text(sample.name).fontWeight(weight).font(font)
             Spacer()

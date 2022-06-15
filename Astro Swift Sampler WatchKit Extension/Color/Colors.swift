@@ -15,7 +15,7 @@ struct Colors: View {
                 if let semanticColors = AstroColorSamples.astroSemantic.colorVariants
                 {
                     ForEach(semanticColors, id: \.id) { colorSample in
-                        ColorSwatch(sample: colorSample)
+                        ColorRow(sample: colorSample)
                     }
                 }
             }
@@ -24,7 +24,7 @@ struct Colors: View {
                 if let statusColors = AstroColorSamples.astroStatus.colorVariants
                 {
                     ForEach(statusColors, id: \.id) { colorSample in
-                        ColorSwatch(sample: colorSample)
+                        ColorRow(sample: colorSample)
                     }
                 }
             }
@@ -33,7 +33,7 @@ struct Colors: View {
                 if let classificationColors = AstroColorSamples.astroClassification.colorVariants
                 {
                     ForEach(classificationColors, id: \.id) { colorSample in
-                        ColorSwatch(sample: colorSample)
+                        ColorRow(sample: colorSample)
                     }
                 }
             }
@@ -46,21 +46,21 @@ struct Colors: View {
                             NavigationLink() {
                                 List{
                                     ForEach(subVariants, id: \.id) { colorSample in
-                                        ColorSwatch(sample: colorSample)
+                                        ColorRow(sample: colorSample)
                                     }
                                 }
                                     .navigationTitle(colorSample.name)
                             }
                             label: {
-                                ColorSwatch(sample: colorSample)
-                            } // for some reason must reapply the styling to ColorSwatch, as NavigationLink strips it away
+                                ColorRow(sample: colorSample)
+                            } // for some reason must reapply the styling to ColorRow, as NavigationLink strips it away
                             .listRowBackground(RoundedRectangle(cornerRadius: 10.0, style:.continuous) // apply Astro color and re-apply shape
                             .background(Color.clear)
                             .foregroundColor(colorSample.color))
 
                         }
                         else {
-                            ColorSwatch(sample: colorSample)
+                            ColorRow(sample: colorSample)
                         }
                     }
                 }

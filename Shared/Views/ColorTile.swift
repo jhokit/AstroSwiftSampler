@@ -15,7 +15,9 @@ struct ColorTile: View {
         HStack{
             Text(sample.name)
                 .padding(6)
+            #if os(iOS)
                 .foregroundColor(Color(.label))
+            #endif
                 .font(.body)
                 .background(.thinMaterial).cornerRadius(radius)
             Spacer()
