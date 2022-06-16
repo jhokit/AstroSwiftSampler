@@ -15,9 +15,9 @@ struct ContentView: View {
         NavigationView {
             List{
                 NavigationLink(tag: 1, selection: self.$selected) {
-                    UIElements()
+                    Components()
                 } label: {
-                    Label("UI Elements", systemImage: "switch.2")
+                    Label("Components", systemImage: "switch.2")
                 }
 
                 NavigationLink(tag: 2, selection: self.$selected) {
