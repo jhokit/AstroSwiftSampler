@@ -132,7 +132,7 @@ struct Components: View {
     }
 }
 
-struct UIElements_Previews: PreviewProvider {
+struct Components_Previews: PreviewProvider {
     static var previews: some View {
         Components()
     }

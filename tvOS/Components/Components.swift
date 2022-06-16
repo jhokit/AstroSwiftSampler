@@ -31,28 +31,59 @@ struct Components: View {
             
             // Right side, a form of many Components
             Form{
-                // Status
-                HStack{
-                    Text("Status")
-                    Spacer()
-                    Status(status)
+                
+                Section("Astro Components"){
+                    HStack{
+                        Text("Status")
+                        Spacer()
+                        Status(AstroStatus.Off)
+                        Status(AstroStatus.Standby)
+                        Status(AstroStatus.Normal)
+                        Status(AstroStatus.Caution)
+                        Status(AstroStatus.Serious)
+                        Status(AstroStatus.Critical)
+                    }
+                    
+                    let columns:[GridItem] = [GridItem(.flexible(),alignment: .trailing),       GridItem(.flexible(),alignment: .trailing),GridItem(.flexible(),alignment: .trailing)]
+                    VStack{
+                        HStack{
+                            Text("Status Tag")
+                            Spacer()
+                        }
+                        LazyVGrid(columns:columns) {
+                            Tag(text:AstroStatus.Off.description,status: .Off)
+                            Tag(text:AstroStatus.Standby.description,status: .Standby)
+                            Tag(text:AstroStatus.Caution.description,status: .Caution)
+                            Tag(text:AstroStatus.Normal.description,status: .Normal)
+                            Tag(text:AstroStatus.Serious.description,status: .Serious)
+                            Tag(text:AstroStatus.Critical.description,status: .Critical)
+                        }
+                    }
+
+                    HStack{
+                        Text("Tag")
+                        Spacer()
+                        Tag(text:"Hello")
+                    }
                 }
-                
-                // Toggle
-                Toggle(isOn: $toggleValue) {
-                    Text("Toggle")
-                }
-                
-                // Two kinds of progress
-                ProgressView("Progress", value: progressValue, total: progressTotal)
-                ProgressView()
-                
-                // Link
-                Link("External Link", destination: URL(string: "https://www.youtube.com/watch?v=iaJNk8gDxwU")!)
-                
-                // Button and Alert
-                Button(LocalizedStringKey("Show Alert")) {
-                    isShowingAlert = true
+
+                Section("System Components"){
+                    // Toggle
+                    Toggle(isOn: $toggleValue) {
+                        Text("Toggle")
+                    }
+                    
+                    // Two kinds of progress
+                    ProgressView("Progress", value: progressValue, total: progressTotal)
+                    ProgressView()
+                    
+                    // Link
+                    Link("External Link", destination: URL(string: "https://www.youtube.com/watch?v=iaJNk8gDxwU")!)
+                    
+                    // Button and Alert
+                    Button(LocalizedStringKey("Show Alert")) {
+                        isShowingAlert = true
+                    }
                 }
             }
             .alert("Sample Alert", isPresented: $isShowingAlert) {
@@ -78,5 +109,10 @@ struct Components: View {
     }
 }
 
+struct Components_Previews: PreviewProvider {
+    static var previews: some View {
+        Components()
+    }
+}
 
 
