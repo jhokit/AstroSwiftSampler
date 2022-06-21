@@ -31,12 +31,12 @@ struct AstroSymbolSamples
     
     
     static var statusSymbols =  [
-        SymbolSample(name:"astro.off", status: .Off),
-        SymbolSample(name:"astro.standby", status: .Standby),
-        SymbolSample(name:"astro.normal", status: .Normal),
-        SymbolSample(name:"astro.caution", status: .Caution),
-        SymbolSample(name:"astro.serious", status: .Serious),
-        SymbolSample(name:"astro.critical", status: .Critical)
+        SymbolSample(name:"astro.off", status: .off),
+        SymbolSample(name:"astro.standby", status: .standby),
+        SymbolSample(name:"astro.normal", status: .normal),
+        SymbolSample(name:"astro.caution", status: .caution),
+        SymbolSample(name:"astro.serious", status: .serious),
+        SymbolSample(name:"astro.critical", status: .critical)
     ]
 }
 

@@ -16,7 +16,6 @@ struct Components: View {
     @ObservedObject private var fruits = Fruits()
     @State private var progressValue: Double = 3
     let progressTotal:Double = 5
- //   @State private var status:AstroStatus = AstroStatus.Normal
 
     var body: some View {
         /* Components */
@@ -27,12 +26,12 @@ struct Components: View {
                     HStack{
                         Text("Status")
                         Spacer()
-                        Status(AstroStatus.Off)
-                        Status(AstroStatus.Standby)
-                        Status(AstroStatus.Normal)
-                        Status(AstroStatus.Caution)
-                        Status(AstroStatus.Serious)
-                        Status(AstroStatus.Critical)
+                        Status(AstroStatus.off)
+                        Status(AstroStatus.standby)
+                        Status(AstroStatus.normal)
+                        Status(AstroStatus.caution)
+                        Status(AstroStatus.serious)
+                        Status(AstroStatus.critical)
                     }
            
                     let columns:[GridItem] = [GridItem(.flexible(),alignment: .trailing), GridItem(.flexible(),alignment: .trailing)]
@@ -42,12 +41,12 @@ struct Components: View {
                             Spacer()
                         }
                         LazyVGrid(columns:columns) {
-                            Tag(text:AstroStatus.Off.description,status: .Off)
-                            Tag(text:AstroStatus.Standby.description,status: .Standby)
-                            Tag(text:AstroStatus.Caution.description,status: .Caution)
-                            Tag(text:AstroStatus.Normal.description,status: .Normal)
-                            Tag(text:AstroStatus.Serious.description,status: .Serious)
-                            Tag(text:AstroStatus.Critical.description,status: .Critical)
+                            Tag(text:AstroStatus.off.description,status: .off)
+                            Tag(text:AstroStatus.standby.description,status: .standby)
+                            Tag(text:AstroStatus.caution.description,status: .caution)
+                            Tag(text:AstroStatus.normal.description,status: .normal)
+                            Tag(text:AstroStatus.serious.description,status: .serious)
+                            Tag(text:AstroStatus.critical.description,status: .critical)
                         }
                     }
 

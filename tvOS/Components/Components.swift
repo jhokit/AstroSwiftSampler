@@ -19,7 +19,6 @@ struct Components: View {
     @State private var isShowingSpinner = false
     @State private var isShowingAlert = false
     @ObservedObject private var fruits = Fruits()
-    @State private var status:AstroStatus = AstroStatus.Normal
     
     var body: some View {
         HStack{ // HStack to divide the screen in half, a traditional settings screen design on tvOS
@@ -36,12 +35,12 @@ struct Components: View {
                     HStack{
                         Text("Status")
                         Spacer()
-                        Status(AstroStatus.Off)
-                        Status(AstroStatus.Standby)
-                        Status(AstroStatus.Normal)
-                        Status(AstroStatus.Caution)
-                        Status(AstroStatus.Serious)
-                        Status(AstroStatus.Critical)
+                        Status(AstroStatus.off)
+                        Status(AstroStatus.standby)
+                        Status(AstroStatus.normal)
+                        Status(AstroStatus.caution)
+                        Status(AstroStatus.serious)
+                        Status(AstroStatus.critical)
                     }
                     
                     let columns:[GridItem] = [GridItem(.flexible(),alignment: .trailing),       GridItem(.flexible(),alignment: .trailing),GridItem(.flexible(),alignment: .trailing)]
@@ -51,12 +50,12 @@ struct Components: View {
                             Spacer()
                         }
                         LazyVGrid(columns:columns) {
-                            Tag(text:AstroStatus.Off.description,status: .Off)
-                            Tag(text:AstroStatus.Standby.description,status: .Standby)
-                            Tag(text:AstroStatus.Caution.description,status: .Caution)
-                            Tag(text:AstroStatus.Normal.description,status: .Normal)
-                            Tag(text:AstroStatus.Serious.description,status: .Serious)
-                            Tag(text:AstroStatus.Critical.description,status: .Critical)
+                            Tag(text:AstroStatus.off.description,status: .off)
+                            Tag(text:AstroStatus.standby.description,status: .standby)
+                            Tag(text:AstroStatus.caution.description,status: .caution)
+                            Tag(text:AstroStatus.normal.description,status: .normal)
+                            Tag(text:AstroStatus.serious.description,status: .serious)
+                            Tag(text:AstroStatus.critical.description,status: .critical)
                         }
                     }
 
@@ -97,14 +96,6 @@ struct Components: View {
         .tabItem {
             Image(systemName: "switch.2")
             Text("Components")
-        }
-        .onChange(of: toggleValue) { newValue in // Link the change of the toggle control to the status control
-            if (toggleValue){
-                status = .Normal
-            }
-            else {
-                status = .Off
-            }
         }
     }
 }

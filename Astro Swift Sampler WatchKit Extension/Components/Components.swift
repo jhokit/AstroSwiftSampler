@@ -28,14 +28,14 @@ struct Components: View {
                             Spacer()
                         }
                         HStack{
-                            Status(AstroStatus.Off)
-                            Status(AstroStatus.Standby)
-                            Status(AstroStatus.Normal)
+                            Status(AstroStatus.off)
+                            Status(AstroStatus.standby)
+                            Status(AstroStatus.normal)
                         }.padding()
                         HStack{
-                            Status(AstroStatus.Caution)
-                            Status(AstroStatus.Serious)
-                            Status(AstroStatus.Critical)
+                            Status(AstroStatus.caution)
+                            Status(AstroStatus.serious)
+                            Status(AstroStatus.critical)
                         }.padding()
                         
                     }
@@ -45,12 +45,12 @@ struct Components: View {
                             Spacer()
                         }
                         VStack{
-                            Tag(text:AstroStatus.Off.description,status: .Off)
-                            Tag(text:AstroStatus.Standby.description,status: .Standby)
-                            Tag(text:AstroStatus.Caution.description,status: .Caution)
-                            Tag(text:AstroStatus.Normal.description,status: .Normal)
-                            Tag(text:AstroStatus.Serious.description,status: .Serious)
-                            Tag(text:AstroStatus.Critical.description,status: .Critical)
+                            Tag(text:AstroStatus.off.description,status: .off)
+                            Tag(text:AstroStatus.standby.description,status: .standby)
+                            Tag(text:AstroStatus.caution.description,status: .caution)
+                            Tag(text:AstroStatus.normal.description,status: .normal)
+                            Tag(text:AstroStatus.serious.description,status: .serious)
+                            Tag(text:AstroStatus.critical.description,status: .critical)
                         }.padding()
                         
                     }
