@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C00CBAE2863BF7400057127 /* AstroSwiftFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7C00CBAD2863BF7400057127 /* AstroSwiftFoundation */; };
 		7C1716CF281C57E800EA3DFA /* PlainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1716CE281C57E800EA3DFA /* PlainList.swift */; };
 		7C1716D1281C59B300EA3DFA /* GroupedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1716D0281C59B300EA3DFA /* GroupedList.swift */; };
 		7C1716D3281C59E400EA3DFA /* InsetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1716D2281C59E400EA3DFA /* InsetList.swift */; };
@@ -259,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C75E661283D7F0600F50298 /* AstroSwiftCore in Frameworks */,
+				7C00CBAE2863BF7400057127 /* AstroSwiftFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +653,7 @@
 			name = "Astro Swift Sampler WatchKit Extension";
 			packageProductDependencies = (
 				7C75E660283D7F0600F50298 /* AstroSwiftCore */,
+				7C00CBAD2863BF7400057127 /* AstroSwiftFoundation */,
 			);
 			productName = "Astro Swift Sampler WatchKit Extension";
 			productReference = 7C75E621283D7C1600F50298 /* Astro Swift Sampler WatchKit Extension.appex */;
@@ -1565,6 +1568,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7C00CBAD2863BF7400057127 /* AstroSwiftFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C479BC42790DA66002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftFoundation" */;
+			productName = AstroSwiftFoundation;
+		};
 		7C479BC52790DA66002845E9 /* AstroSwiftFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7C479BC42790DA66002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftFoundation" */;
