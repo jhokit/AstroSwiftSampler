@@ -81,6 +81,7 @@
 		7C84AB8B28297CB6001D3256 /* AstroSymbolSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8828297BAD001D3256 /* AstroSymbolSamples.swift */; };
 		7C84AB8C28297CBA001D3256 /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
 		7C84AB8D28297CBA001D3256 /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
+		7C87641428651424001C7B66 /* AstroSwiftFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7C87641328651424001C7B66 /* AstroSwiftFoundation */; };
 		7C8C8CBE28416FDF0014E9AD /* SymbolRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C8CBC28416FDB0014E9AD /* SymbolRow.swift */; };
 		7C8C8CC028416FFB0014E9AD /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C8CBF28416FFB0014E9AD /* Symbols.swift */; };
 		7C8C8CC2284171EF0014E9AD /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
@@ -117,6 +118,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7C75E615283D7C1500F50298;
 			remoteInfo = "Astro Swift Sampler WatchKit App";
+		};
+		7C87641528651434001C7B66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C479B8F2790D954002845E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C479B9A2790D954002845E9;
+			remoteInfo = "AstroSwiftSampler (iOS)";
 		};
 		7CB9930F283ED97700DD8A1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -260,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C75E661283D7F0600F50298 /* AstroSwiftCore in Frameworks */,
-				7C00CBAE2863BF7400057127 /* AstroSwiftFoundation in Frameworks */,
+				7C87641428651424001C7B66 /* AstroSwiftFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,7 +661,7 @@
 			name = "Astro Swift Sampler WatchKit Extension";
 			packageProductDependencies = (
 				7C75E660283D7F0600F50298 /* AstroSwiftCore */,
-				7C00CBAD2863BF7400057127 /* AstroSwiftFoundation */,
+				7C87641328651424001C7B66 /* AstroSwiftFoundation */,
 			);
 			productName = "Astro Swift Sampler WatchKit Extension";
 			productReference = 7C75E621283D7C1600F50298 /* Astro Swift Sampler WatchKit Extension.appex */;
@@ -671,6 +679,7 @@
 			);
 			dependencies = (
 				7C75E63D283D7C1700F50298 /* PBXTargetDependency */,
+				7C87641628651434001C7B66 /* PBXTargetDependency */,
 			);
 			name = "Astro Swift SamplerTests";
 			productName = "Astro Swift SamplerTests";
@@ -947,6 +956,11 @@
 			isa = PBXTargetDependency;
 			target = 7C75E615283D7C1500F50298 /* Astro Swift Sampler WatchKit App */;
 			targetProxy = 7C75E646283D7C1700F50298 /* PBXContainerItemProxy */;
+		};
+		7C87641628651434001C7B66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C479B9A2790D954002845E9 /* AstroSwiftSampler (iOS) */;
+			targetProxy = 7C87641528651434001C7B66 /* PBXContainerItemProxy */;
 		};
 		7CB99310283ED97700DD8A1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1561,7 +1575,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RocketCommunicationsInc/AstroSwiftCore";
 			requirement = {
-				branch = newColors;
+				branch = "tokens-experiment";
 				kind = branch;
 			};
 		};
@@ -1597,6 +1611,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7C479BC72790DA80002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftCore" */;
 			productName = AstroSwiftCore;
+		};
+		7C87641328651424001C7B66 /* AstroSwiftFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C479BC42790DA66002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftFoundation" */;
+			productName = AstroSwiftFoundation;
 		};
 		7CF86EFB2821D18800D554DF /* AstroSwiftFoundation */ = {
 			isa = XCSwiftPackageProductDependency;

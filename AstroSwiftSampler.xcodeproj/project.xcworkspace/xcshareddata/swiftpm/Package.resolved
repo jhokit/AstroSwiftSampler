@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RocketCommunicationsInc/AstroSwiftCore",
       "state" : {
-        "branch" : "newColors",
-        "revision" : "18cc8a7c90c1af3cf79efbef4a93d5a56aec5564"
+        "branch" : "tokens-experiment",
+        "revision" : "65cecd30fc28b79765902d0a479e18b8aaf81879"
       }
     },
     {
