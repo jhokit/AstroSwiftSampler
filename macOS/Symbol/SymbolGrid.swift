@@ -17,7 +17,7 @@ struct SymbolGrid: View {
         
         ScrollView{
             
-            LazyVGrid(columns:columns, spacing: 18){
+            LazyVGrid(columns:columns){
                 Section("Status"){
                     if let symbols = AstroSymbolSamples.statusSymbols
                     {

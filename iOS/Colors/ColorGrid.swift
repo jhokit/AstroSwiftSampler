@@ -14,6 +14,7 @@ struct ColorGrid: View {
     var body: some View {
         let columns:[GridItem] = Array(repeating: .init(.flexible()), count: (horizontalSizeClass == .compact) ? 1 : 3)
         
+        ScrollView{
             LazyVGrid(columns:columns) {
                 ForEach(sample.colorVariants!, id: \.id) { colorSample in
                     let subVariants = colorSample.colorVariants
@@ -28,7 +29,11 @@ struct ColorGrid: View {
                             })
                     }
                 }
+            }.padding()
         }
+        .background(Color.astroUIBackground)
+        .navigationTitle(sample.name)
+       
     }
 }
 

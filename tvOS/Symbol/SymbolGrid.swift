@@ -13,23 +13,17 @@ struct SymbolGrid: View {
     @State private var font:Font = .body
     
     var body: some View {
-        
         let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 3)
         LazyVGrid(columns:columns, spacing: 18){
             Section("Status"){
                 ForEach(AstroSymbolSamples.statusSymbols, id: \.id) { symbolSample in
-                    Button(action: {}) {
-                        SymbolTile(sample: symbolSample, weight: $weight, font:$font)
-                    }
-                    .buttonStyle(PlainTileStyle())
+                    SymbolTile(sample: symbolSample, weight: $weight, font:$font)
                 }
             }
             
             Section("Icons"){
                 ForEach(AstroSymbolSamples.standardSymbols, id: \.id) { symbolSample in
-                    Button(action: {}) {
-                        SymbolTile(sample: symbolSample, weight: $weight, font:$font)
-                    }.buttonStyle(PlainTileStyle())
+                    SymbolTile(sample: symbolSample, weight: $weight, font:$font)
                 }
             }
         }

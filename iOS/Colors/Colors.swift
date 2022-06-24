@@ -18,7 +18,6 @@ struct Colors: View {
         NavigationView{
             ScrollView{
                 LazyVGrid(columns:columns) {
-                    
                     Section("Semantic") {
                         ForEach(AstroColorSamples.astroSemantic.colorVariants!, id: \.id) { colorSample in
                             ColorTile(sample: colorSample)
@@ -40,7 +39,7 @@ struct Colors: View {
                     Section("Core") {
                         ForEach(AstroColorSamples.astroCore.colorVariants!, id: \.id) { colorSample in
                             let subVariants = colorSample.colorVariants
-                            if (subVariants == nil){
+                            if (subVariants == nil) {
                                 ColorTile(sample: colorSample)
                             }
                             else {
@@ -52,10 +51,10 @@ struct Colors: View {
                             }
                         }
                     }
-                }
+                }.padding()
             }
             .background(Color.astroUIBackground)
-            .navigationBarTitle("Colors")
+            .navigationTitle("Colors")
             .toolbar {
                 ToolbarItem(){
                     Button("Layers")  {showingSheet.toggle()}
@@ -64,12 +63,14 @@ struct Colors: View {
             .sheet(isPresented: $showingSheet) {
                 LayersView()
             }
-            
-        }.navigationViewStyle(StackNavigationViewStyle())
-            .tabItem {
-                Image(systemName: "paintpalette.fill")
-                Text("Colors")
-            }
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .tabItem {
+            Image(systemName: "paintpalette.fill")
+            Text("Colors")
+        }
+        
+        
     }
 }
 
@@ -147,7 +148,7 @@ struct LayerTile: View {
 struct LayerTile_Previews: PreviewProvider {
     static var previews: some View {
         LayerTile(sample: ColorSample(name:"Test",color: Color.red))
-
+        
     }
 }
 
