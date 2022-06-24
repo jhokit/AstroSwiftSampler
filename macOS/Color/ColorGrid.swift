@@ -16,7 +16,7 @@ struct ColorGrid: View {
         
         ScrollView{
             
-            LazyVGrid(columns:columns, spacing: 18){
+            LazyVGrid(columns:columns){
                 Section("Semantic"){
                     if let colorVariants = AstroColorSamples.astroSemantic.colorVariants
                     {
