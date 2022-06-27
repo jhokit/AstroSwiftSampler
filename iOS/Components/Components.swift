@@ -21,7 +21,6 @@ struct Components: View {
         /* Components */
         NavigationView{
             Form {
-    
                 Section("Astro Components"){
                     HStack{
                         Text("Status")
@@ -49,17 +48,43 @@ struct Components: View {
                             Tag(text:AstroStatus.critical.description,status: .critical)
                         }
                     }
-
+                    
                     HStack{
                         Text("Tag")
                         Spacer()
                         Tag(text:"Hello")
                     }
+
+                    VStack{
+                        HStack{
+                            Text("Classification Banners")
+                            Spacer()
+                        }
+                        ClassificationBanner(.unclassified)
+                        ClassificationBanner(.cui)
+                        ClassificationBanner(.confidential)
+                        ClassificationBanner(.secret)
+                        ClassificationBanner(.topSecret)
+                        ClassificationBanner(.topSecretSCI)
+                    }
+
+                    VStack{
+                        HStack{
+                            Text("Classification Markers")
+                            Spacer()
+                        }
+                        LazyVGrid(columns:columns) {
+                            ClassificationMarker(.unclassified)
+                            ClassificationMarker(.cui)
+                            ClassificationMarker(.confidential)
+                            ClassificationMarker(.secret)
+                            ClassificationMarker(.topSecret)
+                            ClassificationMarker(.topSecretSCI)
+                        }
+                    }
                 }.listRowBackground(Color.astroUISecondaryGroupedBackground)
                 
                 Section("System Components"){
-                    
-
                     // Toggle and Status
                     Toggle(isOn: $toggleValue) {
                         Text("Toggle")
@@ -133,6 +158,11 @@ struct Components: View {
 
 struct Components_Previews: PreviewProvider {
     static var previews: some View {
-        Components()
+        Group {
+            Components()
+                .preferredColorScheme(.light)
+                
+            Components()
+        }
     }
 }
