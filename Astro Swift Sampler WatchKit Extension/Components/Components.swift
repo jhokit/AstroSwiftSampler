@@ -64,6 +64,36 @@ struct Components: View {
                             Tag(text:"Hello")
                         }.padding()
                     }
+                    
+                    VStack{
+                        HStack{
+                            Text("Classification Banners")
+                            Spacer()
+                        }
+                        ClassificationBanner(.unclassified)
+                        ClassificationBanner(.cui)
+                        ClassificationBanner(.confidential)
+                        ClassificationBanner(.secret)
+                        ClassificationBanner(.topSecret)
+                        ClassificationBanner(.topSecretSCI)
+                    }
+
+                    VStack{
+                        HStack{
+                            Text("Classification Markers")
+                            Spacer()
+                        }
+                        VStack(){
+                            ClassificationMarker(.unclassified)
+                            ClassificationMarker(.cui)
+                            ClassificationMarker(.confidential)
+                            ClassificationMarker(.secret)
+                            ClassificationMarker(.topSecret)
+                            ClassificationMarker(.topSecretSCI)
+                        }
+
+                    }
+
                 }
                 
                 Section("System Components"){
