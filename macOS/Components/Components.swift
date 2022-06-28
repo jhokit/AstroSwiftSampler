@@ -9,8 +9,6 @@ import SwiftUI
 import AstroSwiftFoundation
 
 struct Components: View {
-    @State var name: String = ""
-    @State var password: String = ""
     @State var toggleValue: Bool = true
     @State private var progressValue: Double = 3
     let progressTotal:Double = 5
@@ -60,6 +58,41 @@ struct Components: View {
                             Spacer()
                         }
                     }
+                    
+                    VStack{
+                        HStack{
+                            Text("Classification Banners")
+                            Spacer()
+                        }
+                        ClassificationBanner(.unclassified)
+                        ClassificationBanner(.cui)
+                        ClassificationBanner(.confidential)
+                        ClassificationBanner(.secret)
+                        ClassificationBanner(.topSecret)
+                        ClassificationBanner(.topSecretSCI)
+                    }
+
+                    VStack{
+                        HStack{
+                            Text("Classification Markers")
+                            Spacer()
+                        }
+                        HStack(spacing:15){
+                            ClassificationMarker(.unclassified)
+                            ClassificationMarker(.cui)
+                            ClassificationMarker(.confidential)
+                            Spacer()
+                        }
+                        
+                        HStack(spacing:15){
+                            ClassificationMarker(.secret)
+                            ClassificationMarker(.topSecret)
+                            ClassificationMarker(.topSecretSCI)
+                            Spacer()
+                        }
+
+                    }
+
                 }
             }
             .padding()
