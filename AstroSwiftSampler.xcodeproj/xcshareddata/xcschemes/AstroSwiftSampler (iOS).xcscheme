@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C75E63A283D7C1700F50298"
-               BuildableName = "Astro Swift SamplerTests watchOS.xctest"
+               BuildableName = "Astro Swift SamplerTests.xctest"
                BlueprintName = "Astro Swift SamplerTests"
                ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
             </BuildableReference>
