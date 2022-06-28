@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C00CBAE2863BF7400057127 /* AstroSwiftFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7C00CBAD2863BF7400057127 /* AstroSwiftFoundation */; };
 		7C1716CF281C57E800EA3DFA /* PlainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1716CE281C57E800EA3DFA /* PlainList.swift */; };
 		7C1716D1281C59B300EA3DFA /* GroupedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1716D0281C59B300EA3DFA /* GroupedList.swift */; };
 		7C1716D3281C59E400EA3DFA /* InsetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1716D2281C59E400EA3DFA /* InsetList.swift */; };
@@ -105,26 +104,12 @@
 			remoteGlobalIDString = 7C75E620283D7C1600F50298;
 			remoteInfo = "Astro Swift Sampler WatchKit Extension";
 		};
-		7C75E63C283D7C1700F50298 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C479B8F2790D954002845E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7C75E620283D7C1600F50298;
-			remoteInfo = "Astro Swift Sampler WatchKit Extension";
-		};
 		7C75E646283D7C1700F50298 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7C479B8F2790D954002845E9 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7C75E615283D7C1500F50298;
 			remoteInfo = "Astro Swift Sampler WatchKit App";
-		};
-		7C87641528651434001C7B66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C479B8F2790D954002845E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7C479B9A2790D954002845E9;
-			remoteInfo = "AstroSwiftSampler (iOS)";
 		};
 		7CB9930F283ED97700DD8A1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -678,8 +663,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7C75E63D283D7C1700F50298 /* PBXTargetDependency */,
-				7C87641628651434001C7B66 /* PBXTargetDependency */,
 			);
 			name = "Astro Swift SamplerTests";
 			productName = "Astro Swift SamplerTests";
@@ -947,20 +930,10 @@
 			target = 7C75E620283D7C1600F50298 /* Astro Swift Sampler WatchKit Extension */;
 			targetProxy = 7C75E623283D7C1600F50298 /* PBXContainerItemProxy */;
 		};
-		7C75E63D283D7C1700F50298 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7C75E620283D7C1600F50298 /* Astro Swift Sampler WatchKit Extension */;
-			targetProxy = 7C75E63C283D7C1700F50298 /* PBXContainerItemProxy */;
-		};
 		7C75E647283D7C1700F50298 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7C75E615283D7C1500F50298 /* Astro Swift Sampler WatchKit App */;
 			targetProxy = 7C75E646283D7C1700F50298 /* PBXContainerItemProxy */;
-		};
-		7C87641628651434001C7B66 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7C479B9A2790D954002845E9 /* AstroSwiftSampler (iOS) */;
-			targetProxy = 7C87641528651434001C7B66 /* PBXContainerItemProxy */;
 		};
 		7CB99310283ED97700DD8A1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1582,11 +1555,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7C00CBAD2863BF7400057127 /* AstroSwiftFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7C479BC42790DA66002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftFoundation" */;
-			productName = AstroSwiftFoundation;
-		};
 		7C479BC52790DA66002845E9 /* AstroSwiftFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7C479BC42790DA66002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftFoundation" */;
