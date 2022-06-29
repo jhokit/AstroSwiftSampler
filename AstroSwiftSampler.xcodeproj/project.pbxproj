@@ -1548,7 +1548,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RocketCommunicationsInc/AstroSwiftCore";
 			requirement = {
-				branch = "tokens-experiment";
+				branch = newColors;
 				kind = branch;
 			};
 		};

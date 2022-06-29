@@ -15,7 +15,7 @@ struct SymbolRow: View {
             HStack{
                 if let status = sample.status
                 {
-                    Text(Image.imageForAstroStatus(status)).foregroundColor(Color.colorForAstroStatus(status))
+                    Text(status.image).foregroundColor(status.color)
                 }
                 else
                 {

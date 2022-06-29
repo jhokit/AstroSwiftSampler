@@ -18,7 +18,7 @@ struct SymbolTile: View {
         HStack{
             if let status = sample.status
             {
-                Text(Image.imageForAstroStatus(status)).foregroundColor(Color.colorForAstroStatus(status)).fontWeight(weight).font(font)
+                Text(status.image).foregroundColor(status.color).fontWeight(weight).font(font)
             }
             else
             {
