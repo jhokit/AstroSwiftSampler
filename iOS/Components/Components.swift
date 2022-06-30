@@ -138,6 +138,10 @@ struct Components: View {
                         FormView()
                     }.listRowBackground(selected == 6 ? Color.astroUITertiaryGroupedBackground : Color.astroUISecondaryGroupedBackground)
                 }.listRowBackground(Color.astroUISecondaryGroupedBackground)
+                
+                Section(){
+                        Text(versionString())
+                    }.listRowBackground(Color.astroUISecondaryGroupedBackground)
 
             }
             .alert("Sample Alert", isPresented: $isShowingAlert) {
@@ -154,6 +158,14 @@ struct Components: View {
             Text("Components")
         }
     }
+}
+
+
+func versionString()->String
+{
+    let version:String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "Unknown"
+    let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "Unknown"
+    return "Version " + version + " (" + build + ")"
 }
 
 struct Components_Previews: PreviewProvider {
