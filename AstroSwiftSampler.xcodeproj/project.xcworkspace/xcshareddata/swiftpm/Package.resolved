@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RocketCommunicationsInc/AstroSwiftCore",
       "state" : {
-        "branch" : "tokens-experiment",
-        "revision" : "65cecd30fc28b79765902d0a479e18b8aaf81879"
+        "branch" : "newColors",
+        "revision" : "6dca15d870a8922e8468be3a5d32583056fbefea"
       }
     },
     {
@@ -15,7 +15,7 @@
       "location" : "https://github.com/RocketCommunicationsInc/AstroSwiftFoundation.git",
       "state" : {
         "branch" : "newSemanticColors",
-        "revision" : "fe7660c257d2bf4c809a6689897e38fd3336dab7"
+        "revision" : "f99a5ea717591f75e78f9d893eb6e1817467a42e"
       }
     }
   ],

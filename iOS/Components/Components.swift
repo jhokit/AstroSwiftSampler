@@ -138,6 +138,10 @@ struct Components: View {
                         FormView()
                     }.listRowBackground(selected == 6 ? Color.astroUITertiaryGroupedBackground : Color.astroUISecondaryGroupedBackground)
                 }.listRowBackground(Color.astroUISecondaryGroupedBackground)
+                
+                Section(){
+                        Text(versionString())
+                    }.listRowBackground(Color.astroUISecondaryGroupedBackground)
 
             }
             .alert("Sample Alert", isPresented: $isShowingAlert) {
@@ -155,6 +159,7 @@ struct Components: View {
         }
     }
 }
+
 
 struct Components_Previews: PreviewProvider {
     static var previews: some View {

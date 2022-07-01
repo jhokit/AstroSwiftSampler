@@ -125,6 +125,9 @@ struct Components: View {
                     Button(LocalizedStringKey("Show Alert")) {
                         isShowingAlert = true
                     }
+                    
+                    // Version
+                    Text(versionString())
                 }
             }// Just setting listRowBackground to a Color doesn't work on AppleWatch, it removes the row the shape.
             // Must recreate the row background shape, foreground, and background.
