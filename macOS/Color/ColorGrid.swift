@@ -59,11 +59,10 @@ struct ColorGrid: View {
                 }
             }
             .padding()
-            .background(Color.astroUIBackground)
             .sheet(item: $sheetColorSample,
                      content: {theSample in ColorVariantGrid(item: theSample)})
 
-        }
+        }.background(Color.astroUIBackground)
     }
 }
 

@@ -47,6 +47,10 @@
 		7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7C479BDF2790E4B6002845E9 /* ColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BDE2790E4B6002845E9 /* ColorTile.swift */; };
 		7C485CE12836EACA00237652 /* SymbolGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C485CE02836EACA00237652 /* SymbolGrid.swift */; };
+		7C58E954286F454200594560 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58E953286F454200594560 /* Version.swift */; };
+		7C58E955286F454200594560 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58E953286F454200594560 /* Version.swift */; };
+		7C58E956286F454200594560 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58E953286F454200594560 /* Version.swift */; };
+		7C58E957286F454200594560 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58E953286F454200594560 /* Version.swift */; };
 		7C625130283307080055F51C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62512F283307080055F51C /* Colors.swift */; };
 		7C6251322833077C0055F51C /* ColorGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6251312833077C0055F51C /* ColorGrid.swift */; };
 		7C625137283310C00055F51C /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C625136283310C00055F51C /* Components.swift */; };
@@ -179,6 +183,7 @@
 		7C479BDE2790E4B6002845E9 /* ColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTile.swift; sourceTree = "<group>"; };
 		7C479BE02790E66A002845E9 /* ColorGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGrid.swift; sourceTree = "<group>"; };
 		7C485CE02836EACA00237652 /* SymbolGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
+		7C58E953286F454200594560 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		7C62512F283307080055F51C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7C6251312833077C0055F51C /* ColorGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGrid.swift; sourceTree = "<group>"; };
 		7C625136283310C00055F51C /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
@@ -381,6 +386,7 @@
 			children = (
 				7C3DCFC22853F40A00CEEEC5 /* Data */,
 				7C3DCFCA2853FB0600CEEEC5 /* Views */,
+				7C58E952286F452100594560 /* Utilities */,
 				7C3DCFA42853EB0E00CEEEC5 /* Preview Assets.xcassets */,
 			);
 			path = Shared;
@@ -400,6 +406,14 @@
 				7C485CE02836EACA00237652 /* SymbolGrid.swift */,
 			);
 			path = Symbol;
+			sourceTree = "<group>";
+		};
+		7C58E952286F452100594560 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7C58E953286F454200594560 /* Version.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		7C62512E283305DD0055F51C /* Symbol */ = {
@@ -821,6 +835,7 @@
 				7C1716D5281C5A5E00EA3DFA /* InsetGrouped.swift in Sources */,
 				7C7D6F70282EBC340015D7F0 /* Colors.swift in Sources */,
 				7C3DCFC42853F43500CEEEC5 /* SampleData.swift in Sources */,
+				7C58E954286F454200594560 /* Version.swift in Sources */,
 				7C1716D1281C59B300EA3DFA /* GroupedList.swift in Sources */,
 				7C1716D3281C59E400EA3DFA /* InsetList.swift in Sources */,
 				7C84AB8728297B61001D3256 /* SymbolSample.swift in Sources */,
@@ -848,6 +863,7 @@
 				7C37A8D52791F93F00965F29 /* ContentView.swift in Sources */,
 				7C84AB8C28297CBA001D3256 /* SymbolSample.swift in Sources */,
 				7C3DCFCD2853FC6300CEEEC5 /* Sizes.swift in Sources */,
+				7C58E955286F454200594560 /* Version.swift in Sources */,
 				7C65DAA22834439300E2FA3F /* ColorGrid.swift in Sources */,
 				7C3DCFC52853F43500CEEEC5 /* SampleData.swift in Sources */,
 				7C37A8D32791F93F00965F29 /* AstroSwiftSamplerApp.swift in Sources */,
@@ -878,6 +894,7 @@
 				7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */,
 				7C84AB8B28297CB6001D3256 /* AstroSymbolSamples.swift in Sources */,
 				7C3DCFC62853F43500CEEEC5 /* SampleData.swift in Sources */,
+				7C58E956286F454200594560 /* Version.swift in Sources */,
 				7CE893D52832A85500F2CEF6 /* SymbolGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -894,6 +911,7 @@
 				7C70D9E828411FC700D14813 /* Components.swift in Sources */,
 				7C75E627283D7C1600F50298 /* AstroSwiftSamplerApp.swift in Sources */,
 				7C8C8CC2284171EF0014E9AD /* SymbolSample.swift in Sources */,
+				7C58E957286F454200594560 /* Version.swift in Sources */,
 				7CB99346283EDEF400DD8A1E /* ColorSample.swift in Sources */,
 				7C8C8CBE28416FDF0014E9AD /* SymbolRow.swift in Sources */,
 				7CB99345283EDEE100DD8A1E /* AstroColorSamples.swift in Sources */,

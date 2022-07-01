@@ -103,6 +103,7 @@ struct Components: View {
                     Button(LocalizedStringKey("Show Alert")) {
                         isShowingAlert = true
                     }
+                    Text(versionString())
                 }
             }
             .alert("Sample Alert", isPresented: $isShowingAlert) {
