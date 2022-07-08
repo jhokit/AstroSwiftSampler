@@ -35,14 +35,10 @@ struct Components: View {
                         // Status Tag
                         VStack(alignment: .leading){
                             Text("Status Tag")
-                            HStack(spacing:15){
+                            HStack(){
                                 Tag(text:AstroStatus.off.description,status: .off)
                                 Tag(text:AstroStatus.standby.description,status: .standby)
                                 Tag(text:AstroStatus.caution.description,status: .caution)
-                                Spacer()
-                            }
-                            
-                            HStack(spacing:15){
                                 Tag(text:AstroStatus.normal.description,status: .normal)
                                 Tag(text:AstroStatus.serious.description,status: .serious)
                                 Tag(text:AstroStatus.critical.description,status: .critical)
@@ -77,28 +73,20 @@ struct Components: View {
                                 Text("Classification Markers")
                                 Spacer()
                             }
-                            HStack(spacing:15){
+                            HStack(){
                                 ClassificationMarker(.unclassified)
                                 ClassificationMarker(.cui)
                                 ClassificationMarker(.confidential)
-                                Spacer()
-                            }
-                            
-                            HStack(spacing:15){
                                 ClassificationMarker(.secret)
                                 ClassificationMarker(.topSecret)
                                 ClassificationMarker(.topSecretSCI)
                                 Spacer()
                             }
-                            
                         }
-                        
                     }
                 }
                 .padding()
-                
                 Divider()
-                
                
                 // System Components
                 Form(){

@@ -33,7 +33,7 @@ struct ContentView: View {
                 }
 
             }.listStyle(.sidebar).frame(minWidth:100)
-        }
+        }.frame(minWidth:500, idealWidth: 800)
     }
 }
 
