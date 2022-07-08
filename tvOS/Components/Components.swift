@@ -35,18 +35,22 @@ struct Components: View {
                     HStack{
                         Text("Status Tag")
                         Spacer()
-                        VStack(spacing:10) {
-                            Tag(text:AstroStatus.off.description,status: .off)
-                            Tag(text:AstroStatus.standby.description,status: .standby)
-                            Tag(text:AstroStatus.caution.description,status: .caution)
-                        }
-                        VStack(spacing:10){
-                            Tag(text:AstroStatus.normal.description,status: .normal)
-                            Tag(text:AstroStatus.serious.description,status: .serious)
-                            Tag(text:AstroStatus.critical.description,status: .critical)
+                        HStack(){
+                            VStack(alignment:.center) {
+                                Tag(text:AstroStatus.off.description,status: .off)
+                                Tag(text:AstroStatus.caution.description,status: .caution)
+                            }
+                            VStack(alignment:.center){
+                                Tag(text:AstroStatus.standby.description,status: .standby)
+                                Tag(text:AstroStatus.serious.description,status: .serious)
+                            }
+                            VStack(alignment:.center){
+                                Tag(text:AstroStatus.normal.description,status: .normal)
+                                Tag(text:AstroStatus.critical.description,status: .critical)
+                            }
                         }
                     }.padding([.top,.bottom],4)
-
+                    
                     HStack{
                         Text("Tag")
                         Spacer()
@@ -65,25 +69,29 @@ struct Components: View {
                         ClassificationBanner(.topSecret)
                         ClassificationBanner(.topSecretSCI)
                     }.padding([.top,.bottom],4)
-
+                    
                     HStack{
                         Text("Classification Markers")
                         Spacer()
-                       VStack(spacing:10){
-                            ClassificationMarker(.unclassified)
-                            ClassificationMarker(.cui)
-                            ClassificationMarker(.confidential)
-                       }
-                        VStack(spacing:10){
-                            ClassificationMarker(.secret)
-                            ClassificationMarker(.topSecret)
-                            ClassificationMarker(.topSecretSCI)
+                        HStack(){
+                            VStack(alignment:.center) {
+                                ClassificationMarker(.unclassified)
+                                ClassificationMarker(.secret)
+                            }
+                            VStack(alignment:.center){
+                                ClassificationMarker(.cui)
+                                ClassificationMarker(.topSecret)
+                            }
+                            VStack(alignment:.center){
+                                ClassificationMarker(.confidential)
+                                ClassificationMarker(.topSecretSCI)
+                            }
                         }
                     }.padding([.top,.bottom],4)
-
+                    
                 }
             }
-
+            
             // Right Side, a form of system components
             Form{
                 Section("System Components"){
@@ -113,11 +121,11 @@ struct Components: View {
             }
             
         }.navigationBarTitle("Form")
-        .background(Color.astroUIBackground) // Set the background color for the whole page
-        .tabItem {
-            Image(systemName: "switch.2")
-            Text("Components")
-        }
+            .background(Color.astroUIBackground) // Set the background color for the whole page
+            .tabItem {
+                Image(systemName: "switch.2")
+                Text("Components")
+            }
     }
 }
 
