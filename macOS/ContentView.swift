@@ -8,37 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection: String = "components"
-    let categories = ["components","colors","symbols"] // a way to identify our three view types
+    enum Categories{
+        case components,colors,symbols
+    }
+    @State private var selection: Categories = .components
     
     var body: some View {
         
         NavigationSplitView{
             List(selection:$selection){
-                NavigationLink(value: categories[0] ) {
+                NavigationLink(value: Categories.components) {
                     Label("Components", systemImage: "switch.2")
                 }
-                NavigationLink(value: categories[1] ) {
+                NavigationLink(value: Categories.colors) {
                     Label("Colors", systemImage: "paintpalette")
                 }
-                NavigationLink(value: categories[2] ) {
+                NavigationLink(value: Categories.symbols ) {
                     Label("Symbols", systemImage: "star")
                 }
             }
-            .frame(minWidth:100)
+            .frame(minWidth:100) // left column min width
         } detail: {
-                switch selection{
-                case categories[0]:
-                    Components()
-                case categories[1]:
-                    ColorGrid()
-                case categories[2]:
-                    SymbolGrid()
-                default:
-                    EmptyView()
-                }
+            switch selection{
+            case .components:
+                Components()
+            case  .colors :
+                ColorGrid()
+            case  .symbols:
+                SymbolGrid()
             }
-        .frame(minWidth:500, idealWidth: 800)
+        }
+        .frame(minWidth:500, idealWidth: 800) // overall window min and ideal width
     }
 }
 
