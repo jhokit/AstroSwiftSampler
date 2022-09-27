@@ -30,27 +30,3 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-
-
-// experiments with generalizing row selection, not working yet
-
-//struct Tag2: ViewModifier {
-//    func body(content: Content) -> some View {
-//        content
-//            .tag(2)
-//    }
-//}
-
-//extension View {
-//    func tag2() -> some View {
-//        modifier(Tag2())
-//    }
-//}
-
-
-//struct astroBackground: ViewModifier {
-//    func body(content: Content) -> some View {
-//        content
-//            .listRowBackground(1 == 1 ? Color.astroUISecondaryBackground : Color.astroUIBackground)
-//        }
-//}

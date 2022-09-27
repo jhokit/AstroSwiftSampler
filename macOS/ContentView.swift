@@ -8,34 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selected: Int? = 1
-
+  //  @State private var selection: String = "components"
+    let category = ["components","colors","symbols"]
+    
     var body: some View {
         
-        NavigationView {
-            List{
-                NavigationLink(tag: 1, selection: self.$selected) {
-                    Components()
-                } label: {
+        NavigationSplitView{
+            List(){
+                NavigationLink(value: category[0] ) {
                     Label("Components", systemImage: "switch.2")
                 }
-
-                NavigationLink(tag: 2, selection: self.$selected) {
-                    ColorGrid()
-                } label: {
+                NavigationLink(value: category[1] ) {
                     Label("Colors", systemImage: "paintpalette")
                 }
-                
-                NavigationLink(tag: 3, selection: self.$selected) {
-                    SymbolGrid()
-                } label: {
+                NavigationLink(value: category[2] ) {
                     Label("Symbols", systemImage: "star")
                 }
-
-            }.listStyle(.sidebar).frame(minWidth:100)
-        }.frame(minWidth:500, idealWidth: 800)
+                
+            }
+            .listStyle(.sidebar)
+            .frame(minWidth:100)
+            .navigationDestination(for: String.self) { theCategory in
+                switch theCategory{
+                case category[0]:
+                    Components()
+                case category[1]:
+                    ColorGrid()
+                case category[2]:
+                    SymbolGrid()
+                default:
+                    EmptyView()
+                }
+            }
+        } detail: {
+            // no default view here
+        }
+        .frame(minWidth:500, idealWidth: 800)
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
