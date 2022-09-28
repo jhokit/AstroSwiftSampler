@@ -29,6 +29,7 @@ struct Components: View {
             // set the background color for all sections
             .background(Color.astroUIGroupedBackground)
             .scrollContentBackground(.hidden) // required on iOS 16 to let background color show
+            .navigationBarTitle("Components")
         } detail: {
             // all detail views are pushed directly by NavigationLink(s)
         }
@@ -42,7 +43,6 @@ struct Components: View {
         } message: {
             Text("Hello")
         }
-        .navigationBarTitle("Components")
     }
 }
 
