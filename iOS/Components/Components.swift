@@ -22,6 +22,7 @@ struct Components: View {
                 
                 Lists()
                 
+                // show the app version in a section
                 Section(){
                     Text(versionString())
                 }.listRowBackground(Color.astroUISecondaryGroupedBackground)
@@ -31,7 +32,8 @@ struct Components: View {
             .scrollContentBackground(.hidden) // required on iOS 16 to let background color show
             .navigationBarTitle("Components")
         } detail: {
-            // all detail views are pushed directly by NavigationLink(s)
+            PlainList() // show this by default
+            // all other detail views are pushed directly by NavigationLink(s)
         }
 
         .tabItem {
