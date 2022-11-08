@@ -30,7 +30,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C479B9A2790D954002845E9"
                BuildableName = "Astro Sampler.app"
-               BlueprintName = "AstroSwiftSampler (iOS)"
+               BlueprintName = "AstroSwiftSampler iOS"
                ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
