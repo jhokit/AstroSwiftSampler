@@ -40,6 +40,7 @@ struct SymbolGrid: View {
             .padding()
         }
         .background(Color.astroUIBackground)
+        .navigationTitle("Symbols")
     }
 }
 struct SymbolGrid_Previews: PreviewProvider {
