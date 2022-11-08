@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C479BA02790D954002845E9"
                BuildableName = "Astro Sampler.app"
-               BlueprintName = "AstroSwiftSampler (macOS)"
+               BlueprintName = "AstroSwiftSampler macOS"
                ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C479BA02790D954002845E9"
             BuildableName = "Astro Sampler.app"
-            BlueprintName = "AstroSwiftSampler (macOS)"
+            BlueprintName = "AstroSwiftSampler macOS"
             ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C479BA02790D954002845E9"
             BuildableName = "Astro Sampler.app"
-            BlueprintName = "AstroSwiftSampler (macOS)"
+            BlueprintName = "AstroSwiftSampler macOS"
             ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -10,7 +10,7 @@ import AstroSwiftFoundation
 import AstroSwiftCore
 import SwiftUI
 
-@testable import Astro_Swift_Sampler_WatchKit_Extension
+@testable import Astro_Sampler // This is the Product Name in iOS target settings
 
 class Astro_Swift_SamplerTests: XCTestCase {
 

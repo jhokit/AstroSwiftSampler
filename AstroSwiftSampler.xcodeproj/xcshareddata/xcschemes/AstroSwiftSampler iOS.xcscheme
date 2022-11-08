@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7C479BB52790D998002845E9"
+               BlueprintIdentifier = "7C479B9A2790D954002845E9"
                BuildableName = "Astro Sampler.app"
-               BlueprintName = "AstroSwiftSampler (tvOS)"
+               BlueprintName = "AstroSwiftSampler iOS"
                ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7C75E63A283D7C1700F50298"
+               BuildableName = "Astro Swift SamplerTests.xctest"
+               BlueprintName = "Astro Swift SamplerTests"
+               ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -44,9 +54,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7C479BB52790D998002845E9"
+            BlueprintIdentifier = "7C479B9A2790D954002845E9"
             BuildableName = "Astro Sampler.app"
-            BlueprintName = "AstroSwiftSampler (tvOS)"
+            BlueprintName = "AstroSwiftSampler iOS"
             ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +71,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7C479BB52790D998002845E9"
+            BlueprintIdentifier = "7C479B9A2790D954002845E9"
             BuildableName = "Astro Sampler.app"
-            BlueprintName = "AstroSwiftSampler (tvOS)"
+            BlueprintName = "AstroSwiftSampler iOS"
             ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
