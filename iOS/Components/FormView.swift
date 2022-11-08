@@ -30,6 +30,7 @@ struct FormView: View {
                 }.listRowBackground(Color.astroUISecondaryGroupedBackground)
             }
             .background(Color.astroUIGroupedBackground) // set the background color for both sections
+            .scrollContentBackground(.hidden) // required on iOS 16 to let background color show
             .navigationBarTitle("Form")
             
         }

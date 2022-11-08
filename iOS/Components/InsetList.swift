@@ -9,13 +9,14 @@ import SwiftUI
 
 struct InsetList: View {
     @ObservedObject private var zones = Zones()
-
+    
     var body: some View {
         List(zones.zones){ zone in
             Text(zone.name).listRowBackground(Color.astroUIBackground)
         }.background(Color.astroUIBackground)
-            .listStyle(.inset)
-            .navigationBarTitle("Inset")
+        .scrollContentBackground(.hidden) // required on iOS 16 to let background color show
+        .listStyle(.inset)
+        .navigationBarTitle("Inset")
     }
 }
 

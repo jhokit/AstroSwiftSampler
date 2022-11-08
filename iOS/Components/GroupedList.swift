@@ -27,6 +27,7 @@ struct GroupedList: View {
         }
         .listStyle(.grouped)  // set the style for both Sections
         .background(Color.astroUIGroupedBackground) // set the background color for both Sections
+        .scrollContentBackground(.hidden) // required on iOS 16 to let background color show
         .navigationBarTitle("Grouped")
     }
 }
