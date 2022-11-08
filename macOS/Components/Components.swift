@@ -122,7 +122,10 @@ struct Components: View {
                     Spacer()
                 }
                 Spacer()
-            }.background(Color.astroUIBackground) // Set the background color for the whole page
+            }
         }
+        .background(Color.astroUIBackground) // Set the background color for the whole page
+        .navigationTitle("Components")
+
     }
 }
