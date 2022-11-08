@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C75E615283D7C1500F50298"
-               BuildableName = "Astro Swift Sampler (watchOS).app"
-               BlueprintName = "Astro Swift Sampler (watchOS)"
+               BuildableName = "Astro Swift Sampler watchOS.app"
+               BlueprintName = "Astro Swift Sampler watchOS"
                ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -59,8 +59,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C75E615283D7C1500F50298"
-            BuildableName = "Astro Swift Sampler (watchOS).app"
-            BlueprintName = "Astro Swift Sampler (watchOS)"
+            BuildableName = "Astro Swift Sampler watchOS.app"
+            BlueprintName = "Astro Swift Sampler watchOS"
             ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C75E615283D7C1500F50298"
-            BuildableName = "Astro Swift Sampler (watchOS).app"
-            BlueprintName = "Astro Swift Sampler (watchOS)"
+            BuildableName = "Astro Swift Sampler watchOS.app"
+            BlueprintName = "Astro Swift Sampler watchOS"
             ReferencedContainer = "container:AstroSwiftSampler.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
