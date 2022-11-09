@@ -11,6 +11,9 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var accessiblyOverrides = AccessiblyOverrides()
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.legibilityWeight) private var systemLegibiltyWeight
+    
+   // @Environment(\.accessibilityEnabled) private var scenePhase
 
     var body: some View {
         TabView {
@@ -22,6 +25,8 @@ struct ContentView: View {
         .environmentObject(accessiblyOverrides)
         // override the dynamicTypeSize for all views
         .dynamicTypeSize(accessiblyOverrides.dynamicTypeSize)
+        .bold(accessiblyOverrides.accessibilityBoldWeight == .bold)
+       // .fontWeight(accessiblyOverrides.accessibilityBoldWeight == .regular ? .regular : .bold)
         .onAppear(){
             accessiblyOverrides.readUserDefaults()
         }
@@ -31,6 +36,7 @@ struct ContentView: View {
                 accessiblyOverrides.writeUserDefaults()
             }
         }
+
 
     }
 }
