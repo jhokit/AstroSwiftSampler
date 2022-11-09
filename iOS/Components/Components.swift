@@ -11,7 +11,8 @@ import AstroSwiftFoundation
 struct Components: View {
     
     @State private var isShowingAlert = false
-
+    @State var someSize:DynamicTypeSize = .large
+    
     var body: some View {
         /* Components */
         NavigationSplitView{
@@ -27,6 +28,11 @@ struct Components: View {
                     Text(versionString())
                 }.listRowBackground(Color.astroUISecondaryGroupedBackground)
             }
+            .toolbar{
+                AccessibilyToolbarContent()
+            }
+            
+            
             // set the background color for all sections
             .background(Color.astroUIGroupedBackground)
             .scrollContentBackground(.hidden) // required on iOS 16 to let background color show
@@ -35,7 +41,6 @@ struct Components: View {
             PlainList() // show this by default
             // all other detail views are pushed directly by NavigationLink(s)
         }
-
         .tabItem {
             Image(systemName: "switch.2")
             Text("Components")
@@ -51,7 +56,7 @@ struct Components: View {
 struct AstroComponents: View {
     // column definition shared by two grids in this view
     let columns:[GridItem] = [GridItem(.flexible(),alignment: .trailing), GridItem(.flexible(),alignment: .trailing)]
-
+    
     var body: some View {
         Section("Astro Components"){
             // horizontal row of status symbols
@@ -197,13 +202,13 @@ struct Lists: View {
     }
 }
 
-struct Components_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            Components()
-                .preferredColorScheme(.light)
-            Components()
-        }
-    }
-}
+//struct Components_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            Components()
+//                .preferredColorScheme(.light)
+//            Components()
+//        }
+//    }
+//}
 
