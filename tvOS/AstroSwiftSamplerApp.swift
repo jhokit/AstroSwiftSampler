@@ -12,7 +12,6 @@ struct AstroSwiftSamplerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView().tint(.astroUIAccent).accentColor(.astroUIAccent)
-            AccessiblyOverrides.registerUserDefaults()
         }
     }
 }
