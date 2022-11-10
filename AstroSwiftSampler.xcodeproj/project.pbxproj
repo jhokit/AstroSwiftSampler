@@ -49,10 +49,6 @@
 		7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7C479BDF2790E4B6002845E9 /* ColorTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BDE2790E4B6002845E9 /* ColorTile.swift */; };
 		7C485CE12836EACA00237652 /* SymbolGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C485CE02836EACA00237652 /* SymbolGrid.swift */; };
-		7C58E954286F454200594560 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58E953286F454200594560 /* Version.swift */; };
-		7C58E955286F454200594560 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58E953286F454200594560 /* Version.swift */; };
-		7C58E956286F454200594560 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58E953286F454200594560 /* Version.swift */; };
-		7C58E957286F454200594560 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58E953286F454200594560 /* Version.swift */; };
 		7C625130283307080055F51C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62512F283307080055F51C /* Colors.swift */; };
 		7C6251322833077C0055F51C /* ColorGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6251312833077C0055F51C /* ColorGrid.swift */; };
 		7C625137283310C00055F51C /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C625136283310C00055F51C /* Components.swift */; };
@@ -84,12 +80,14 @@
 		7C84AB8B28297CB6001D3256 /* AstroSymbolSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8828297BAD001D3256 /* AstroSymbolSamples.swift */; };
 		7C84AB8C28297CBA001D3256 /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
 		7C84AB8D28297CBA001D3256 /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
-		7C87641428651424001C7B66 /* AstroSwiftFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7C87641328651424001C7B66 /* AstroSwiftFoundation */; };
+		7C882780291D9E94007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C88277F291D9E94007DD163 /* AstroSwiftUtilities */; };
+		7C882782291DA08B007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C882781291DA08B007DD163 /* AstroSwiftUtilities */; };
+		7C882784291DA08F007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C882783291DA08F007DD163 /* AstroSwiftUtilities */; };
+		7C882786291DA098007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C882785291DA098007DD163 /* AstroSwiftUtilities */; };
 		7C8C8CBE28416FDF0014E9AD /* SymbolRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C8CBC28416FDB0014E9AD /* SymbolRow.swift */; };
 		7C8C8CC028416FFB0014E9AD /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C8CBF28416FFB0014E9AD /* Symbols.swift */; };
 		7C8C8CC2284171EF0014E9AD /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
 		7C8C8CC3284171F50014E9AD /* AstroSymbolSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8828297BAD001D3256 /* AstroSymbolSamples.swift */; };
-		7C92392228E3978E00364E5A /* AstroSwiftCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7C184B0328D5289400DCCEFF /* AstroSwiftCore */; };
 		7C92392328E3978E00364E5A /* AstroSwiftFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7C184B0428D5289400DCCEFF /* AstroSwiftFoundation */; };
 		7C94CBA0291C0B2400F40CC2 /* DynamicTypeSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C94CB9F291C0B2400F40CC2 /* DynamicTypeSizeExtensions.swift */; };
 		7C94CBA1291C0B2400F40CC2 /* DynamicTypeSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C94CB9F291C0B2400F40CC2 /* DynamicTypeSizeExtensions.swift */; };
@@ -186,7 +184,6 @@
 		7C479BDE2790E4B6002845E9 /* ColorTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTile.swift; sourceTree = "<group>"; };
 		7C479BE02790E66A002845E9 /* ColorGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGrid.swift; sourceTree = "<group>"; };
 		7C485CE02836EACA00237652 /* SymbolGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
-		7C58E953286F454200594560 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		7C62512F283307080055F51C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7C6251312833077C0055F51C /* ColorGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGrid.swift; sourceTree = "<group>"; };
 		7C625136283310C00055F51C /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
@@ -235,6 +232,7 @@
 			files = (
 				7C479BC62790DA66002845E9 /* AstroSwiftFoundation in Frameworks */,
 				7C479BC92790DA80002845E9 /* AstroSwiftCore in Frameworks */,
+				7C882780291D9E94007DD163 /* AstroSwiftUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +242,7 @@
 			files = (
 				7C479BD22790DEDD002845E9 /* AstroSwiftFoundation in Frameworks */,
 				7C479BD42790DEE1002845E9 /* AstroSwiftCore in Frameworks */,
+				7C882782291DA08B007DD163 /* AstroSwiftUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +252,7 @@
 			files = (
 				7CF86EFC2821D18800D554DF /* AstroSwiftFoundation in Frameworks */,
 				7CF86EFE2821D18E00D554DF /* AstroSwiftCore in Frameworks */,
+				7C882784291DA08F007DD163 /* AstroSwiftUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +261,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C92392328E3978E00364E5A /* AstroSwiftFoundation in Frameworks */,
-				7C92392228E3978E00364E5A /* AstroSwiftCore in Frameworks */,
+				7C882786291DA098007DD163 /* AstroSwiftUtilities in Frameworks */,
 				7C75E661283D7F0600F50298 /* AstroSwiftCore in Frameworks */,
-				7C87641428651424001C7B66 /* AstroSwiftFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +413,6 @@
 		7C58E952286F452100594560 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				7C58E953286F454200594560 /* Version.swift */,
 				7C94CB9F291C0B2400F40CC2 /* DynamicTypeSizeExtensions.swift */,
 				7C13D7EE291C568F005FF637 /* LegibilityWeightExtensions.swift */,
 				7C94CBA2291C0D4B00F40CC2 /* AccessibilityOverrides.swift */,
@@ -579,6 +577,7 @@
 			packageProductDependencies = (
 				7C479BC52790DA66002845E9 /* AstroSwiftFoundation */,
 				7C479BC82790DA80002845E9 /* AstroSwiftCore */,
+				7C88277F291D9E94007DD163 /* AstroSwiftUtilities */,
 			);
 			productName = "AstroSwiftColors (iOS)";
 			productReference = 7C479B9B2790D954002845E9 /* Astro Sampler.app */;
@@ -600,6 +599,7 @@
 			packageProductDependencies = (
 				7C479BD12790DEDD002845E9 /* AstroSwiftFoundation */,
 				7C479BD32790DEE1002845E9 /* AstroSwiftCore */,
+				7C882781291DA08B007DD163 /* AstroSwiftUtilities */,
 			);
 			productName = "AstroSwiftColors (macOS)";
 			productReference = 7C479BA12790D954002845E9 /* Astro Sampler.app */;
@@ -621,6 +621,7 @@
 			packageProductDependencies = (
 				7CF86EFB2821D18800D554DF /* AstroSwiftFoundation */,
 				7CF86EFD2821D18E00D554DF /* AstroSwiftCore */,
+				7C882783291DA08F007DD163 /* AstroSwiftUtilities */,
 			);
 			productName = AstroSwiftColors;
 			productReference = 7C479BB62790D998002845E9 /* Astro Sampler.app */;
@@ -640,8 +641,8 @@
 			);
 			name = "Astro Swift Sampler watchOS";
 			packageProductDependencies = (
-				7C184B0328D5289400DCCEFF /* AstroSwiftCore */,
 				7C184B0428D5289400DCCEFF /* AstroSwiftFoundation */,
+				7C882785291DA098007DD163 /* AstroSwiftUtilities */,
 			);
 			productName = "Astro Swift Sampler WatchKit App";
 			productReference = 7C75E616283D7C1500F50298 /* Astro Swift Sampler watchOS.app */;
@@ -728,6 +729,7 @@
 			packageReferences = (
 				7C479BC42790DA66002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftFoundation" */,
 				7C479BC72790DA80002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftCore" */,
+				7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */,
 			);
 			productRefGroup = 7C479B9C2790D954002845E9 /* Products */;
 			projectDirPath = "";
@@ -807,7 +809,6 @@
 				7C1716D5281C5A5E00EA3DFA /* InsetGrouped.swift in Sources */,
 				7C7D6F70282EBC340015D7F0 /* Colors.swift in Sources */,
 				7C3DCFC42853F43500CEEEC5 /* SampleData.swift in Sources */,
-				7C58E954286F454200594560 /* Version.swift in Sources */,
 				7C1716D1281C59B300EA3DFA /* GroupedList.swift in Sources */,
 				7C1716D3281C59E400EA3DFA /* InsetList.swift in Sources */,
 				7C84AB8728297B61001D3256 /* SymbolSample.swift in Sources */,
@@ -837,7 +838,6 @@
 				7C37A8D52791F93F00965F29 /* ContentView.swift in Sources */,
 				7C84AB8C28297CBA001D3256 /* SymbolSample.swift in Sources */,
 				7C3DCFCD2853FC6300CEEEC5 /* Sizes.swift in Sources */,
-				7C58E955286F454200594560 /* Version.swift in Sources */,
 				7C65DAA22834439300E2FA3F /* ColorGrid.swift in Sources */,
 				7C3DCFC52853F43500CEEEC5 /* SampleData.swift in Sources */,
 				7C37A8D32791F93F00965F29 /* AstroSwiftSamplerApp.swift in Sources */,
@@ -868,7 +868,6 @@
 				7C479BDD2790E06C002845E9 /* AstroColorSamples.swift in Sources */,
 				7C84AB8B28297CB6001D3256 /* AstroSymbolSamples.swift in Sources */,
 				7C3DCFC62853F43500CEEEC5 /* SampleData.swift in Sources */,
-				7C58E956286F454200594560 /* Version.swift in Sources */,
 				7CE893D52832A85500F2CEF6 /* SymbolGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -887,7 +886,6 @@
 				7C70D9E828411FC700D14813 /* Components.swift in Sources */,
 				7C75E627283D7C1600F50298 /* AstroSwiftSamplerApp.swift in Sources */,
 				7C8C8CC2284171EF0014E9AD /* SymbolSample.swift in Sources */,
-				7C58E957286F454200594560 /* Version.swift in Sources */,
 				7CB99346283EDEF400DD8A1E /* ColorSample.swift in Sources */,
 				7C8C8CBE28416FDF0014E9AD /* SymbolRow.swift in Sources */,
 				7CB99345283EDEE100DD8A1E /* AstroColorSamples.swift in Sources */,
@@ -1488,14 +1486,17 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RocketCommunicationsInc/AstroSwiftUtilities";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7C184B0328D5289400DCCEFF /* AstroSwiftCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7C479BC72790DA80002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftCore" */;
-			productName = AstroSwiftCore;
-		};
 		7C184B0428D5289400DCCEFF /* AstroSwiftFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7C479BC42790DA66002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftFoundation" */;
@@ -1526,10 +1527,25 @@
 			package = 7C479BC72790DA80002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftCore" */;
 			productName = AstroSwiftCore;
 		};
-		7C87641328651424001C7B66 /* AstroSwiftFoundation */ = {
+		7C88277F291D9E94007DD163 /* AstroSwiftUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7C479BC42790DA66002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftFoundation" */;
-			productName = AstroSwiftFoundation;
+			package = 7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
+			productName = AstroSwiftUtilities;
+		};
+		7C882781291DA08B007DD163 /* AstroSwiftUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
+			productName = AstroSwiftUtilities;
+		};
+		7C882783291DA08F007DD163 /* AstroSwiftUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
+			productName = AstroSwiftUtilities;
+		};
+		7C882785291DA098007DD163 /* AstroSwiftUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
+			productName = AstroSwiftUtilities;
 		};
 		7CF86EFB2821D18800D554DF /* AstroSwiftFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
