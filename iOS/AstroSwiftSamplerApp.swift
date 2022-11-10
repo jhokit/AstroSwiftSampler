@@ -12,10 +12,9 @@ import SwiftUI
 struct AstroSwiftSamplerApp: App {
     
     init(){
-        #if os(iOS)
         // allow background colors set by List's .background modifier to work in grouped configurations in light mode
         UITableView.appearance().backgroundColor = .clear
-        #endif
+        AccessiblyOverrides.registerUserDefaults()
     }
 
     var body: some Scene {
