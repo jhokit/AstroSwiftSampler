@@ -31,8 +31,6 @@ struct Components: View {
             .toolbar{
                 AccessibilyToolbarContent()
             }
-            
-            
             // set the background color for all sections
             .background(Color.astroUIGroupedBackground)
             .scrollContentBackground(.hidden) // required on iOS 16 to let background color show
@@ -59,16 +57,29 @@ struct AstroComponents: View {
     
     var body: some View {
         Section("Astro Components"){
-            // horizontal row of status symbols
-            HStack{
-                Text("Status")
-                Spacer()
-                Status(AstroStatus.off)
-                Status(AstroStatus.standby)
-                Status(AstroStatus.normal)
-                Status(AstroStatus.caution)
-                Status(AstroStatus.serious)
-                Status(AstroStatus.critical)
+            ViewThatFits(){
+                // horizontal row of status symbols
+                HStack{
+                    Text("Status")
+                    Spacer()
+                    Status(AstroStatus.off)
+                    Status(AstroStatus.standby)
+                    Status(AstroStatus.normal)
+                    Status(AstroStatus.caution)
+                    Status(AstroStatus.serious)
+                    Status(AstroStatus.critical)
+                }
+                // Vertical column of status symbols
+                VStack{
+                    Text("Status")
+                    Spacer()
+                    Status(AstroStatus.off)
+                    Status(AstroStatus.standby)
+                    Status(AstroStatus.normal)
+                    Status(AstroStatus.caution)
+                    Status(AstroStatus.serious)
+                    Status(AstroStatus.critical)
+                }
             }
             
             // two columns of status tags
@@ -202,6 +213,7 @@ struct Lists: View {
     }
 }
 
+// causes simulator to crash
 //struct Components_Previews: PreviewProvider {
 //    static var previews: some View {
 //        Group {
