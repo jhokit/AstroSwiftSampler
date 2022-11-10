@@ -80,10 +80,10 @@
 		7C84AB8B28297CB6001D3256 /* AstroSymbolSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8828297BAD001D3256 /* AstroSymbolSamples.swift */; };
 		7C84AB8C28297CBA001D3256 /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
 		7C84AB8D28297CBA001D3256 /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
-		7C882780291D9E94007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C88277F291D9E94007DD163 /* AstroSwiftUtilities */; };
-		7C882782291DA08B007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C882781291DA08B007DD163 /* AstroSwiftUtilities */; };
-		7C882784291DA08F007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C882783291DA08F007DD163 /* AstroSwiftUtilities */; };
-		7C882786291DA098007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C882785291DA098007DD163 /* AstroSwiftUtilities */; };
+		7C882789291DA492007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C882788291DA492007DD163 /* AstroSwiftUtilities */; };
+		7C88278B291DA49E007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C88278A291DA49E007DD163 /* AstroSwiftUtilities */; };
+		7C88278D291DA4A3007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C88278C291DA4A3007DD163 /* AstroSwiftUtilities */; };
+		7C88278F291DA4A8007DD163 /* AstroSwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 7C88278E291DA4A8007DD163 /* AstroSwiftUtilities */; };
 		7C8C8CBE28416FDF0014E9AD /* SymbolRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C8CBC28416FDB0014E9AD /* SymbolRow.swift */; };
 		7C8C8CC028416FFB0014E9AD /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C8CBF28416FFB0014E9AD /* Symbols.swift */; };
 		7C8C8CC2284171EF0014E9AD /* SymbolSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C84AB8628297B61001D3256 /* SymbolSample.swift */; };
@@ -232,7 +232,7 @@
 			files = (
 				7C479BC62790DA66002845E9 /* AstroSwiftFoundation in Frameworks */,
 				7C479BC92790DA80002845E9 /* AstroSwiftCore in Frameworks */,
-				7C882780291D9E94007DD163 /* AstroSwiftUtilities in Frameworks */,
+				7C882789291DA492007DD163 /* AstroSwiftUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +242,7 @@
 			files = (
 				7C479BD22790DEDD002845E9 /* AstroSwiftFoundation in Frameworks */,
 				7C479BD42790DEE1002845E9 /* AstroSwiftCore in Frameworks */,
-				7C882782291DA08B007DD163 /* AstroSwiftUtilities in Frameworks */,
+				7C88278B291DA49E007DD163 /* AstroSwiftUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +252,7 @@
 			files = (
 				7CF86EFC2821D18800D554DF /* AstroSwiftFoundation in Frameworks */,
 				7CF86EFE2821D18E00D554DF /* AstroSwiftCore in Frameworks */,
-				7C882784291DA08F007DD163 /* AstroSwiftUtilities in Frameworks */,
+				7C88278D291DA4A3007DD163 /* AstroSwiftUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +261,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C92392328E3978E00364E5A /* AstroSwiftFoundation in Frameworks */,
-				7C882786291DA098007DD163 /* AstroSwiftUtilities in Frameworks */,
 				7C75E661283D7F0600F50298 /* AstroSwiftCore in Frameworks */,
+				7C88278F291DA4A8007DD163 /* AstroSwiftUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,7 +577,7 @@
 			packageProductDependencies = (
 				7C479BC52790DA66002845E9 /* AstroSwiftFoundation */,
 				7C479BC82790DA80002845E9 /* AstroSwiftCore */,
-				7C88277F291D9E94007DD163 /* AstroSwiftUtilities */,
+				7C882788291DA492007DD163 /* AstroSwiftUtilities */,
 			);
 			productName = "AstroSwiftColors (iOS)";
 			productReference = 7C479B9B2790D954002845E9 /* Astro Sampler.app */;
@@ -599,7 +599,7 @@
 			packageProductDependencies = (
 				7C479BD12790DEDD002845E9 /* AstroSwiftFoundation */,
 				7C479BD32790DEE1002845E9 /* AstroSwiftCore */,
-				7C882781291DA08B007DD163 /* AstroSwiftUtilities */,
+				7C88278A291DA49E007DD163 /* AstroSwiftUtilities */,
 			);
 			productName = "AstroSwiftColors (macOS)";
 			productReference = 7C479BA12790D954002845E9 /* Astro Sampler.app */;
@@ -621,7 +621,7 @@
 			packageProductDependencies = (
 				7CF86EFB2821D18800D554DF /* AstroSwiftFoundation */,
 				7CF86EFD2821D18E00D554DF /* AstroSwiftCore */,
-				7C882783291DA08F007DD163 /* AstroSwiftUtilities */,
+				7C88278C291DA4A3007DD163 /* AstroSwiftUtilities */,
 			);
 			productName = AstroSwiftColors;
 			productReference = 7C479BB62790D998002845E9 /* Astro Sampler.app */;
@@ -642,7 +642,7 @@
 			name = "Astro Swift Sampler watchOS";
 			packageProductDependencies = (
 				7C184B0428D5289400DCCEFF /* AstroSwiftFoundation */,
-				7C882785291DA098007DD163 /* AstroSwiftUtilities */,
+				7C88278E291DA4A8007DD163 /* AstroSwiftUtilities */,
 			);
 			productName = "Astro Swift Sampler WatchKit App";
 			productReference = 7C75E616283D7C1500F50298 /* Astro Swift Sampler watchOS.app */;
@@ -729,7 +729,7 @@
 			packageReferences = (
 				7C479BC42790DA66002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftFoundation" */,
 				7C479BC72790DA80002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftCore" */,
-				7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */,
+				7C882787291DA492007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */,
 			);
 			productRefGroup = 7C479B9C2790D954002845E9 /* Products */;
 			projectDirPath = "";
@@ -1486,12 +1486,12 @@
 				minimumVersion = 2.0.0;
 			};
 		};
-		7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */ = {
+		7C882787291DA492007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RocketCommunicationsInc/AstroSwiftUtilities";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1527,24 +1527,24 @@
 			package = 7C479BC72790DA80002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftCore" */;
 			productName = AstroSwiftCore;
 		};
-		7C88277F291D9E94007DD163 /* AstroSwiftUtilities */ = {
+		7C882788291DA492007DD163 /* AstroSwiftUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
+			package = 7C882787291DA492007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
 			productName = AstroSwiftUtilities;
 		};
-		7C882781291DA08B007DD163 /* AstroSwiftUtilities */ = {
+		7C88278A291DA49E007DD163 /* AstroSwiftUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
+			package = 7C882787291DA492007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
 			productName = AstroSwiftUtilities;
 		};
-		7C882783291DA08F007DD163 /* AstroSwiftUtilities */ = {
+		7C88278C291DA4A3007DD163 /* AstroSwiftUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
+			package = 7C882787291DA492007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
 			productName = AstroSwiftUtilities;
 		};
-		7C882785291DA098007DD163 /* AstroSwiftUtilities */ = {
+		7C88278E291DA4A8007DD163 /* AstroSwiftUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7C88277E291D9E94007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
+			package = 7C882787291DA492007DD163 /* XCRemoteSwiftPackageReference "AstroSwiftUtilities" */;
 			productName = AstroSwiftUtilities;
 		};
 		7CF86EFB2821D18800D554DF /* AstroSwiftFoundation */ = {
