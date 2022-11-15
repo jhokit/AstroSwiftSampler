@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     enum Categories{
-        case components,colors,symbols
+        case components,colors,symbols,dataVis
     }
     @State private var selection: Categories = .components
     
@@ -26,6 +26,10 @@ struct ContentView: View {
                 NavigationLink(value: Categories.symbols ) {
                     Label("Symbols", systemImage: "star")
                 }
+                NavigationLink(value: Categories.dataVis ) {
+                    Label("DataVis", systemImage: "chart.pie")
+                }
+
             }
             .frame(minWidth:100) // left column min width
         } detail: {
@@ -36,6 +40,9 @@ struct ContentView: View {
                 ColorGrid()
             case  .symbols:
                 SymbolGrid()
+            case  .dataVis:
+                DataVis()
+
             }
         }
         .frame(minWidth:500, idealWidth: 800) // overall window min and ideal width

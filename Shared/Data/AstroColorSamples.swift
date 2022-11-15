@@ -202,5 +202,17 @@ struct AstroColorSamples
         ColorSample(name:"Top Secret", color: Color.astroClassificationTopSecret),
         ColorSample(name:"Top Secret SCI", color: Color.astroClassificationTopSecretSCI),
     ])
+    
+    static var astroDataVis:ColorSample = ColorSample(name: "DataVis Colors", color: Color.astroDataVis1, colorVariants: [
+        ColorSample(name:"DataVis 1", color: Color.astroDataVis1),
+        ColorSample(name:"DataVis 2", color: Color.astroDataVis2),
+        ColorSample(name:"DataVis 3", color: Color.astroDataVis3),
+        ColorSample(name:"DataVis 4", color: Color.astroDataVis4),
+        ColorSample(name:"DataVis 5", color: Color.astroDataVis5),
+        ColorSample(name:"DataVis 6", color: Color.astroDataVis6),
+        ColorSample(name:"DataVis 7", color: Color.astroDataVis7),
+        ColorSample(name:"DataVis 8", color: Color.astroDataVis8),
+    ])
+
 }
 
