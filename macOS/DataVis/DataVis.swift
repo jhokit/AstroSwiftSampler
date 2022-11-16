@@ -10,9 +10,14 @@ import Charts
 
 struct DataVis: View {
     var body: some View {
-        VStack{
-            BarChart()
+        ScrollView{
+            VStack{
+                Section("Series Chart"){
+                    SeriesChart()
+                }
+            }
         }
+        .padding()
         .background(Color.astroUIBackground)
         .navigationTitle("DataVis")
     }

@@ -94,11 +94,12 @@
 		7C94CBA3291C0D4B00F40CC2 /* AccessibilityOverrides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C94CBA2291C0D4B00F40CC2 /* AccessibilityOverrides.swift */; };
 		7C94CBA4291C0D4B00F40CC2 /* AccessibilityOverrides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C94CBA2291C0D4B00F40CC2 /* AccessibilityOverrides.swift */; };
 		7CA539882923062A00DC62C4 /* DataVis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA539872923062A00DC62C4 /* DataVis.swift */; };
-		7CA5398A2923EE2E00DC62C4 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA539892923EE2E00DC62C4 /* BarChart.swift */; };
+		7CA5398A2923EE2E00DC62C4 /* SeriesChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA539892923EE2E00DC62C4 /* SeriesChart.swift */; };
 		7CB9933F283EDC4200DD8A1E /* Astro Swift Sampler watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7C75E616283D7C1500F50298 /* Astro Swift Sampler watchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7CB99344283EDE1A00DD8A1E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB99343283EDE1A00DD8A1E /* Colors.swift */; };
 		7CB99345283EDEE100DD8A1E /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7CB99346283EDEF400DD8A1E /* ColorSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCA2790DBB9002845E9 /* ColorSample.swift */; };
+		7CCAA0B72924549D0031350A /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCAA0B62924549D0031350A /* PieChart.swift */; };
 		7CCCDD3E283FFC5F00B12EBE /* ColorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCDD3D283FFC5F00B12EBE /* ColorRow.swift */; };
 		7CE893D52832A85500F2CEF6 /* SymbolGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE893D42832A85500F2CEF6 /* SymbolGrid.swift */; };
 		7CE893D92832A88A00F2CEF6 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE893D82832A88A00F2CEF6 /* Symbols.swift */; };
@@ -222,8 +223,9 @@
 		7C94CB9F291C0B2400F40CC2 /* DynamicTypeSizeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTypeSizeExtensions.swift; sourceTree = "<group>"; };
 		7C94CBA2291C0D4B00F40CC2 /* AccessibilityOverrides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityOverrides.swift; sourceTree = "<group>"; };
 		7CA539872923062A00DC62C4 /* DataVis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataVis.swift; sourceTree = "<group>"; };
-		7CA539892923EE2E00DC62C4 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		7CA539892923EE2E00DC62C4 /* SeriesChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesChart.swift; sourceTree = "<group>"; };
 		7CB99343283EDE1A00DD8A1E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7CCAA0B62924549D0031350A /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 		7CCCDD3D283FFC5F00B12EBE /* ColorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRow.swift; sourceTree = "<group>"; };
 		7CE893D42832A85500F2CEF6 /* SymbolGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
 		7CE893D82832A88A00F2CEF6 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
@@ -370,8 +372,7 @@
 			children = (
 				7C37A8CF2791F93F00965F29 /* AstroSwiftSamplerApp.swift */,
 				7C37A8D12791F93F00965F29 /* ContentView.swift */,
-				7CA539872923062A00DC62C4 /* DataVis.swift */,
-				7CA539892923EE2E00DC62C4 /* BarChart.swift */,
+				7CA5398B2924131700DC62C4 /* DataVis */,
 				7C8C8CBA28416F8E0014E9AD /* Components */,
 				7C485CE42836EAE200237652 /* Symbol */,
 				7C485CDF2836E42900237652 /* Color */,
@@ -559,6 +560,16 @@
 				7C8C8CBC28416FDB0014E9AD /* SymbolRow.swift */,
 			);
 			path = Symbol;
+			sourceTree = "<group>";
+		};
+		7CA5398B2924131700DC62C4 /* DataVis */ = {
+			isa = PBXGroup;
+			children = (
+				7CA539872923062A00DC62C4 /* DataVis.swift */,
+				7CA539892923EE2E00DC62C4 /* SeriesChart.swift */,
+				7CCAA0B62924549D0031350A /* PieChart.swift */,
+			);
+			path = DataVis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -849,12 +860,13 @@
 				7CA539882923062A00DC62C4 /* DataVis.swift in Sources */,
 				7C37A8D32791F93F00965F29 /* AstroSwiftSamplerApp.swift in Sources */,
 				7C485CE12836EACA00237652 /* SymbolGrid.swift in Sources */,
+				7CCAA0B72924549D0031350A /* PieChart.swift in Sources */,
 				7C479BCC2790DBB9002845E9 /* ColorSample.swift in Sources */,
 				7C75E610283D6B2E00F50298 /* Components.swift in Sources */,
 				7C84AB8A28297CB5001D3256 /* AstroSymbolSamples.swift in Sources */,
 				7C83F78D285A61F10002FD58 /* ColorTile.swift in Sources */,
 				7C83F78C285A61670002FD58 /* SymbolTile.swift in Sources */,
-				7CA5398A2923EE2E00DC62C4 /* BarChart.swift in Sources */,
+				7CA5398A2923EE2E00DC62C4 /* SeriesChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
