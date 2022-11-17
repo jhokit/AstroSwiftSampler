@@ -45,7 +45,7 @@ struct ColorGrid: View {
                         }
                     }
                     
-                    Section("DataVis"){
+                    Section("Charts"){
                         if let colorVariants = AstroColorSamples.astroDataVis.colorVariants
                         {
                             ForEach(colorVariants, id: \.id) { colorSample in

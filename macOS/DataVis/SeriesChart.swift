@@ -87,6 +87,16 @@ struct SeriesChart: View {
                         .foregroundStyle(by: .value("Name",series.name))
                         .symbol(by: .value("Name",series.name))
                         .interpolationMethod(.catmullRom)
+                        RuleMark(
+                            y: .value("Threshold", 65)
+                        ) .lineStyle(StrokeStyle(lineWidth: 2, dash: [6]))
+                        #if os(iOS) || os(tvOS)
+                            .foregroundStyle(Color(.secondaryLabel))
+                        #endif
+                        #if os(macOS)
+                            .foregroundStyle(Color(.secondaryLabelColor))
+                        #endif
+
                     case .point:
                         PointMark(
                             x: .value("Name",item.name),
@@ -99,12 +109,59 @@ struct SeriesChart: View {
             }
             .chartYAxis {
                 AxisMarks(position: .leading) // move the axis to the left
+                AxisMarks(values: .automatic) { _ in
+                  AxisGridLine()
+                        .foregroundStyle(Color.astroUIDarkBlue700)
+                }
             }
-
+            .chartXAxis {
+                AxisMarks(values: .automatic) { _ in
+                    AxisGridLine(stroke: StrokeStyle())
+                        .foregroundStyle(Color.astroUIDarkBlue700)
+                    AxisValueLabel()
+                }
+            }
             .padding()
+            .frame(minHeight:300)
             .chartForegroundStyleScale([
                 "Morning":  Color.astroDataVis1, "Evening": Color.astroDataVis4
             ])
+
+            /* Non Styled chart
+            Chart(stackedItems){ series in
+                ForEach(series.items) { item in
+                    switch markStyle {
+                    case .bar:
+                        BarMark(
+                            x: .value("Name",item.name),
+                            y: .value("Value",item.value)
+                        )
+                        .foregroundStyle(by: .value("Name",series.name))
+                    case .line:
+                        LineMark(
+                            x: .value("Name",item.name),
+                            y: .value("Value",item.value)
+                        )
+                        .foregroundStyle(by: .value("Name",series.name))
+                        .symbol(by: .value("Name",series.name))
+                        .interpolationMethod(.catmullRom)
+                        RuleMark(
+                            y: .value("Threshold", 65)
+                        )
+
+                    case .point:
+                        PointMark(
+                            x: .value("Name",item.name),
+                            y: .value("Value",item.value)
+                        )
+                        .foregroundStyle(by: .value("Name",series.name))
+                        .symbol(by: .value("Name",series.name))
+                    }
+                }
+            }
+            
+            .padding()
+            .frame(minHeight:400) */
         }
     }
     

@@ -27,7 +27,7 @@ struct ContentView: View {
                     Label("Symbols", systemImage: "star")
                 }
                 NavigationLink(value: Categories.dataVis ) {
-                    Label("DataVis", systemImage: "chart.pie")
+                    Label("Charts", systemImage: "chart.pie")
                 }
 
             }
@@ -41,7 +41,7 @@ struct ContentView: View {
             case  .symbols:
                 SymbolGrid()
             case  .dataVis:
-                DataVis()
+                Charts()
 
             }
         }
