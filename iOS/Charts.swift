@@ -13,13 +13,21 @@ struct Charts: View {
         NavigationView{
             
             ScrollView{
-                Section("Series Chart"){
+                VStack{
+                    Text("Series Chart")
                     SeriesChart()
                 }
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)
                 .cornerRadius(Sizes.cornerRadius)
-                
+
+                VStack{
+                    Text("Fill Gauge")
+                    FillGauge()
+                }
+                .padding()
+                .background(Color.astroUISecondaryGroupedBackground)
+                .cornerRadius(Sizes.cornerRadius)
             }
             .padding()
             .background(Color.astroUIGroupedBackground)

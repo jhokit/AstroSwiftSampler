@@ -20,10 +20,9 @@ struct Charts: View {
                 .background(Color.astroUISecondaryGroupedBackground)
                 .cornerRadius(Sizes.cornerRadius)
                 
-                
                 VStack{
                     Text("Fill Gauge")
-                    SummaryChart()
+                    FillGauge()
                 }
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)

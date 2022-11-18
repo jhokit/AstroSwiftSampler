@@ -16,7 +16,7 @@
 		7C1716D7281C6F7B00EA3DFA /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1716D6281C6F7B00EA3DFA /* FormView.swift */; };
 		7C26015E2926BF8E00C223F8 /* SeriesChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA539892923EE2E00DC62C4 /* SeriesChart.swift */; };
 		7C2601602926C01700C223F8 /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26015F2926C01700C223F8 /* Charts.swift */; };
-		7C2601632926EC1300C223F8 /* SummaryChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCAA0B62924549D0031350A /* SummaryChart.swift */; };
+		7C2601632926EC1300C223F8 /* FillGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCAA0B62924549D0031350A /* FillGauge.swift */; };
 		7C37A8CA2791F7A500965F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C37A8C52791F7A500965F29 /* Assets.xcassets */; };
 		7C37A8CC2791F7A500965F29 /* AstroSwiftSamplerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37A8C82791F7A500965F29 /* AstroSwiftSamplerApp.swift */; };
 		7C37A8CD2791F7A500965F29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37A8C92791F7A500965F29 /* ContentView.swift */; };
@@ -102,7 +102,7 @@
 		7CB99344283EDE1A00DD8A1E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB99343283EDE1A00DD8A1E /* Colors.swift */; };
 		7CB99345283EDEE100DD8A1E /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7CB99346283EDEF400DD8A1E /* ColorSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCA2790DBB9002845E9 /* ColorSample.swift */; };
-		7CCAA0B72924549D0031350A /* SummaryChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCAA0B62924549D0031350A /* SummaryChart.swift */; };
+		7CCAA0B72924549D0031350A /* FillGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCAA0B62924549D0031350A /* FillGauge.swift */; };
 		7CCCDD3E283FFC5F00B12EBE /* ColorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCDD3D283FFC5F00B12EBE /* ColorRow.swift */; };
 		7CE893D52832A85500F2CEF6 /* SymbolGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE893D42832A85500F2CEF6 /* SymbolGrid.swift */; };
 		7CE893D92832A88A00F2CEF6 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE893D82832A88A00F2CEF6 /* Symbols.swift */; };
@@ -229,7 +229,7 @@
 		7CA539872923062A00DC62C4 /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
 		7CA539892923EE2E00DC62C4 /* SeriesChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesChart.swift; sourceTree = "<group>"; };
 		7CB99343283EDE1A00DD8A1E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		7CCAA0B62924549D0031350A /* SummaryChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryChart.swift; sourceTree = "<group>"; };
+		7CCAA0B62924549D0031350A /* FillGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillGauge.swift; sourceTree = "<group>"; };
 		7CCCDD3D283FFC5F00B12EBE /* ColorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRow.swift; sourceTree = "<group>"; };
 		7CE893D42832A85500F2CEF6 /* SymbolGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
 		7CE893D82832A88A00F2CEF6 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				7CA539892923EE2E00DC62C4 /* SeriesChart.swift */,
-				7CCAA0B62924549D0031350A /* SummaryChart.swift */,
+				7CCAA0B62924549D0031350A /* FillGauge.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -845,7 +845,7 @@
 				7C84AB8728297B61001D3256 /* SymbolSample.swift in Sources */,
 				7C479BA62790D954002845E9 /* ContentView.swift in Sources */,
 				7C1716D7281C6F7B00EA3DFA /* FormView.swift in Sources */,
-				7C2601632926EC1300C223F8 /* SummaryChart.swift in Sources */,
+				7C2601632926EC1300C223F8 /* FillGauge.swift in Sources */,
 				7C1716CF281C57E800EA3DFA /* PlainList.swift in Sources */,
 				7C479BCE2790DC2D002845E9 /* AstroColorSamples.swift in Sources */,
 				7C13D7EF291C568F005FF637 /* LegibilityWeightExtensions.swift in Sources */,
@@ -876,7 +876,7 @@
 				7CA539882923062A00DC62C4 /* Charts.swift in Sources */,
 				7C37A8D32791F93F00965F29 /* AstroSwiftSamplerApp.swift in Sources */,
 				7C485CE12836EACA00237652 /* SymbolGrid.swift in Sources */,
-				7CCAA0B72924549D0031350A /* SummaryChart.swift in Sources */,
+				7CCAA0B72924549D0031350A /* FillGauge.swift in Sources */,
 				7C479BCC2790DBB9002845E9 /* ColorSample.swift in Sources */,
 				7C75E610283D6B2E00F50298 /* Components.swift in Sources */,
 				7C84AB8A28297CB5001D3256 /* AstroSymbolSamples.swift in Sources */,
