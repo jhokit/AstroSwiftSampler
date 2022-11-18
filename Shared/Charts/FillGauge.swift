@@ -35,25 +35,32 @@ private let items:[GaugeItem] = [
 struct FillGauge: View {
     
     var body: some View {
-        Chart(items){ item in
-            Plot {
-                BarMark(
-                    x: .value("Value",item.value))
-            }.foregroundStyle(by: .value("Name", item.name))
+        VStack{
+            Chart(items){ item in
+                Plot {
+                    BarMark(
+                        x: .value("Value",item.value))
+                }.foregroundStyle(by: .value("Name", item.name))
+            }
+            .frame(height:50)
+            .padding(.bottom,12)
+            
+            Chart(items){ item in
+                Plot {
+                    BarMark(
+                        y: .value("Value",item.value))
+                }.foregroundStyle(by: .value("Name", item.name))
+            }
+            .frame(width:100,height: 100)
+            .chartLegend(position: .trailing)
         }
+        
         .chartPlotStyle { plotArea in
             plotArea
                 .cornerRadius(8)
         }
-        .chartYAxis {
-            AxisMarks(position: .leading) // move the axis to the left
-            AxisMarks(values: .automatic) { _ in
-                AxisGridLine()
-                    .foregroundStyle(Color.astroUIDarkBlue700)
-            }
-        }
+        .chartYAxis(.hidden)
         .chartXAxis(.hidden)
-        .frame(height:50)
         .chartForegroundStyleScale([
             "Apps":  Color.astroDataVis1,
             "Music": Color.astroDataVis4,
