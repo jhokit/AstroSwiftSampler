@@ -20,13 +20,13 @@ class SeriesChartItem: Identifiable {
     }
 }
 
-struct Series: Identifiable {
+private struct Series: Identifiable {
     let name:String
     let items:[SeriesChartItem]
     var id:String {name}
 }
 
-let barChartItems:[SeriesChartItem] = [
+private let barChartItems:[SeriesChartItem] = [
     .init(name: "Alpha", value: Int.random(in: 0...100)),
     .init(name: "Bravo", value: Int.random(in: 0...100)),
     .init(name: "Charlie", value: Int.random(in: 0...100)),
@@ -35,7 +35,7 @@ let barChartItems:[SeriesChartItem] = [
     .init(name: "Foxtrot", value: Int.random(in: 0...100))
 ]
 
-let barChartItems2:[SeriesChartItem] =  [
+private let barChartItems2:[SeriesChartItem] =  [
     .init(name: "Alpha", value: Int.random(in: 0...100)),
     .init(name: "Bravo", value: Int.random(in: 0...100)),
     .init(name: "Charlie", value: Int.random(in: 0...100)),
@@ -44,18 +44,19 @@ let barChartItems2:[SeriesChartItem] =  [
     .init(name: "Foxtrot", value: Int.random(in: 0...100))
 ]
 
-let stackedItems:[Series] =  [
+private let stackedItems:[Series] =  [
     .init(name: "Morning", items: barChartItems),
     .init(name: "Evening", items: barChartItems2)
 ]
 
-enum MarkStyle {
+private enum MarkStyle {
     case bar
     case line
     case point
 }
+
 struct SeriesChart: View {
-    @State var markStyle:MarkStyle = .line
+    @State fileprivate var markStyle:MarkStyle = .line
     
     var body: some View {
         VStack{
@@ -107,6 +108,7 @@ struct SeriesChart: View {
                     }
                 }
             }
+            //.chartLegend(position: .trailing)
             .chartYAxis {
                 AxisMarks(position: .leading) // move the axis to the left
                 AxisMarks(values: .automatic) { _ in
@@ -121,49 +123,13 @@ struct SeriesChart: View {
                     AxisValueLabel()
                 }
             }
-            .padding()
             .frame(minHeight:300)
             .chartForegroundStyleScale([
-                "Morning":  Color.astroDataVis1, "Evening": Color.astroDataVis4
-            ])
+                "Morning":  Color.astroDataVis1, "Evening": Color.astroDataVis4])
 
-            /* Non Styled chart
-            Chart(stackedItems){ series in
-                ForEach(series.items) { item in
-                    switch markStyle {
-                    case .bar:
-                        BarMark(
-                            x: .value("Name",item.name),
-                            y: .value("Value",item.value)
-                        )
-                        .foregroundStyle(by: .value("Name",series.name))
-                    case .line:
-                        LineMark(
-                            x: .value("Name",item.name),
-                            y: .value("Value",item.value)
-                        )
-                        .foregroundStyle(by: .value("Name",series.name))
-                        .symbol(by: .value("Name",series.name))
-                        .interpolationMethod(.catmullRom)
-                        RuleMark(
-                            y: .value("Threshold", 65)
-                        )
-
-                    case .point:
-                        PointMark(
-                            x: .value("Name",item.name),
-                            y: .value("Value",item.value)
-                        )
-                        .foregroundStyle(by: .value("Name",series.name))
-                        .symbol(by: .value("Name",series.name))
-                    }
-                }
-            }
-            
-            .padding()
-            .frame(minHeight:400) */
         }
     }
+
     
     //    func randomize() {
     //        for item in barChartItems {

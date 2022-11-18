@@ -10,29 +10,24 @@ import Charts
 
 struct Charts: View {
     var body: some View {
-        ScrollView{
-            VStack{
-                VStack{
-                    Text("Series Chart")
+        NavigationView{
+            
+            ScrollView{
+                Section("Series Chart"){
                     SeriesChart()
                 }
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)
                 .cornerRadius(Sizes.cornerRadius)
                 
-                
-                VStack{
-                    Text("Fill Gauge")
-                    SummaryChart()
-                }
-                .padding()
-                .background(Color.astroUISecondaryGroupedBackground)
-                .cornerRadius(Sizes.cornerRadius)
             }
+            .padding()
+            .background(Color.astroUIGroupedBackground)
+            .navigationTitle("Charts")
+        }.tabItem {
+            Image(systemName: "chart.pie")
+            Text("Charts")
         }
-        .padding()
-        .background(Color.astroUIGroupedBackground)
-        .navigationTitle("Charts")
     }
 }
 
