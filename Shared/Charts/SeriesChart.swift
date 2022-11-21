@@ -126,38 +126,11 @@ struct SeriesChart: View {
             .frame(minHeight:300)
             .chartForegroundStyleScale([
                 "Morning":  Color.astroDataVis1, "Evening": Color.astroDataVis4])
-             .chartOverlay { proxy in
-                 GeometryReader { geometry in
-                     Rectangle().fill(.clear).contentShape(Rectangle())
-                         .gesture(
-                             DragGesture()
-                                 .onChanged { value in
-                                     // Convert the gesture location to the coordiante space of the plot area.
-                                     let origin = geometry[proxy.plotAreaFrame].origin
-                                     let location = CGPoint(
-                                         x: value.location.x - origin.x,
-                                         y: value.location.y - origin.y
-                                     )
-                                     // Get the x (date) and y (price) value from the location.
-                                     let (name, value) = proxy.value(at: location, as: (String, Int).self)!
-                                     print("Location: \(name), \(value)")
-                                 }
-                         )
-                 }
-             }
-
         }
     }
 
     
-    //    func randomize() {
-    //        for item in barChartItems {
-    //            item.value = Int.random(in: 0...100)
-    //        }
-    //        for item in barChartItems2 {
-    //            item.value = Int.random(in: 0...100)
-    //        }
-    //    }
+
 }
 
 struct BarChart_Previews: PreviewProvider {

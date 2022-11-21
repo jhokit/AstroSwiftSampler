@@ -293,6 +293,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C0474D0292C404B00D5671E /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				7C26015F2926C01700C223F8 /* Charts.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		7C2601642926EC2400C223F8 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,10 +366,10 @@
 			children = (
 				7C479B942790D954002845E9 /* AstroSwiftSamplerApp.swift */,
 				7C479B952790D954002845E9 /* ContentView.swift */,
-				7C26015F2926C01700C223F8 /* Charts.swift */,
 				7C84AB812829720F001D3256 /* Components */,
 				7C84AB832829724D001D3256 /* Symbol */,
 				7C84AB8228297243001D3256 /* Colors */,
+				7C0474D0292C404B00D5671E /* Charts */,
 				7C479B962790D954002845E9 /* Assets.xcassets */,
 				7C8C8CC4284178CC0014E9AD /* Info.plist */,
 			);
@@ -386,10 +394,10 @@
 			children = (
 				7C37A8CF2791F93F00965F29 /* AstroSwiftSamplerApp.swift */,
 				7C37A8D12791F93F00965F29 /* ContentView.swift */,
-				7CA5398B2924131700DC62C4 /* DataVis */,
 				7C8C8CBA28416F8E0014E9AD /* Components */,
 				7C485CE42836EAE200237652 /* Symbol */,
 				7C485CDF2836E42900237652 /* Color */,
+				7CA5398B2924131700DC62C4 /* Charts */,
 				7C479BA32790D954002845E9 /* macOS.entitlements */,
 				7C65DAA52836B82500E2FA3F /* Assets.xcassets */,
 				7C8C8CC5284179070014E9AD /* Info.plist */,
@@ -577,12 +585,12 @@
 			path = Symbol;
 			sourceTree = "<group>";
 		};
-		7CA5398B2924131700DC62C4 /* DataVis */ = {
+		7CA5398B2924131700DC62C4 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
 				7CA539872923062A00DC62C4 /* Charts.swift */,
 			);
-			path = DataVis;
+			path = Charts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

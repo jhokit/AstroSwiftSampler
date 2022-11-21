@@ -32,6 +32,9 @@ struct Charts: View {
             .padding()
             .background(Color.astroUIGroupedBackground)
             .navigationTitle("Charts")
+            .toolbar{
+                AccessibilyToolbarContent()
+            }
         }.tabItem {
             Image(systemName: "chart.pie")
             Text("Charts")
