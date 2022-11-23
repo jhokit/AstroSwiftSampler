@@ -13,45 +13,40 @@ struct Charts: View {
         NavigationView{
             
             ScrollView{
-                VStack{
-                    Text("Bar")
-                    BarChart()
-                }
-                .padding()
-                .background(Color.astroUISecondaryGroupedBackground)
-                .cornerRadius(Sizes.cornerRadius)
-
-                VStack{
-                    Text("Line")
-                    LineChart()
-                }
-                .padding()
-                .background(Color.astroUISecondaryGroupedBackground)
-                .cornerRadius(Sizes.cornerRadius)
-                
-                VStack{
-                    Text("Point")
-                    PointChart()
-                }
-                .padding()
-                .background(Color.astroUISecondaryGroupedBackground)
-                .cornerRadius(Sizes.cornerRadius)
-                
-                VStack{
-                    Text("Fill Gauge")
-                    FillGauge()
-                }
-                .padding()
-                .background(Color.astroUISecondaryGroupedBackground)
-                .cornerRadius(Sizes.cornerRadius)
+                VStack(spacing: 18) {
+                    Group{
+                        VStack{
+                            Text("Bar")
+                            BarChart()
+                        }
+                        
+                        VStack{
+                            Text("Line")
+                            LineChart()
+                        }
+                        
+                        VStack{
+                            Text("Point")
+                            PointChart()
+                        }
+                        
+                        VStack{
+                            Text("Fill Gauge")
+                            FillGauge()
+                        }
+                    }
+                    .padding()
+                    .background(Color.astroUISecondaryGroupedBackground)
+                    .cornerRadius(Sizes.cornerRadius)
+                }.padding()
             }
-            .padding()
             .background(Color.astroUIGroupedBackground)
-            .navigationTitle("Charts")
+            .navigationBarTitle("Charts")
             .toolbar{
                 AccessibilyToolbarContent()
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .tabItem {
             Image(systemName: "chart.pie")
             Text("Charts")
