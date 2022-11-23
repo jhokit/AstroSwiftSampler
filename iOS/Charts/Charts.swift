@@ -35,10 +35,12 @@ struct Charts: View {
             .toolbar{
                 AccessibilyToolbarContent()
             }
-        }.tabItem {
+        }
+        .tabItem {
             Image(systemName: "chart.pie")
             Text("Charts")
         }
+        .badge("beta")
     }
 }
 

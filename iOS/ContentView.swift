@@ -37,6 +37,7 @@ struct ContentView: View {
         .environmentObject(accessiblyOverrides)
         .onAppear(){
             accessiblyOverrides.readUserDefaults()
+            UITabBarItem.appearance().badgeColor = UIColor.gray // use gray color on the beta badge
         }
         // use scenePhase to detect app going in background, onDissapear is not reliable
         .onChange(of: scenePhase) { phase in
