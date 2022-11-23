@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // Use this enum to allow List to track the selection (rather than using the simpler form of NavigationLink referencing the target view directly)
     enum Categories{
         case components,colors,symbols,dataVis
     }
@@ -15,6 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         
+        // left side navigation
         NavigationSplitView{
             List(selection:$selection){
                 NavigationLink(value: Categories.components) {
@@ -28,27 +31,26 @@ struct ContentView: View {
                 }
                 NavigationLink(value: Categories.dataVis ) {
                     Label("Charts", systemImage: "chart.pie")
-                }
+                }//.badge("beta") //- a bug makes a badged item unselectable by pointer
 
             }
             .frame(minWidth:100) // left column min width
+        // main content
         } detail: {
             switch selection{
             case .components:
                 Components()
-            case  .colors :
+            case .colors :
                 ColorGrid()
-            case  .symbols:
+            case .symbols:
                 SymbolGrid()
-            case  .dataVis:
+            case .dataVis:
                 Charts()
-
             }
         }
         .frame(minWidth:500, idealWidth: 800) // overall window min and ideal width
     }
 }
-
 
 
 struct ContentView_Previews: PreviewProvider {
