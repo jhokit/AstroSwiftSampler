@@ -64,6 +64,12 @@
 		7C6D45B4292EB478002F8FE0 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D45B2292EB478002F8FE0 /* LineChart.swift */; };
 		7C6D45B6292EB485002F8FE0 /* PointChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D45B5292EB485002F8FE0 /* PointChart.swift */; };
 		7C6D45B7292EB485002F8FE0 /* PointChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D45B5292EB485002F8FE0 /* PointChart.swift */; };
+		7C6D45B9292EDAE1002F8FE0 /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D45B8292EDAE1002F8FE0 /* Charts.swift */; };
+		7C6D45BB292EDB88002F8FE0 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D45AF292EB461002F8FE0 /* BarChart.swift */; };
+		7C6D45BC292EDB96002F8FE0 /* SeriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA539892923EE2E00DC62C4 /* SeriesData.swift */; };
+		7C6D45BD292EDD74002F8FE0 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D45B2292EB478002F8FE0 /* LineChart.swift */; };
+		7C6D45BE292EDD76002F8FE0 /* PointChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D45B5292EB485002F8FE0 /* PointChart.swift */; };
+		7C6D45BF292EDD7B002F8FE0 /* FillGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCAA0B62924549D0031350A /* FillGauge.swift */; };
 		7C70D9E828411FC700D14813 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C70D9E728411FC700D14813 /* Components.swift */; };
 		7C75E610283D6B2E00F50298 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C75E60F283D6B2E00F50298 /* Components.swift */; };
 		7C75E627283D7C1600F50298 /* AstroSwiftSamplerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C75E626283D7C1600F50298 /* AstroSwiftSamplerApp.swift */; };
@@ -205,6 +211,7 @@
 		7C6D45AF292EB461002F8FE0 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		7C6D45B2292EB478002F8FE0 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		7C6D45B5292EB485002F8FE0 /* PointChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointChart.swift; sourceTree = "<group>"; };
+		7C6D45B8292EDAE1002F8FE0 /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
 		7C70D9E728411FC700D14813 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		7C75E60F283D6B2E00F50298 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		7C75E616283D7C1500F50298 /* Astro Swift Sampler watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astro Swift Sampler watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -480,6 +487,14 @@
 			path = Color;
 			sourceTree = "<group>";
 		};
+		7C6D45BA292EDAE7002F8FE0 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				7C6D45B8292EDAE1002F8FE0 /* Charts.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		7C70D9E628411EBE00D14813 /* Color */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,6 +520,7 @@
 				7C8C8CBB28416FA00014E9AD /* Components */,
 				7C8C8CC1284170000014E9AD /* Symbol */,
 				7C70D9E628411EBE00D14813 /* Color */,
+				7C6D45BA292EDAE7002F8FE0 /* Charts */,
 				7C75E62A283D7C1600F50298 /* NotificationController.swift */,
 				7C75E62C283D7C1700F50298 /* NotificationView.swift */,
 				7C75E62E283D7C1700F50298 /* ComplicationController.swift */,
@@ -941,11 +957,16 @@
 				7C94CBA4291C0D4B00F40CC2 /* AccessibilityOverrides.swift in Sources */,
 				7C75E62B283D7C1600F50298 /* NotificationController.swift in Sources */,
 				7CB99344283EDE1A00DD8A1E /* Colors.swift in Sources */,
+				7C6D45BD292EDD74002F8FE0 /* LineChart.swift in Sources */,
 				7C75E629283D7C1600F50298 /* ContentView.swift in Sources */,
+				7C6D45BC292EDB96002F8FE0 /* SeriesData.swift in Sources */,
 				7C75E62F283D7C1700F50298 /* ComplicationController.swift in Sources */,
+				7C6D45BF292EDD7B002F8FE0 /* FillGauge.swift in Sources */,
+				7C6D45BE292EDD76002F8FE0 /* PointChart.swift in Sources */,
 				7C13D7F2291C568F005FF637 /* LegibilityWeightExtensions.swift in Sources */,
 				7C3DCFCF2853FC6300CEEEC5 /* Sizes.swift in Sources */,
 				7C70D9E828411FC700D14813 /* Components.swift in Sources */,
+				7C6D45B9292EDAE1002F8FE0 /* Charts.swift in Sources */,
 				7C75E627283D7C1600F50298 /* AstroSwiftSamplerApp.swift in Sources */,
 				7C8C8CC2284171EF0014E9AD /* SymbolSample.swift in Sources */,
 				7CB99346283EDEF400DD8A1E /* ColorSample.swift in Sources */,
@@ -956,6 +977,7 @@
 				7C75E62D283D7C1700F50298 /* NotificationView.swift in Sources */,
 				7CCCDD3E283FFC5F00B12EBE /* ColorRow.swift in Sources */,
 				7C3DCFC72853F43500CEEEC5 /* SampleData.swift in Sources */,
+				7C6D45BB292EDB88002F8FE0 /* BarChart.swift in Sources */,
 				7C8C8CC3284171F50014E9AD /* AstroSymbolSamples.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

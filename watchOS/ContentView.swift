@@ -29,6 +29,13 @@ struct ContentView: View {
                 } label: {
                     Label("Symbols", systemImage: "star")
                 }
+                
+                NavigationLink() {
+                    Charts()
+                } label: {
+                    Label("Charts", systemImage: "chart.pie")
+                }
+
             }
             .listRowBackground(RoundedRectangle(cornerRadius: 10.0, style:.continuous) // apply Astro color and re-apply shape
                 .background(Color.clear)

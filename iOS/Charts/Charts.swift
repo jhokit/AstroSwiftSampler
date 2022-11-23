@@ -17,17 +17,17 @@ struct Charts: View {
                     Group{
                         VStack{
                             Text("Bar")
-                            BarChart()
+                            BarChart().frame(height:300)
                         }
                         
                         VStack{
                             Text("Line")
-                            LineChart()
+                            LineChart().frame(height:300)
                         }
                         
                         VStack{
                             Text("Point")
-                            PointChart()
+                            PointChart().frame(height:300)
                         }
                         
                         VStack{
@@ -55,7 +55,7 @@ struct Charts: View {
     }
 }
 
-struct DataVis_Previews: PreviewProvider {
+struct Charts_Previews: PreviewProvider {
     static var previews: some View {
         Charts()
     }

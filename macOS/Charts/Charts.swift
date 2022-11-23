@@ -14,7 +14,7 @@ struct Charts: View {
             VStack{
                 VStack{
                     Text("Bar")
-                    BarChart()
+                    BarChart().frame(height:300)
                 }
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)
@@ -22,7 +22,7 @@ struct Charts: View {
                 
                 VStack{
                     Text("Line")
-                    LineChart()
+                    LineChart().frame(height:300)
                 }
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)
@@ -30,7 +30,7 @@ struct Charts: View {
                 
                 VStack{
                     Text("Point")
-                    PointChart()
+                    PointChart().frame(height:300)
                 }
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)

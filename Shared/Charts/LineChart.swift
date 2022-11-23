@@ -46,7 +46,6 @@ struct LineChart: View {
                 AxisValueLabel()
             }
         }
-        .frame(minHeight:300)
         .chartForegroundStyleScale([
             "Morning":  Color.astroDataVis1, "Evening": Color.astroDataVis4])
     }
