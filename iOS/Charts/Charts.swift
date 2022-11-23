@@ -14,13 +14,29 @@ struct Charts: View {
             
             ScrollView{
                 VStack{
-                    Text("Series Chart")
-                    SeriesChart()
+                    Text("Bar")
+                    BarChart()
                 }
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)
                 .cornerRadius(Sizes.cornerRadius)
 
+                VStack{
+                    Text("Line")
+                    LineChart()
+                }
+                .padding()
+                .background(Color.astroUISecondaryGroupedBackground)
+                .cornerRadius(Sizes.cornerRadius)
+                
+                VStack{
+                    Text("Point")
+                    PointChart()
+                }
+                .padding()
+                .background(Color.astroUISecondaryGroupedBackground)
+                .cornerRadius(Sizes.cornerRadius)
+                
                 VStack{
                     Text("Fill Gauge")
                     FillGauge()

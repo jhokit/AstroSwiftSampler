@@ -45,14 +45,14 @@ struct FillGauge: View {
             .frame(height:50)
             .padding(.bottom,12)
             
-            Chart(items){ item in
-                Plot {
-                    BarMark(
-                        y: .value("Value",item.value))
-                }.foregroundStyle(by: .value("Name", item.name))
-            }
-            .frame(width:100,height: 100)
-            .chartLegend(position: .trailing)
+//            Chart(items){ item in
+//                Plot {
+//                    BarMark(
+//                        y: .value("Value",item.value))
+//                }.foregroundStyle(by: .value("Name", item.name))
+//            }
+//            .frame(width:100,height: 100)
+//            .chartLegend(position: .trailing)
         }
         
         .chartPlotStyle { plotArea in

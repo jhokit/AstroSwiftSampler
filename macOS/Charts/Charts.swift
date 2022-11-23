@@ -13,8 +13,24 @@ struct Charts: View {
         ScrollView{
             VStack{
                 VStack{
-                    Text("Series Chart")
-                    SeriesChart()
+                    Text("Bar")
+                    BarChart()
+                }
+                .padding()
+                .background(Color.astroUISecondaryGroupedBackground)
+                .cornerRadius(Sizes.cornerRadius)
+                
+                VStack{
+                    Text("Line")
+                    LineChart()
+                }
+                .padding()
+                .background(Color.astroUISecondaryGroupedBackground)
+                .cornerRadius(Sizes.cornerRadius)
+                
+                VStack{
+                    Text("Point")
+                    PointChart()
                 }
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)
@@ -27,6 +43,7 @@ struct Charts: View {
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)
                 .cornerRadius(Sizes.cornerRadius)
+
             }
         }
         .padding()
