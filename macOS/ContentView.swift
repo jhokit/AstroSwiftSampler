@@ -30,7 +30,7 @@ struct ContentView: View {
                     Label("Symbols", systemImage: "star")
                 }
                 NavigationLink(value: Categories.dataVis ) {
-                    Label("Charts", systemImage: "chart.pie")
+                    Label("Charts (beta)", systemImage: "chart.pie")
                 }//.badge("beta") //- a bug makes a badged item unselectable by pointer
 
             }

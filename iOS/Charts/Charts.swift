@@ -17,17 +17,17 @@ struct Charts: View {
                     Group{
                         VStack{
                             Text("Bar")
-                            BarChart().frame(height:300)
+                            BarChart().frame(height:250)
                         }
                         
                         VStack{
                             Text("Line")
-                            LineChart().frame(height:300)
+                            LineChart().frame(height:250)
                         }
                         
                         VStack{
                             Text("Point")
-                            PointChart().frame(height:300)
+                            PointChart().frame(height:250)
                         }
                         
                         VStack{
@@ -49,7 +49,7 @@ struct Charts: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .tabItem {
             Image(systemName: "chart.pie")
-            Text("Charts")
+            Text("Charts (beta)")
         }
         .badge("beta")
     }

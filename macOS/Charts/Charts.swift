@@ -48,7 +48,7 @@ struct Charts: View {
         }
         .padding()
         .background(Color.astroUIGroupedBackground)
-        .navigationTitle("Charts")
+        .navigationTitle("Charts (beta)")
     }
 }
 

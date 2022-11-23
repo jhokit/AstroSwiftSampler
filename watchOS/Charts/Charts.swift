@@ -36,7 +36,7 @@ struct Charts: View {
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)
                 .cornerRadius(Sizes.cornerRadius)
-            }.navigationTitle("Symbols")
+            }.navigationTitle("Charts (beta)")
         }
     }
 }

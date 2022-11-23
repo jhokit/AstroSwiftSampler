@@ -33,7 +33,7 @@ struct ContentView: View {
                 NavigationLink() {
                     Charts()
                 } label: {
-                    Label("Charts", systemImage: "chart.pie")
+                    Label("Charts (beta)", systemImage: "chart.pie")
                 }
 
             }
