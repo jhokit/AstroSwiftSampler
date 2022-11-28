@@ -21,14 +21,9 @@ struct LineChart: View {
                     .interpolationMethod(.catmullRom)
                     RuleMark(
                         y: .value("Threshold", 65)
-                    ) .lineStyle(StrokeStyle(lineWidth: 2, dash: [6]))
-                    #if os(iOS) || os(tvOS)
-                        .foregroundStyle(Color(.secondaryLabel))
-                    #endif
-                    #if os(macOS)
-                        .foregroundStyle(Color(.secondaryLabelColor))
-                    #endif
-
+                    )
+                    .lineStyle(StrokeStyle(lineWidth: 2, dash: [8]))
+                    .foregroundStyle(Color.astroUIGrey300)
             }
         }
         //.chartLegend(position: .trailing)

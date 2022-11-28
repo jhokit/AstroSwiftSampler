@@ -45,6 +45,7 @@ struct FillGauge: View {
             .frame(height:50)
             .padding(.bottom,12)
             
+            // an attempt at a vertical fill chart, doesn't look good, legend and items have opposite order
 //            Chart(items){ item in
 //                Plot {
 //                    BarMark(
@@ -66,7 +67,7 @@ struct FillGauge: View {
             "Music": Color.astroDataVis4,
             "Photos": Color.astroDataVis8,
             "Other": Color.astroDataVis2,
-            "Free": Color.gray]
+            "Free": Color.astroDataVis7]
         )
     }
 }

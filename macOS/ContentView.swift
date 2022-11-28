@@ -29,8 +29,9 @@ struct ContentView: View {
                 NavigationLink(value: Categories.symbols ) {
                     Label("Symbols", systemImage: "star")
                 }
+#warning("Astro Data Vis colors and designs are in development and subject to change")
                 NavigationLink(value: Categories.dataVis ) {
-                    Label("Charts (beta)", systemImage: "chart.pie")
+                    Label("Charts (beta)", systemImage: "chart.xyaxis.line")
                 }//.badge("beta") //- a bug makes a badged item unselectable by pointer
 
             }

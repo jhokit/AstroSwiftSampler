@@ -31,9 +31,10 @@ struct ContentView: View {
                 }
                 
                 NavigationLink() {
+#warning("Astro Data Vis colors and designs are in development and subject to change")
                     Charts()
                 } label: {
-                    Label("Charts (beta)", systemImage: "chart.pie")
+                    Label("Charts (beta)", systemImage: "chart.xyaxis.line")
                 }
 
             }
