@@ -31,8 +31,8 @@ struct ContentView: View {
                 }
 #warning("Astro Data Vis colors and designs are in development and subject to change")
                 NavigationLink(value: Categories.dataVis ) {
-                    Label("Charts (beta)", systemImage: "chart.xyaxis.line")
-                }//.badge("beta") //- a bug makes a badged item unselectable by pointer
+                    Label("Charts", systemImage: "chart.xyaxis.line")
+                }
 
             }
             .frame(minWidth:100) // left column min width

@@ -34,7 +34,7 @@ struct ContentView: View {
 #warning("Astro Data Vis colors and designs are in development and subject to change")
                     Charts()
                 } label: {
-                    Label("Charts (beta)", systemImage: "chart.xyaxis.line")
+                    Label("Charts", systemImage: "chart.xyaxis.line")
                 }
 
             }

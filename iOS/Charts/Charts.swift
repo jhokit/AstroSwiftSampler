@@ -49,9 +49,8 @@ struct Charts: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .tabItem {
             Image(systemName: "chart.xyaxis.line")
-            Text("Charts (beta)")
+            Text("Charts")
         }
-        .badge("beta")
     }
 }
 

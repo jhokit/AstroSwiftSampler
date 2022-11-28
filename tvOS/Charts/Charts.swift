@@ -31,7 +31,7 @@ struct Charts: View {
         }
         .tabItem {
             Image(systemName: "chart.xyaxis.line")
-            Text("Charts (beta)")
+            Text("Charts")
         }
     }
 }

@@ -43,12 +43,11 @@ struct Charts: View {
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)
                 .cornerRadius(Sizes.cornerRadius)
-
             }
         }
         .padding()
         .background(Color.astroUIGroupedBackground)
-        .navigationTitle("Charts (beta)")
+        .navigationTitle("Charts")
     }
 }
 
