@@ -22,27 +22,24 @@ struct LineChart: View {
                     RuleMark(
                         y: .value("Threshold", 65)
                     )
-                    .lineStyle(StrokeStyle(lineWidth: 2, dash: [8]))
-                    .foregroundStyle(Color.astroUIGrey300)
+                    .astroStyle()
             }
         }
-        //.chartLegend(position: .trailing)
+        .astroStyle()
         .chartYAxis {
             AxisMarks(position: .leading) // move the axis to the left
             AxisMarks(values: .automatic) { _ in
               AxisGridLine()
-                    .foregroundStyle(Color.astroUIDarkBlue700)
+                    .astroStyle()
             }
         }
         .chartXAxis {
             AxisMarks(values: .automatic) { _ in
                 AxisGridLine(stroke: StrokeStyle())
-                    .foregroundStyle(Color.astroUIDarkBlue700)
+                    .astroStyle()
                 AxisValueLabel()
             }
         }
-        .chartForegroundStyleScale([
-            "Morning":  Color.astroDataVis1, "Evening": Color.astroDataVis4])
     }
 }
 

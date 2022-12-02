@@ -5,13 +5,9 @@
 //  Created by Jeff Hokit on 11/15/22.
 //
 
-import Foundation
-
-
-
 import SwiftUI
 import Charts
-import AstroSwiftFoundation
+//import AstroSwiftFoundation
 
 class GaugeItem: Identifiable {
     var name:String = ""
@@ -25,36 +21,25 @@ class GaugeItem: Identifiable {
 }
 
 private let items:[GaugeItem] = [
-    .init(name: "Apps", value: 26),
-    .init(name: "Music", value: 13),
-    .init(name: "Photos", value: 40),
-    .init(name: "Other", value: 6),
-    .init(name: "Free", value: 15)
+    .init(name: "Apps", value: Double.random(in: 5.0 ..< 25.0)),
+    .init(name: "Music", value: Double.random(in: 5.0 ..< 25.0)),
+    .init(name: "Photos", value: Double.random(in: 5.0 ..< 25.0)),
+    .init(name: "Other", value: Double.random(in: 5.0 ..< 25.0)),
+    .init(name: "Free", value: Double.random(in: 5.0 ..< 25.0))
 ]
 
 struct FillGauge: View {
     
     var body: some View {
-        VStack{
-            Chart(items){ item in
-                Plot {
-                    BarMark(
-                        x: .value("Value",item.value))
-                }.foregroundStyle(by: .value("Name", item.name))
-            }
-            .frame(height:50)
-            .padding(.bottom,12)
-            
-            // an attempt at a vertical fill chart, doesn't look good, legend and items have opposite order
-//            Chart(items){ item in
-//                Plot {
-//                    BarMark(
-//                        y: .value("Value",item.value))
-//                }.foregroundStyle(by: .value("Name", item.name))
-//            }
-//            .frame(width:100,height: 100)
-//            .chartLegend(position: .trailing)
+        Chart(items){ item in
+            Plot {
+                BarMark(
+                    x: .value("Value",item.value))
+            }.foregroundStyle(by: .value("Name", item.name))
         }
+        .astroStyle()
+        .frame(height:50)
+        .padding(.bottom,12)
         
         .chartPlotStyle { plotArea in
             plotArea
@@ -62,13 +47,6 @@ struct FillGauge: View {
         }
         .chartYAxis(.hidden)
         .chartXAxis(.hidden)
-        .chartForegroundStyleScale([
-            "Apps":  Color.astroDataVis1,
-            "Music": Color.astroDataVis4,
-            "Photos": Color.astroDataVis8,
-            "Other": Color.astroDataVis2,
-            "Free": Color.astroDataVis7]
-        )
     }
 }
 

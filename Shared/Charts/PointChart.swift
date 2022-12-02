@@ -25,13 +25,13 @@ struct PointChart: View {
             AxisMarks(position: .leading) // move the axis to the left
             AxisMarks(values: .automatic) { _ in
               AxisGridLine()
-                    .foregroundStyle(Color.astroUIDarkBlue700)
+                   .astroStyle()
             }
         }
         .chartXAxis {
             AxisMarks(values: .automatic) { _ in
                 AxisGridLine(stroke: StrokeStyle())
-                    .foregroundStyle(Color.astroUIDarkBlue700)
+                    .astroStyle()
                 AxisValueLabel()
             }
         }
