@@ -9,7 +9,7 @@ import SwiftUI
 import Charts
 
 
-/*----- AxisGridLine ------*/
+///---- AxisGridLine ------
 extension AxisGridLine {
     public func astroStyle() -> some AxisMark {
         return self
@@ -17,7 +17,7 @@ extension AxisGridLine {
     }
 }
 
-/*----- RuleMark ------*/
+///----- RuleMark ------
 extension RuleMark {
     public func astroStyle() -> some ChartContent {
         return self
@@ -26,7 +26,7 @@ extension RuleMark {
     }
 }
 
-/*----- Chart ------*/
+///----- Chart ------
 extension Chart {
     public func astroStyle() -> some View {
         modifier(AstroChartStyle())
