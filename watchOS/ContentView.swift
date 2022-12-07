@@ -29,10 +29,18 @@ struct ContentView: View {
                 } label: {
                     Label("Symbols", systemImage: "star")
                 }
+                
+                NavigationLink() {
+//#warning("Astro Data Vis colors and designs are in development and subject to change")
+                    Charts()
+                } label: {
+                    Label("Charts", systemImage: "chart.xyaxis.line")
+                }
+
             }
             .listRowBackground(RoundedRectangle(cornerRadius: 10.0, style:.continuous) // apply Astro color and re-apply shape
-                .background(Color.clear)
-                .foregroundColor(.astroUIBackground))
+            .background(Color.clear)
+            .foregroundColor(.astroUIBackground))
         }
     }
 }

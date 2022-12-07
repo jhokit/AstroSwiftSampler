@@ -16,6 +16,10 @@ struct ContentView: View {
             Colors()
             
             Symbols()
+            
+#warning("Astro Data Vis colors and designs are in development and subject to change")
+            Charts()
+
         }.background(Color.astroUIBackground)
     }
 }

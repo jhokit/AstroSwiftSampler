@@ -16,21 +16,28 @@ struct ContentView: View {
         TabView {
             Components()
             // override the dynamicTypeSize for this views
-            .dynamicTypeSize(accessiblyOverrides.dynamicTypeSize)
-            .bold(accessiblyOverrides.accessibilityBoldWeight == .bold)
-            //.environment(\.legibilityWeight,accessiblyOverrides.accessibilityBoldWeight == .bold ? .bold : .bold) // should work but doesn't on iOS 16. Use bold modifier instead to simulate legibilityWeight. Does not work for views that have specific weight settings, such as ClassificationBanner
-
+                .dynamicTypeSize(accessiblyOverrides.dynamicTypeSize)
+                .bold(accessiblyOverrides.accessibilityBoldWeight == .bold)
+                //.environment(\.legibilityWeight,accessiblyOverrides.accessibilityBoldWeight == .bold ? .bold : .bold) // should work but doesn't on iOS 16. Use bold modifier instead to simulate legibilityWeight. Does not work for views that have specific weight settings, such as ClassificationBanner
+            
             Colors()
+            
             Symbols()
             // override the dynamicTypeSize for this view
-            .dynamicTypeSize(accessiblyOverrides.dynamicTypeSize)
-            .bold(accessiblyOverrides.accessibilityBoldWeight == .bold)
-            //.environment(\.legibilityWeight,accessiblyOverrides.accessibilityBoldWeight == .bold ? .bold : .bold) // should work but doesn't on iOS 16. Use bold modifier instead to simulate legibilityWeight. Does not work for views that have specific weight settings, such as ClassificationBanner
+                .dynamicTypeSize(accessiblyOverrides.dynamicTypeSize)
+                .bold(accessiblyOverrides.accessibilityBoldWeight == .bold)
+                //.environment(\.legibilityWeight,accessiblyOverrides.accessibilityBoldWeight == .bold ? .bold : .bold) // should work but doesn't on iOS 16. Use bold modifier instead to simulate legibilityWeight. Does not work for views that have specific weight settings, such as ClassificationBanner
+            
+//#warning("Astro Data Vis colors and designs are in development and subject to change")
+            Charts()
+                .dynamicTypeSize(accessiblyOverrides.dynamicTypeSize)
+                .bold(accessiblyOverrides.accessibilityBoldWeight == .bold)
+                //.environment(\.legibilityWeight,accessiblyOverrides.accessibilityBoldWeight == .bold ? .bold : .bold) // should work but doesn't on iOS 16. Use bold modifier instead to simulate legibilityWeight. Does not work for views that have specific weight settings, such as ClassificationBanner
         }
         // inject accessiblyOverrides in the environment
         .environmentObject(accessiblyOverrides)
         .onAppear(){
-            accessiblyOverrides.readUserDefaults() 
+            accessiblyOverrides.readUserDefaults()
         }
         // use scenePhase to detect app going in background, onDissapear is not reliable
         .onChange(of: scenePhase) { phase in
