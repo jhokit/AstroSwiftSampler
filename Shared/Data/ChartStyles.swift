@@ -1,6 +1,5 @@
 //
-//  AstroStyle.swift
-//  AstroSwiftSampler
+//  ChartStyles.swift
 //
 //  Created by Jeff Hokit on 12/2/22.
 //
@@ -9,7 +8,10 @@ import SwiftUI
 import Charts
 
 
-///---- AxisGridLine ------
+///  Applies Astro styling to an AxisGridLine
+///    - sets the color
+///
+///   This is automatically applied by Chart.astroStyle
 extension AxisGridLine {
     public func astroStyle() -> some AxisMark {
         return self
@@ -17,7 +19,9 @@ extension AxisGridLine {
     }
 }
 
-///----- RuleMark ------
+///  Applies Astro styling to a RuleMark
+///    - sets the color
+///    - sets the line style
 extension RuleMark {
     public func astroStyle() -> some ChartContent {
         return self
@@ -26,7 +30,10 @@ extension RuleMark {
     }
 }
 
-///----- Chart ------
+///  Applies Astro styling to a Chart
+///    - sets the color on AxisMarks
+///    - move the Y axis to the left
+///    - provides a default set of data colors (via chartForegroundStyleScale)
 extension Chart {
     public func astroStyle() -> some View {
         modifier(AstroChartStyle())
@@ -40,13 +47,13 @@ private struct AstroChartStyle: ViewModifier {
                 AxisMarks(position: .leading) // move the axis to the left
                 AxisMarks(values: .automatic) { _ in
                     AxisGridLine()
-                        .foregroundStyle(Color.astroUIDarkBlue700)
+                        .astroStyle()
                 }
             }
             .chartXAxis {
                 AxisMarks(values: .automatic) { _ in
                     AxisGridLine(stroke: StrokeStyle())
-                        .foregroundStyle(Color.astroUIDarkBlue700)
+                        .astroStyle()
                     AxisValueLabel()
                 }
             }

@@ -21,20 +21,7 @@ struct PointChart: View {
                     .symbol(by: .value("Name",series.name))
                 }
         }
-        .chartYAxis {
-            AxisMarks(position: .leading) // move the axis to the left
-            AxisMarks(values: .automatic) { _ in
-              AxisGridLine()
-                   .astroStyle()
-            }
-        }
-        .chartXAxis {
-            AxisMarks(values: .automatic) { _ in
-                AxisGridLine(stroke: StrokeStyle())
-                    .astroStyle()
-                AxisValueLabel()
-            }
-        }
+        .astroStyle()
         .chartForegroundStyleScale([
             "Morning":  Color.astroDataVis1, "Evening": Color.astroDataVis4])
     }

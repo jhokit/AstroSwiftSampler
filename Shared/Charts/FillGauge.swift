@@ -40,7 +40,6 @@ struct FillGauge: View {
         .astroStyle()
         .frame(height:50)
         .padding(.bottom,12)
-        
         .chartPlotStyle { plotArea in
             plotArea
                 .cornerRadius(8)
