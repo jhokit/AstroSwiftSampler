@@ -22,8 +22,6 @@ struct PointChart: View {
                 }
         }
         .astroStyle()
-        .chartForegroundStyleScale([
-            "Morning":  Color.astroDataVis1, "Evening": Color.astroDataVis4])
     }
 }
 
