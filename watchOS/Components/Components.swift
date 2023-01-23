@@ -19,7 +19,6 @@ struct Components: View {
     @State private var sliderValue: Double = 100
     
     var body: some View {
-        
         Form {
             Group{
                 Section("Astro Components"){
@@ -63,6 +62,38 @@ struct Components: View {
                         }
                         VStack{
                             Tag(text:"Hello")
+                        }.padding()
+                    }
+                    
+                    VStack{
+                        HStack{
+                            Text("Clock")
+                            Spacer()
+                        }
+                        VStack{
+                            // standard Astro Clock, equivalent to AstroClock(verbatimFormatter: AstroClock.astroDayTime)
+                            AstroClock()
+
+                            // standard Astro Clock, without day of year
+                            AstroClock(verbatimFormatter: AstroClock.astroTime)
+
+                            // 24 hour clock with 'Z' time zone suffix.
+                            AstroClock(verbatimFormatter: Date.VerbatimFormatStyle(format: "\(hour: .twoDigits(clock: .twentyFourHour, hourCycle: .oneBased)):\(minute: .twoDigits):\(second: .twoDigits) Z", locale: .current,timeZone: TimeZone.gmt, calendar: .current))
+                            
+                            // standard system day and time format
+                            AstroClock(formatter: Date.FormatStyle()).foregroundColor(.mint)
+                        }.padding()
+                    }
+
+                    VStack{
+                        HStack{
+                            Text("Interval Timer")
+                            Spacer()
+                        }
+                        VStack{
+                            IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), options: .all)
+                            IntervalTimer(targetDate: Date(), options: [.hour,.minute,.second]).foregroundColor(.mint)
+                            IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), formatter:(Date.IntervalFormatStyle()))
                         }.padding()
                     }
                     

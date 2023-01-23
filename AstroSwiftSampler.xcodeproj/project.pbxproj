@@ -236,7 +236,6 @@
 		7C75E645283D7C1700F50298 /* Astro Swift SamplerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Astro Swift SamplerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C75E649283D7C1700F50298 /* Astro_Swift_SamplerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astro_Swift_SamplerUITests.swift; sourceTree = "<group>"; };
 		7C75E64B283D7C1700F50298 /* Astro_Swift_SamplerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astro_Swift_SamplerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7C760C38297AFA020074DD54 /* AstroSwiftFoundation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AstroSwiftFoundation; path = ../AstroSwiftFoundation; sourceTree = "<group>"; };
 		7C7D6F6D282EBB7E0015D7F0 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		7C7D6F6F282EBC340015D7F0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7C7D6F71282EBCB50015D7F0 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
@@ -385,7 +384,6 @@
 		7C479B8E2790D954002845E9 = {
 			isa = PBXGroup;
 			children = (
-				7C760C38297AFA020074DD54 /* AstroSwiftFoundation */,
 				7C479BDB2790E04D002845E9 /* Shared */,
 				7C479B932790D954002845E9 /* iOS */,
 				7C479BA22790D954002845E9 /* macOS */,
@@ -1200,6 +1198,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				SDKROOT = iphoneos;
@@ -1230,6 +1229,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				SDKROOT = iphoneos;
@@ -1263,6 +1263,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1295,6 +1296,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				SDKROOT = macosx;
@@ -1320,6 +1322,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				SDKROOT = appletvos;
@@ -1348,6 +1351,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler";
 				PRODUCT_NAME = "Astro Sampler";
 				SDKROOT = appletvos;
@@ -1380,6 +1384,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1412,6 +1417,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocketcom.Astro-Swift-Sampler.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
