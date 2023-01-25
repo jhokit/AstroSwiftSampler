@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RocketCommunicationsInc/AstroSwiftFoundation.git",
       "state" : {
-        "revision" : "3a3d154db4b47d80b3f5bee2a63368d9f5f77afa",
-        "version" : "3.0.0"
+        "branch" : "main",
+        "revision" : "181eb0d839892e1d696dee14e6d3d5fe63cf0bdb"
       }
     },
     {

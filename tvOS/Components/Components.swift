@@ -58,17 +58,39 @@ struct Components: View {
                         Tag(text:"Hello")
                     }
                     
+                    HStack{
+                        Text("Clock")
+                        Spacer()
+                        // standard Astro Clock, equivalent to AstroClock(verbatimFormatter: AstroClock.astroDayTime)
+                        AstroClock()
+                    }
+                    
+                    HStack{
+                        Text("Interval Timer")
+                        Spacer()
+                        IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), options: .all)
+                    }
+                    
                     VStack(spacing:8){
                         HStack{
                             Text("Classification Banners")
                             Spacer()
                         }
-                        ClassificationBanner(.unclassified)
-                        ClassificationBanner(.cui)
-                        ClassificationBanner(.confidential)
-                        ClassificationBanner(.secret)
-                        ClassificationBanner(.topSecret)
-                        ClassificationBanner(.topSecretSCI)
+                        HStack(spacing:4){
+                            VStack() {
+                                ClassificationBanner(.unclassified)
+                                ClassificationBanner(.secret)
+                            }
+                            VStack(){
+                                ClassificationBanner(.cui)
+                                ClassificationBanner(.topSecret)
+                            }
+                            VStack(){
+                                ClassificationBanner(.confidential)
+                                ClassificationBanner(.topSecretSCI)
+                            }
+                        }
+
                     }.padding([.top,.bottom],4)
                     
                     HStack{
