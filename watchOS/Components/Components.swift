@@ -81,7 +81,7 @@ struct Components: View {
                             AstroClock(verbatimFormatter: Date.VerbatimFormatStyle(format: "\(hour: .twoDigits(clock: .twentyFourHour, hourCycle: .oneBased)):\(minute: .twoDigits):\(second: .twoDigits) Z", locale: .current,timeZone: TimeZone.gmt, calendar: .current))
                             
                             // standard system day and time format
-                            AstroClock(formatter: Date.FormatStyle()).foregroundColor(.mint)
+                            AstroClock(formatter: Date.FormatStyle(),textStyle: .caption2).foregroundColor(.mint)
                         }.padding()
                     }
 
