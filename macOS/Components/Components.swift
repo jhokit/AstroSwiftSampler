@@ -189,7 +189,7 @@ struct Clocks: View {
                 .timeZone(.exemplarLocation)
                 .weekday(.wide)
                 .locale(.init(identifier: "fr_FR")),
-                       digitFont:Font.system(.caption))
+                       textStyle: .caption)
                     .foregroundColor(.mint)
             
             // customized system clock, in English
@@ -202,9 +202,7 @@ struct Clocks: View {
                 .second(.twoDigits)
                 .timeZone(.exemplarLocation)
                 .weekday(.wide),
-                       digitFont:Font.system(.caption))
-           /* .foregroundColor(.teal)*/.monospacedDigit()
-
+                       textStyle: .caption)
         }
         Divider()
     }
@@ -302,6 +300,6 @@ struct ClassificationMarkers: View {
 //// showing the entire view causes simulator to crash
 struct Components_Previews: PreviewProvider {
     static var previews: some View {
-        SystemComponents()
+        Clocks()
     }
 }

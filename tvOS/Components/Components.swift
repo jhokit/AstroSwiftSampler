@@ -62,13 +62,20 @@ struct Components: View {
                         Text("Clock")
                         Spacer()
                         // standard Astro Clock, equivalent to AstroClock(verbatimFormatter: AstroClock.astroDayTime)
-                        AstroClock()
+                        VStack(alignment: .trailing,spacing: 12){
+                            AstroClock()
+                            AstroClock(formatter: Date.FormatStyle())
+                        }
                     }
                     
                     HStack{
                         Text("Interval Timer")
                         Spacer()
-                        IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), options: .all)
+                        VStack(alignment: .trailing,spacing: 12){
+                            IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), options: .all)
+                            IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), formatter: Date.IntervalFormatStyle())
+                        }
+
                     }
                     
                     VStack(spacing:8){

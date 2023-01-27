@@ -1589,7 +1589,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RocketCommunicationsInc/AstroSwiftFoundation.git";
 			requirement = {
-				branch = main;
+				branch = "platforms-75";
 				kind = branch;
 			};
 		};
