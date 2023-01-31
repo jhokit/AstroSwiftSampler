@@ -171,13 +171,11 @@ struct Clocks: View {
             
             VStack(alignment: .center, spacing:6){
                 
-                AstroClock()
-                
                 // standard Astro Clock, without day of year
                 AstroClock(verbatimFormatter: AstroClock.astroTime)
                 
-                // 24 hour clock with 'Z' time zone suffix.
-                AstroClock(verbatimFormatter: Date.VerbatimFormatStyle(format: "\(hour: .twoDigits(clock: .twentyFourHour, hourCycle: .oneBased)):\(minute: .twoDigits):\(second: .twoDigits) Z", locale: .current,timeZone: TimeZone.gmt, calendar: .current))
+                // standard Astro Clock, with day of year and UTC suffix
+                AstroClock(verbatimFormatter: AstroClock.astroDayTime, suffix: " UTC")
                 
                 // standard system day and time format
                 AstroClock(formatter: Date.FormatStyle())

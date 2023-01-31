@@ -63,7 +63,7 @@ struct Components: View {
                         Spacer()
                         // standard Astro Clock, equivalent to AstroClock(verbatimFormatter: AstroClock.astroDayTime)
                         VStack(alignment: .trailing,spacing: 12){
-                            AstroClock()
+                            AstroClock(verbatimFormatter: AstroClock.astroDayTime, suffix: " UTC")
                             AstroClock(formatter: Date.FormatStyle())
                         }
                     }
