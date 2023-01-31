@@ -164,14 +164,11 @@ struct Clocks: View {
                 Text("Clock")
                 Spacer()
             }
-            // standard Astro Clock, equivalent to AstroClock(verbatimFormatter: AstroClock.astroDayTime)
-            AstroClock()
-
             // standard Astro Clock, without day of year
             AstroClock(verbatimFormatter: AstroClock.astroTime)
-
-            // 24 hour clock with 'Z' time zone suffix.
-            AstroClock(verbatimFormatter: Date.VerbatimFormatStyle(format: "\(hour: .twoDigits(clock: .twentyFourHour, hourCycle: .oneBased)):\(minute: .twoDigits):\(second: .twoDigits) Z", locale: .current,timeZone: TimeZone.gmt, calendar: .current))
+            
+            // standard Astro Clock, with day of year and UTC suffix
+            AstroClock(verbatimFormatter: AstroClock.astroDayTime, suffix: " UTC")
             
             // standard system day and time format
             AstroClock(formatter: Date.FormatStyle())
@@ -187,7 +184,7 @@ struct Clocks: View {
                 .weekday(.wide)
                 .locale(.init(identifier: "fr_FR")),
                        textStyle: .caption)
-                    .foregroundColor(.mint)
+                .foregroundColor(.mint)
             
             // customized system clock, in English
             AstroClock(formatter: Date.FormatStyle()
