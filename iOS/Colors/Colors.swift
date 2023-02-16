@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AstroSwiftUtilities
 
 struct Colors: View {
     @State private var selected: Int? = nil
@@ -59,6 +60,7 @@ struct Colors: View {
                 ToolbarItem(){
                     Button("Layers")  {showingSheet.toggle()}
                 }
+                ColorSchemeAutomaticToolbarContent()
             }
             .sheet(isPresented: $showingSheet) {
                 LayersView()
@@ -114,6 +116,7 @@ struct LayersView: View {
                 ToolbarItem(){
                     Button("Done") {dismiss()}
                 }
+
             }
         }
     }
