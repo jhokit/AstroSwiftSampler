@@ -168,42 +168,45 @@ struct Clocks: View {
                 Spacer()
             }.padding(.bottom,4)
             // standard Astro Clock, equivalent to AstroClock(verbatimFormatter: AstroClock.astroDayTime)
-            
-            VStack(alignment: .center, spacing:6){
-                
-                // standard Astro Clock, without day of year
-                AstroClock(verbatimFormatter: AstroClock.astroTime)
-                
-                // standard Astro Clock, with day of year and UTC suffix
-                AstroClock(verbatimFormatter: AstroClock.astroDayTime, suffix: " UTC")
-                
-                // standard system day and time format
-                AstroClock(formatter: Date.FormatStyle())
-                
-                // customized system clock, in French
-                AstroClock(formatter: Date.FormatStyle()
-                    .year(.defaultDigits)
-                    .month(.abbreviated)
-                    .day(.twoDigits)
-                    .hour(.defaultDigits(amPM: .abbreviated))
-                    .minute(.twoDigits)
-                    .timeZone(.exemplarLocation)
-                    .weekday(.wide)
-                    .locale(.init(identifier: "fr_FR")),
-                           textStyle: .caption)
-                .foregroundColor(.mint)
-                
-                // customized system clock, in English
-                AstroClock(formatter: Date.FormatStyle()
-                    .year(.defaultDigits)
-                    .month(.abbreviated)
-                    .day(.twoDigits)
-                    .hour(.defaultDigits(amPM: .abbreviated))
-                    .minute(.twoDigits)
-                    .second(.twoDigits)
-                    .timeZone(.exemplarLocation)
-                    .weekday(.wide),
-                           textStyle: .caption)
+            HStack{
+                Spacer()
+                VStack(alignment: .center, spacing:6){
+                    
+                    // standard Astro Clock, without day of year
+                    AstroClock(verbatimFormatter: AstroClock.astroTime)
+                    
+                    // standard Astro Clock, with day of year and UTC suffix
+                    AstroClock(verbatimFormatter: AstroClock.astroDayTime, suffix: " UTC")
+                    
+                    // standard system day and time format
+                    AstroClock(formatter: Date.FormatStyle())
+                    
+                    // customized system clock, in French
+                    AstroClock(formatter: Date.FormatStyle()
+                        .year(.defaultDigits)
+                        .month(.abbreviated)
+                        .day(.twoDigits)
+                        .hour(.defaultDigits(amPM: .abbreviated))
+                        .minute(.twoDigits)
+                        .timeZone(.exemplarLocation)
+                        .weekday(.wide)
+                        .locale(.init(identifier: "fr_FR")),
+                               textStyle: .caption)
+                    .foregroundColor(.mint)
+                    
+                    // customized system clock, in English
+                    AstroClock(formatter: Date.FormatStyle()
+                        .year(.defaultDigits)
+                        .month(.abbreviated)
+                        .day(.twoDigits)
+                        .hour(.defaultDigits(amPM: .abbreviated))
+                        .minute(.twoDigits)
+                        .second(.twoDigits)
+                        .timeZone(.exemplarLocation)
+                        .weekday(.wide),
+                               textStyle: .caption)
+                }
+                Spacer()
             }
         }
         Divider()
@@ -218,10 +221,14 @@ struct Timers: View {
                 Text("Interval Timer").font(.subheadline)
                 Spacer()
             }.padding(.bottom,4)
-            VStack(alignment: .trailing, spacing:6) {
-                IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), options: .all)
-                IntervalTimer(targetDate: Date(), options: [.hour,.minute,.second]).foregroundColor(.mint)
-                IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), formatter:(Date.IntervalFormatStyle()))
+            HStack{
+                Spacer()
+                VStack(alignment: .trailing, spacing:6) {
+                    IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), options: .all)
+                    IntervalTimer(targetDate: Date(), options: [.hour,.minute,.second]).foregroundColor(.mint)
+                    IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), formatter:(Date.IntervalFormatStyle()))
+                }
+                Spacer()
             }
         }
         Divider()

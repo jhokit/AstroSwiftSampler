@@ -120,6 +120,7 @@
 		7CB99344283EDE1A00DD8A1E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB99343283EDE1A00DD8A1E /* Colors.swift */; };
 		7CB99345283EDEE100DD8A1E /* AstroColorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCD2790DC2D002845E9 /* AstroColorSamples.swift */; };
 		7CB99346283EDEF400DD8A1E /* ColorSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C479BCA2790DBB9002845E9 /* ColorSample.swift */; };
+		7CC1039729A03BCA00E251E5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1039629A03BCA00E251E5 /* SettingsView.swift */; };
 		7CCAA0B72924549D0031350A /* FillGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCAA0B62924549D0031350A /* FillGauge.swift */; };
 		7CCCDD3E283FFC5F00B12EBE /* ColorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCCDD3D283FFC5F00B12EBE /* ColorRow.swift */; };
 		7CE893D52832A85500F2CEF6 /* SymbolGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE893D42832A85500F2CEF6 /* SymbolGrid.swift */; };
@@ -252,6 +253,7 @@
 		7CA539872923062A00DC62C4 /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
 		7CA539892923EE2E00DC62C4 /* SeriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesData.swift; sourceTree = "<group>"; };
 		7CB99343283EDE1A00DD8A1E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7CC1039629A03BCA00E251E5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7CCAA0B62924549D0031350A /* FillGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillGauge.swift; sourceTree = "<group>"; };
 		7CCCDD3D283FFC5F00B12EBE /* ColorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRow.swift; sourceTree = "<group>"; };
 		7CE893D42832A85500F2CEF6 /* SymbolGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolGrid.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 			children = (
 				7C37A8CF2791F93F00965F29 /* AstroSwiftSamplerApp.swift */,
 				7C37A8D12791F93F00965F29 /* ContentView.swift */,
+				7CC1039629A03BCA00E251E5 /* SettingsView.swift */,
 				7C8C8CBA28416F8E0014E9AD /* Components */,
 				7C485CE42836EAE200237652 /* Symbol */,
 				7C485CDF2836E42900237652 /* Color */,
@@ -927,6 +930,7 @@
 				7C6D45B4292EB478002F8FE0 /* LineChart.swift in Sources */,
 				7C84AB8C28297CBA001D3256 /* SymbolSample.swift in Sources */,
 				7C6D45B1292EB461002F8FE0 /* BarChart.swift in Sources */,
+				7CC1039729A03BCA00E251E5 /* SettingsView.swift in Sources */,
 				7C3DCFCD2853FC6300CEEEC5 /* Sizes.swift in Sources */,
 				7C6D45B7292EB485002F8FE0 /* PointChart.swift in Sources */,
 				7C65DAA22834439300E2FA3F /* ColorGrid.swift in Sources */,
