@@ -7,6 +7,8 @@
 
 import Charts
 
+let seriesDisplayCountKey = "SeriesDisplayCount"
+
 class SeriesChartItem: Identifiable {
     var name:String = ""
     var value:Int = 0
@@ -42,13 +44,48 @@ let seriesChartItems2:[SeriesChartItem] =  [
     .init(name: "Foxtrot", value: Int.random(in: 0...100))
 ]
 
-let sampleSeries:[Series] =  [
-    .init(name: "Morning", items: seriesChartItems1),
-    .init(name: "Evening", items: seriesChartItems2)
+let seriesChartItems3:[SeriesChartItem] = [
+    .init(name: "Alpha", value: Int.random(in: 0...100)),
+    .init(name: "Bravo", value: Int.random(in: 0...100)),
+    .init(name: "Charlie", value: Int.random(in: 0...100)),
+    .init(name: "Delta", value: Int.random(in: 0...100)),
+    .init(name: "Echo", value: Int.random(in: 0...100)),
+    .init(name: "Foxtrot", value: Int.random(in: 0...100))
 ]
 
-private enum MarkStyle {
-    case bar
-    case line
-    case point
-}
+let seriesChartItems4:[SeriesChartItem] =  [
+    .init(name: "Alpha", value: Int.random(in: 0...100)),
+    .init(name: "Bravo", value: Int.random(in: 0...100)),
+    .init(name: "Charlie", value: Int.random(in: 0...100)),
+    .init(name: "Delta", value: Int.random(in: 0...100)),
+    .init(name: "Echo", value: Int.random(in: 0...100)),
+    .init(name: "Foxtrot", value: Int.random(in: 0...100))
+]
+
+let seriesChartItems5:[SeriesChartItem] = [
+    .init(name: "Alpha", value: Int.random(in: 0...100)),
+    .init(name: "Bravo", value: Int.random(in: 0...100)),
+    .init(name: "Charlie", value: Int.random(in: 0...100)),
+    .init(name: "Delta", value: Int.random(in: 0...100)),
+    .init(name: "Echo", value: Int.random(in: 0...100)),
+    .init(name: "Foxtrot", value: Int.random(in: 0...100))
+]
+
+let seriesChartItems6:[SeriesChartItem] =  [
+    .init(name: "Alpha", value: Int.random(in: 0...100)),
+    .init(name: "Bravo", value: Int.random(in: 0...100)),
+    .init(name: "Charlie", value: Int.random(in: 0...100)),
+    .init(name: "Delta", value: Int.random(in: 0...100)),
+    .init(name: "Echo", value: Int.random(in: 0...100)),
+    .init(name: "Foxtrot", value: Int.random(in: 0...100))
+]
+
+
+let sampleSeries:[Series] =  [
+    .init(name: "Lorem", items: seriesChartItems1),
+    .init(name: "Ipsum", items: seriesChartItems2),
+    .init(name: "Dolor", items: seriesChartItems3),
+    .init(name: "Amet", items: seriesChartItems4),
+    .init(name: "Cillum", items: seriesChartItems5),
+    .init(name: "Occaecat", items: seriesChartItems6)
+]

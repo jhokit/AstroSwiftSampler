@@ -9,8 +9,10 @@ import SwiftUI
 import Charts
 
 struct LineChart: View {
+    @AppStorage("seriesDisplayCountKey") var seriesDisplayCount = 4
+
     var body: some View {
-        Chart(sampleSeries){ series in
+        Chart(sampleSeries[0..<seriesDisplayCount]){ series in
             ForEach(series.items) { item in
                 LineMark(
                     x: .value("Name",item.name),
