@@ -58,6 +58,8 @@ struct Charts: View {
                 Text("4 Series").tag(4)
                 Text("5 Series").tag(5)
                 Text("6 Series").tag(6)
+                Text("7 Series").tag(7)
+                Text("8 Series").tag(8)
         }
 }
     }
