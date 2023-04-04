@@ -12,20 +12,14 @@ struct Symbols: View {
         List{
             Group{
                 Section("Status"){
-                    if let symbols = AstroSymbolSamples.statusSymbols
-                    {
-                        ForEach(symbols, id: \.id) { symbolSample in
-                            SymbolRow(sample: symbolSample)
-                        }
+                    ForEach(AstroSymbolSamples.statusSymbols, id: \.id) { symbolSample in
+                        SymbolRow(sample: symbolSample)
                     }
                 }
                 
                 Section("Icons"){
-                    if let symbols = AstroSymbolSamples.standardSymbols
-                    {
-                        ForEach(symbols, id: \.id) { symbolSample in
-                            SymbolRow(sample: symbolSample)
-                        }
+                    ForEach(AstroSymbolSamples.standardSymbols, id: \.id) { symbolSample in
+                        SymbolRow(sample: symbolSample)
                     }
                 }
                 
