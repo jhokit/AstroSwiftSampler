@@ -9,7 +9,7 @@ import Charts
 
 let seriesDisplayCountKey = "SeriesDisplayCount"
 
-class SeriesChartItem: Identifiable {
+class SeriesChartItem: Identifiable, Equatable {
     var name:String = ""
     var value:Int = 0
     var id:String {name}
@@ -17,6 +17,10 @@ class SeriesChartItem: Identifiable {
     init(name:String, value:Int){
         self.name = name
         self.value = value
+    }
+    
+    static func ==(lhs: SeriesChartItem, rhs: SeriesChartItem) -> Bool {
+        return lhs.name == rhs.name
     }
 }
 
