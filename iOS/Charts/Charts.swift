@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Charts
+import AstroSwiftUtilities
 
 struct Charts: View {
     var body: some View {
@@ -44,6 +45,7 @@ struct Charts: View {
             .navigationBarTitle("Charts")
             .toolbar{
                 AccessibilyToolbarContent()
+                ColorSchemeAutomaticToolbarContent()
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())

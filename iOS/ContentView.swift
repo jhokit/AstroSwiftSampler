@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
-
+import AstroSwiftUtilities
 
 struct ContentView: View {
     @StateObject var accessiblyOverrides = AccessiblyOverrides()
     @Environment(\.scenePhase) private var scenePhase
-    
+    @AppStorage(colorSchemeAutomaticName) var colorSchemeAutomatic:ColorSchemeAutomatic = .automatic
+
     var body: some View {
         TabView {
             Components()
@@ -45,6 +46,7 @@ struct ContentView: View {
                 accessiblyOverrides.writeUserDefaults()
             }
         }
+        .preferredColorScheme(colorSchemeAutomatic == .light ? .light : colorSchemeAutomatic == .dark ? .dark : nil)
     }
 }
 

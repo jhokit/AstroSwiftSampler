@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AstroSwiftUtilities
 
 struct ContentView: View {
     
@@ -14,7 +15,8 @@ struct ContentView: View {
         case components,colors,symbols,dataVis
     }
     @State private var selection: Categories = .components
-    
+    @AppStorage(colorSchemeAutomaticName) var colorSchemeAutomatic:ColorSchemeAutomatic = .automatic
+
     var body: some View {
         
         // left side navigation
@@ -50,6 +52,9 @@ struct ContentView: View {
             }
         }
         .frame(minWidth:500, idealWidth: 800) // overall window min and ideal width
+        .accentColor(Color("AccentColor")) // necessary because our forced light/dark modes, and UIAppearance usage, breaks automatic loading of AccentColor
+        .preferredColorScheme(colorSchemeAutomatic == .light ? .light : colorSchemeAutomatic == .dark ? .dark : nil)
+
     }
 }
 

@@ -9,6 +9,8 @@ import SwiftUI
 import Charts
 
 struct Charts: View {
+    @AppStorage("seriesDisplayCountKey") var seriesDisplayCount = 4
+
     var body: some View {
         ScrollView{
             VStack{
@@ -48,6 +50,18 @@ struct Charts: View {
         .padding()
         .background(Color.astroUIGroupedBackground)
         .navigationTitle("Charts")
+        .toolbar{
+            Picker(selection: $seriesDisplayCount, label: Text("Count")) {
+                Text("1 Series").tag(1)
+                Text("2 Series").tag(2)
+                Text("3 Series").tag(3)
+                Text("4 Series").tag(4)
+                Text("5 Series").tag(5)
+                Text("6 Series").tag(6)
+                Text("7 Series").tag(7)
+                Text("8 Series").tag(8)
+        }
+}
     }
 }
 

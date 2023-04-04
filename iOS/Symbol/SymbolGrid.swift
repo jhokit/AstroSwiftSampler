@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AstroSwiftFoundation
+import AstroSwiftUtilities
 
 struct SymbolGrid: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
@@ -33,6 +34,7 @@ struct SymbolGrid: View {
             .background(Color.astroUIBackground)
             .toolbar{
                 AccessibilyToolbarContent()
+                ColorSchemeAutomaticToolbarContent()
             }
     }
     

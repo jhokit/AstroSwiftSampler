@@ -13,7 +13,7 @@ struct Components: View {
     
     @State private var isShowingAlert = false
     @State var someSize:DynamicTypeSize = .large
-    
+
     var body: some View {
 
         NavigationSplitView{
@@ -31,6 +31,7 @@ struct Components: View {
             }
             .toolbar{
                 AccessibilyToolbarContent()
+                ColorSchemeAutomaticToolbarContent()
             }
             // set the background color for all sections
             .background(Color.astroUIGroupedBackground)
@@ -49,6 +50,7 @@ struct Components: View {
         } message: {
             Text("Hello")
         }
+
     }
 }
 

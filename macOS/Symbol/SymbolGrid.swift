@@ -19,20 +19,14 @@ struct SymbolGrid: View {
             
             LazyVGrid(columns:columns){
                 Section("Status"){
-                    if let symbols = AstroSymbolSamples.statusSymbols
-                    {
-                        ForEach(symbols, id: \.id) { symbolSample in
-                            SymbolTile(sample: symbolSample, weight: $weight, font:$font)
-                        }
+                    ForEach(AstroSymbolSamples.statusSymbols, id: \.id) { symbolSample in
+                        SymbolTile(sample: symbolSample, weight: $weight, font:$font)
                     }
                 }
                 
                 Section("Icons"){
-                    if let symbols = AstroSymbolSamples.standardSymbols
-                    {
-                        ForEach(symbols, id: \.id) { symbolSample in
-                            SymbolTile(sample: symbolSample, weight: $weight, font:$font)
-                        }
+                    ForEach(AstroSymbolSamples.standardSymbols, id: \.id) { symbolSample in
+                        SymbolTile(sample: symbolSample, weight: $weight, font:$font)
                     }
                 }
                 
