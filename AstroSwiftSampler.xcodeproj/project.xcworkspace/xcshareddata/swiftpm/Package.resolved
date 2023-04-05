@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "astroswiftfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RocketCommunicationsInc/AstroSwiftFoundation.git",
+      "state" : {
+        "revision" : "b68ba214b4a4180961a7ed6318e77759334a0703",
+        "version" : "3.1.1"
+      }
+    },
+    {
       "identity" : "astroswiftutilities",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RocketCommunicationsInc/AstroSwiftUtilities",

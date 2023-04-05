@@ -253,7 +253,6 @@
 		7CA539872923062A00DC62C4 /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
 		7CA539892923EE2E00DC62C4 /* SeriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesData.swift; sourceTree = "<group>"; };
 		7CB99343283EDE1A00DD8A1E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		7CBFEF0329DE05220032548C /* AstroSwiftFoundation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AstroSwiftFoundation; path = ../AstroSwiftFoundation; sourceTree = "<group>"; };
 		7CC1039629A03BCA00E251E5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7CCAA0B62924549D0031350A /* FillGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillGauge.swift; sourceTree = "<group>"; };
 		7CCCDD3D283FFC5F00B12EBE /* ColorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRow.swift; sourceTree = "<group>"; };
@@ -447,7 +446,6 @@
 		7C479BD02790DEDD002845E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7CBFEF0329DE05220032548C /* AstroSwiftFoundation */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1595,8 +1593,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RocketCommunicationsInc/AstroSwiftFoundation.git";
 			requirement = {
-				branch = "platforms-82";
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 		7C479BC72790DA80002845E9 /* XCRemoteSwiftPackageReference "AstroSwiftCore" */ = {
