@@ -32,10 +32,11 @@ struct FillGauge: View {
     
     var body: some View {
         Chart(items){ item in
-            Plot {
-                BarMark(
-                    x: .value("Value",item.value))
-            }.foregroundStyle(by: .value("Name", item.name))
+            BarMark(
+                x: .value("Value",item.value)
+            )
+            .astroStyle()
+            .foregroundStyle(by: .value("Name", item.name))
         }
         .astroStyle()
         .frame(height:50)

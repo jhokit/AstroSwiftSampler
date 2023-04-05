@@ -31,7 +31,6 @@ struct ContentView: View {
                 NavigationLink(value: Categories.symbols ) {
                     Label("Symbols", systemImage: "star")
                 }
-#warning("Astro Data Vis colors and designs are in development and subject to change")
                 NavigationLink(value: Categories.dataVis ) {
                     Label("Charts", systemImage: "chart.xyaxis.line")
                 }
