@@ -9,96 +9,74 @@ import SwiftUI
 import AstroSwiftFoundation
 import AstroSwiftUtilities
 
+let radius = 6.0
 struct Components: View {
     
-    var body: some View {
-        ScrollView{
-            VStack {
-                AstroComponents()
-                Divider()
-                SystemComponents()
-                HStack{
-                    Text(versionString()).padding()
-                    Spacer()
-                }
-                Spacer()
-            }
-        }
-        .background(Color.astroUIBackground) // Set the background color for the whole page
-        .navigationTitle("Components")
-        
-    }
-}
-
-struct AstroComponents: View {
-    var body: some View {
-        Text("Astro Components").font(.headline).padding(.top,10)
-        Form {
-            // Astro Components
-            VStack(alignment: .leading,spacing:15){
-                StatusSymbols()
-                
-                StatusTags()
-
-                Tags()
-
-                Clocks()
-
-                Timers()
-
-                ClassificationBanners()
-                
-                ClassificationMarkers()
-            }
-        }
-        .padding()
-    }
-}
-
-struct SystemComponents: View {
     @State private var isShowingAlert = false
 
     var body: some View {
-        // System Components
-        Text("System Components").font(.headline).padding(.top,2)
-
-        Form(){
-            VStack(alignment: .leading,spacing:15){
-                
-                ToggleSample()
-                
-                Progress()
-                
-                ExternalLink()
-                
-                ButtonAndAlert(isShowingAlert: $isShowingAlert)
-            }
-
-        }.padding()
-            .alert("Sample Alert", isPresented: $isShowingAlert) {
-                Button("Continue", role: .cancel) {}
-            } message: {
-                Text("Hello")
-            }
-        
-        Divider()
+        ScrollView{
+                LazyVGrid(columns:[GridItem(.adaptive(minimum: 400))]){// as many 300 width columns as will fit
+                    Section("Astro Components"){
+                        StatusSymbols()
+                        
+                        StatusTags()
+                        
+                        Tags()
+                        
+                        Clocks()
+                        
+                        Timers()
+                        
+                        ClassificationBanners()
+                        
+                        ClassificationMarkers()
+                        
+                    }
+                    Section("System Components"){
+                        
+                        ToggleSample()
+                        
+                        Progress()
+                        
+                        ExternalLink()
+                        
+                        ButtonAndAlert(isShowingAlert: $isShowingAlert)
+                    }
+                    Section{
+                        HStack(alignment: .center){
+                            Text(versionString()).padding()
+                        }
+                    }
+                }
+                .padding()
+        }
+        .background(Color.astroUIBackground) // Set the background color for the whole page
+        .navigationTitle("Components")
+    
+        .alert("Sample Alert", isPresented: $isShowingAlert) {
+            Button("Continue", role: .cancel) {}
+        } message: {
+            Text("Hello")
+        }
 
     }
 }
+
+
 
 
 struct ToggleSample: View {
     @State var toggleValue: Bool = true
 
     var body: some View {
-        HStack{
-            Text("Toggle").font(.subheadline)
-            Spacer()
-        }.padding(.bottom,4)
-        Toggle(isOn: $toggleValue) {
-            Text("Value")
-        }
-        Divider()
+        VStack(alignment: .leading){
+                Text("Toggle").font(.subheadline)
+            Toggle(isOn: $toggleValue) {
+                Text("Value")
+            }
+        }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
+        
     }
 }
 
@@ -108,55 +86,65 @@ struct Progress: View {
 
     var body: some View{
         // Two kinds of progress
-        HStack{
-            Text("Progress").font(.subheadline)
-            Spacer()
-        }.padding(.bottom,4)
-
-        ProgressView("Determinate", value: progressValue, total: progressTotal)
-        ProgressView().padding(.bottom, 8)
-        Divider()
+        VStack(alignment: .leading){
+            
+            HStack{
+                Text("Progress").font(.subheadline)
+                Spacer()
+            }.padding(.bottom,4)
+            
+            ProgressView("Determinate", value: progressValue, total: progressTotal)
+            ProgressView().padding(.bottom, 8)
+        }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
+        
     }
 }
 
             
 struct ExternalLink: View {
     var body: some View {
-        HStack{
-            Text("External Link").font(.subheadline)
-            Spacer()
-        }.padding(.bottom,4)
-        Link("Astro Web Site", destination: URL(string: "https://www.astrouxds.com")!)
-        Divider()
+        VStack(alignment: .leading){
+            
+            HStack{
+                Text("External Link").font(.subheadline)
+                Spacer()
+            }.padding(.bottom,4)
+            Link("Astro Web Site", destination: URL(string: "https://www.astrouxds.com")!)
+        }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
+        
     }
 }
 
 struct ButtonAndAlert: View {
     @Binding var isShowingAlert:Bool
     var body: some View {
-        HStack{
-            Text("Button and Alert").font(.subheadline)
-            Spacer()
-        }.padding(.bottom,4)
-        Button(LocalizedStringKey("Show Alert")) {
-            isShowingAlert = true
-        }
+        VStack(alignment: .leading){
+            
+            HStack{
+                Text("Button and Alert").font(.subheadline)
+                Spacer()
+            }.padding(.bottom,4)
+            Button(LocalizedStringKey("Show Alert")) {
+                isShowingAlert = true
+            }
+        }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
     }
 }
     
 struct StatusSymbols: View {
     var body: some View {
-        Text("Status").font(.subheadline)
-        HStack{
-            Status(AstroStatus.off)
-            Status(AstroStatus.standby)
-            Status(AstroStatus.normal)
-            Status(AstroStatus.caution)
-            Status(AstroStatus.serious)
-            Status(AstroStatus.critical)
-            Spacer()
-        }
-        Divider()
+        VStack(alignment: .leading){
+            Text("Status").font(.subheadline)
+            HStack{
+                Status(AstroStatus.off)
+                Status(AstroStatus.standby)
+                Status(AstroStatus.normal)
+                Status(AstroStatus.caution)
+                Status(AstroStatus.serious)
+                Status(AstroStatus.critical)
+                Spacer()
+            }
+        }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
     }
 }
 
@@ -209,29 +197,23 @@ struct Clocks: View {
                 Spacer()
             }
         }
-        Divider()
+        .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
     }
 
 }
 
 struct Timers: View {
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .center){
             HStack{
                 Text("Interval Timer").font(.subheadline)
                 Spacer()
             }.padding(.bottom,4)
-            HStack{
-                Spacer()
-                VStack(alignment: .trailing, spacing:6) {
                     IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), options: .all)
                     IntervalTimer(targetDate: Date(), options: [.hour,.minute,.second]).foregroundColor(.mint)
                     IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), formatter:(Date.IntervalFormatStyle()))
-                }
-                Spacer()
-            }
         }
-        Divider()
+        .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
 
     }
 }
@@ -250,7 +232,7 @@ struct StatusTags: View {
                 Spacer()
             }
         }
-        Divider()
+        .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
     }
 }
 
@@ -264,23 +246,23 @@ struct Tags: View {
                 Spacer()
             }
         }
-        Divider()
+        .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
     }
 }
 
 struct ClassificationBanners: View {
     var body: some View {
-        HStack{
+        VStack(alignment: .leading){
             Text("Classification Banner").font(.subheadline)
-            Spacer()
-        }
-        ClassificationBanner(.unclassified)
-        ClassificationBanner(.cui)
-        ClassificationBanner(.confidential)
-        ClassificationBanner(.secret)
-        ClassificationBanner(.topSecret)
-        ClassificationBanner(.topSecretSCI)
-        Divider()
+            
+                ClassificationBanner(.unclassified)
+                ClassificationBanner(.cui)
+                ClassificationBanner(.confidential)
+                ClassificationBanner(.secret)
+                ClassificationBanner(.topSecret)
+                ClassificationBanner(.topSecretSCI)
+            }
+            .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
     }
 }
 
@@ -299,9 +281,11 @@ struct ClassificationMarkers: View {
                 ClassificationMarker(.secret)
                 ClassificationMarker(.topSecret)
                 ClassificationMarker(.topSecretSCI)
-                Spacer()
             }
         }
+        .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
+
+        
     }
 }
 
