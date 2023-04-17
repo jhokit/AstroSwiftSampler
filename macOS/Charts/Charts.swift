@@ -13,8 +13,9 @@ struct Charts: View {
 
     var body: some View {
         ScrollView{
-            VStack{
+            LazyVGrid(columns:[GridItem(.adaptive(minimum: 500))]){ // as many 500 width columns as will fit
                 VStack{
+                    
                     Text("Bar")
                     BarChart().frame(height:300)
                 }
@@ -41,6 +42,7 @@ struct Charts: View {
                 VStack{
                     Text("Fill Gauge")
                     FillGauge()
+                    Spacer()
                 }
                 .padding()
                 .background(Color.astroUISecondaryGroupedBackground)

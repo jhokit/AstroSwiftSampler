@@ -12,12 +12,10 @@ struct SymbolGrid: View {
     @State private var font:Font = .body
     
     var body: some View {
-        
-        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 3)
-        
+                
         ScrollView{
             
-            LazyVGrid(columns:columns){
+            LazyVGrid(columns:[GridItem(.adaptive(minimum: 250))]){// as many 250 width columns as will fit
                 Section("Status"){
                     ForEach(AstroSymbolSamples.statusSymbols, id: \.id) { symbolSample in
                         SymbolTile(sample: symbolSample, weight: $weight, font:$font)
