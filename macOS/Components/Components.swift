@@ -34,10 +34,9 @@ struct Components: View {
             }
             .padding()
             
-            HStack(alignment: .center){
+            HStack(alignment: .center){ // verson centered at the bottom
                 Text(versionString())
             }
-            
         }
         .background(Color.astroUIBackground) // Set the background color for the whole page
         .navigationTitle("Components")
@@ -66,7 +65,9 @@ struct TileTitle: View {
 extension View {
     public func tileStyle() -> some View {
         return self
-            .padding().background(Color.astroUISecondaryBackground).cornerRadius(6)
+            .padding()
+            .background(Color.astroUISecondaryBackground)
+            .cornerRadius(6)
     }
 }
 
@@ -92,7 +93,7 @@ struct Progress: View {
         VStack(alignment: .center){
             TileTitle(name: "Progress")
             ProgressView("Determinite", value: progressValue, total: progressTotal)
-            ProgressView().padding(.bottom, 8)
+            ProgressView()
         }.tileStyle()
     }
 }
@@ -174,8 +175,7 @@ struct Clocks: View {
                 .timeZone(.exemplarLocation)
                 .weekday(.wide),
                        textStyle: .caption)
-        }
-        .tileStyle()
+        }.tileStyle()
     }
 }
 
@@ -186,8 +186,8 @@ struct Timers: View {
             IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), options: .all)
             IntervalTimer(targetDate: Date(), options: [.hour,.minute,.second]).foregroundColor(.mint)
             IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), formatter:(Date.IntervalFormatStyle()))
-        }
-        .tileStyle()    }
+        }.tileStyle()
+    }
 }
 
 struct StatusTags: View {
@@ -202,8 +202,7 @@ struct StatusTags: View {
                 Tag(text:AstroStatus.serious.description,status: .serious)
                 Tag(text:AstroStatus.critical.description,status: .critical)
             }
-        }
-        .tileStyle()
+        }.tileStyle()
     }
 }
 
@@ -212,8 +211,7 @@ struct Tags: View {
         VStack(alignment: .center){
             TileTitle(name: "Tag")
             Tag(text:"Hello")
-        }
-        .tileStyle()
+        }.tileStyle()
     }
 }
 
@@ -227,8 +225,7 @@ struct ClassificationBanners: View {
             ClassificationBanner(.secret)
             ClassificationBanner(.topSecret)
             ClassificationBanner(.topSecretSCI)
-        }
-        .tileStyle()
+        }.tileStyle()
     }
 }
 
@@ -244,8 +241,7 @@ struct ClassificationMarkers: View {
                 ClassificationMarker(.topSecret)
                 ClassificationMarker(.topSecretSCI)
             }
-        }
-        .tileStyle()
+        }.tileStyle()
     }
 }
 
