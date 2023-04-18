@@ -72,8 +72,11 @@ struct ToggleSample: View {
     var body: some View {
         VStack(alignment: .leading){
                 Text("Toggle").font(.subheadline)
-            Toggle(isOn: $toggleValue) {
-                Text("Value")
+            HStack{
+                Toggle(isOn: $toggleValue) {
+                    Text("Value")
+                }
+                Spacer()
             }
         }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
         
@@ -88,11 +91,7 @@ struct Progress: View {
         // Two kinds of progress
         VStack(alignment: .leading){
             
-            HStack{
                 Text("Progress").font(.subheadline)
-                Spacer()
-            }.padding(.bottom,4)
-            
             ProgressView("Determinate", value: progressValue, total: progressTotal)
             ProgressView().padding(.bottom, 8)
         }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
@@ -104,7 +103,6 @@ struct Progress: View {
 struct ExternalLink: View {
     var body: some View {
         VStack(alignment: .leading){
-            
             HStack{
                 Text("External Link").font(.subheadline)
                 Spacer()
@@ -133,16 +131,18 @@ struct ButtonAndAlert: View {
     
 struct StatusSymbols: View {
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Status").font(.subheadline)
+        VStack(alignment: .center){
             HStack{
+                Text("Status").font(.subheadline)
+                Spacer()
+            }
+            HStack(alignment: .center){
                 Status(AstroStatus.off)
                 Status(AstroStatus.standby)
                 Status(AstroStatus.normal)
                 Status(AstroStatus.caution)
                 Status(AstroStatus.serious)
                 Status(AstroStatus.critical)
-                Spacer()
             }
         }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
     }
@@ -220,8 +220,11 @@ struct Timers: View {
 
 struct StatusTags: View {
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Status Tag").font(.subheadline)
+        VStack(alignment: .center){
+            HStack{
+                Text("Status Tag").font(.subheadline)
+                Spacer()
+            }
             HStack(){
                 Tag(text:AstroStatus.off.description,status: .off)
                 Tag(text:AstroStatus.standby.description,status: .standby)
@@ -229,7 +232,6 @@ struct StatusTags: View {
                 Tag(text:AstroStatus.normal.description,status: .normal)
                 Tag(text:AstroStatus.serious.description,status: .serious)
                 Tag(text:AstroStatus.critical.description,status: .critical)
-                Spacer()
             }
         }
         .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
@@ -241,7 +243,7 @@ struct Tags: View {
     var body: some View {
         VStack(alignment: .leading){
             Text("Tag").font(.subheadline)
-            HStack{
+            HStack(alignment: .center){
                 Tag(text:"Hello")
                 Spacer()
             }
