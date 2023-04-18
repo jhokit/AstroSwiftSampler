@@ -12,27 +12,62 @@ import AstroSwiftUtilities
 struct Components: View {
     
     @State private var isShowingAlert = false
-    
+
     var body: some View {
         ScrollView{
-            LazyVGrid(columns:[GridItem(.adaptive(minimum: 400))]){// as many 400 width columns as will fit
-                Section("Astro Components"){
-                    StatusSymbols()
-                    StatusTags()
-                    Tags()
-                    Clocks()
-                    Timers()
-                    ClassificationBanners()
-                    ClassificationMarkers()
+            ViewThatFits{ // choose one or two column layout
+                
+                VStack{ // two column layout
+                    Section("Astro Components"){
+                        HStack(alignment: .top){
+                            VStack{
+                                StatusSymbols()
+                                Tags()
+                                Timers()
+                                ClassificationMarkers()
+                            }
+                            VStack{
+                                StatusTags()
+                                Clocks()
+                                ClassificationBanners()
+                            }
+                        }
+                    }
+                    Section("System Components"){
+                        HStack(alignment: .top){
+                            VStack{
+                                ToggleSample()
+                                ExternalLink()
+                            }
+                            VStack{
+                                Progress()
+                                ButtonAndAlert(isShowingAlert: $isShowingAlert)
+                            }
+                        }
+                    }
                 }
-                Section("System Components"){
-                    ToggleSample()
-                    Progress()
-                    ExternalLink()
-                    ButtonAndAlert(isShowingAlert: $isShowingAlert)
+                .frame(minWidth: 880) // two columns displayed above 880
+                .padding()
+                
+                VStack(){ // one column layout
+                    Section("Astro Components"){
+                        StatusSymbols()
+                        StatusTags()
+                        Tags()
+                        Clocks()
+                        Timers()
+                        ClassificationBanners()
+                        ClassificationMarkers()
+                    }
+                    Section("System Components"){
+                        ToggleSample()
+                        Progress()
+                        ExternalLink()
+                        ButtonAndAlert(isShowingAlert: $isShowingAlert)
+                    }
                 }
+                .padding()
             }
-            .padding()
             
             HStack(alignment: .center){ // verson centered at the bottom
                 Text(versionString())
