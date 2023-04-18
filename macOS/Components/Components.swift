@@ -9,134 +9,121 @@ import SwiftUI
 import AstroSwiftFoundation
 import AstroSwiftUtilities
 
-let radius = 6.0
 struct Components: View {
     
     @State private var isShowingAlert = false
-
+    
     var body: some View {
         ScrollView{
-                LazyVGrid(columns:[GridItem(.adaptive(minimum: 400))]){// as many 300 width columns as will fit
-                    Section("Astro Components"){
-                        StatusSymbols()
-                        
-                        StatusTags()
-                        
-                        Tags()
-                        
-                        Clocks()
-                        
-                        Timers()
-                        
-                        ClassificationBanners()
-                        
-                        ClassificationMarkers()
-                        
-                    }
-                    Section("System Components"){
-                        
-                        ToggleSample()
-                        
-                        Progress()
-                        
-                        ExternalLink()
-                        
-                        ButtonAndAlert(isShowingAlert: $isShowingAlert)
-                    }
-                    Section{
-                        HStack(alignment: .center){
-                            Text(versionString()).padding()
-                        }
-                    }
+            LazyVGrid(columns:[GridItem(.adaptive(minimum: 400))]){// as many 400 width columns as will fit
+                Section("Astro Components"){
+                    StatusSymbols()
+                    StatusTags()
+                    Tags()
+                    Clocks()
+                    Timers()
+                    ClassificationBanners()
+                    ClassificationMarkers()
                 }
-                .padding()
+                Section("System Components"){
+                    ToggleSample()
+                    Progress()
+                    ExternalLink()
+                    ButtonAndAlert(isShowingAlert: $isShowingAlert)
+                }
+            }
+            .padding()
+            
+            HStack(alignment: .center){
+                Text(versionString())
+            }
+            
         }
         .background(Color.astroUIBackground) // Set the background color for the whole page
         .navigationTitle("Components")
-    
-        .alert("Sample Alert", isPresented: $isShowingAlert) {
+        
+        .alert("Sample Alert", isPresented: $isShowingAlert) { // handle the alert
             Button("Continue", role: .cancel) {}
         } message: {
             Text("Hello")
         }
-
     }
 }
 
-
-
-
-struct ToggleSample: View {
-    @State var toggleValue: Bool = true
-
+// left justified tile title
+struct TileTitle: View {
+    var name: String
+    
     var body: some View {
-        VStack(alignment: .leading){
-                Text("Toggle").font(.subheadline)
-            HStack{
-                Toggle(isOn: $toggleValue) {
-                    Text("Value")
-                }
-                Spacer()
+        HStack{
+            Text(name).font(.subheadline)
+            Spacer()
+        }.padding(.bottom,4)
+    }
+}
+
+// rounded filled tile
+extension View {
+    public func tileStyle() -> some View {
+        return self
+            .padding().background(Color.astroUISecondaryBackground).cornerRadius(6)
+    }
+}
+
+struct ToggleSample: View { // called Tottle Sample because Toggle is taken
+    @State var toggleValue: Bool = true
+    
+    var body: some View {
+        VStack(alignment: .center){
+            TileTitle(name: "Toggle")
+            Toggle(isOn: $toggleValue) {
+                Text("Value")
             }
-        }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
-        
+        }.tileStyle()
     }
 }
 
 struct Progress: View {
     @State private var progressValue: Double = 3
     let progressTotal:Double = 5
-
+    
     var body: some View{
         // Two kinds of progress
-        VStack(alignment: .leading){
-            
-                Text("Progress").font(.subheadline)
-            ProgressView("Determinate", value: progressValue, total: progressTotal)
+        VStack(alignment: .center){
+            TileTitle(name: "Progress")
+            ProgressView("Determinite", value: progressValue, total: progressTotal)
             ProgressView().padding(.bottom, 8)
-        }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
-        
+        }.tileStyle()
     }
 }
 
-            
+
 struct ExternalLink: View {
     var body: some View {
-        VStack(alignment: .leading){
-            HStack{
-                Text("External Link").font(.subheadline)
-                Spacer()
-            }.padding(.bottom,4)
+        VStack(alignment: .center){
+            TileTitle(name: "External Link")
             Link("Astro Web Site", destination: URL(string: "https://www.astrouxds.com")!)
-        }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
-        
+        }.tileStyle()
     }
 }
 
 struct ButtonAndAlert: View {
     @Binding var isShowingAlert:Bool
     var body: some View {
-        VStack(alignment: .leading){
-            
-            HStack{
-                Text("Button and Alert").font(.subheadline)
-                Spacer()
-            }.padding(.bottom,4)
+        VStack(alignment: .center){
+            TileTitle(name: "Button and Alert")
             Button(LocalizedStringKey("Show Alert")) {
                 isShowingAlert = true
             }
-        }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
+        }.tileStyle()
     }
 }
-    
+
 struct StatusSymbols: View {
     var body: some View {
         VStack(alignment: .center){
-            HStack{
-                Text("Status").font(.subheadline)
-                Spacer()
-            }
-            HStack(alignment: .center){
+            TileTitle(name: "Status")
+            HStack(){
                 Status(AstroStatus.off)
                 Status(AstroStatus.standby)
                 Status(AstroStatus.normal)
@@ -144,87 +131,69 @@ struct StatusSymbols: View {
                 Status(AstroStatus.serious)
                 Status(AstroStatus.critical)
             }
-        }.padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
+        }.tileStyle()
     }
 }
 
 struct Clocks: View {
     var body: some View {
-        VStack(alignment: .leading, spacing:6){
-            HStack{
-                Text("Clock").font(.subheadline)
-                Spacer()
-            }.padding(.bottom,4)
+        VStack(alignment: .center,spacing: 6){
+            TileTitle(name: "Clock")
             // standard Astro Clock, equivalent to AstroClock(verbatimFormatter: AstroClock.astroDayTime)
-            HStack{
-                Spacer()
-                VStack(alignment: .center, spacing:6){
-                    
-                    // standard Astro Clock, without day of year
-                    AstroClock(verbatimFormatter: AstroClock.astroTime)
-                    
-                    // standard Astro Clock, with day of year and UTC suffix
-                    AstroClock(verbatimFormatter: AstroClock.astroDayTime, suffix: " UTC")
-                    
-                    // standard system day and time format
-                    AstroClock(formatter: Date.FormatStyle())
-                    
-                    // customized system clock, in French
-                    AstroClock(formatter: Date.FormatStyle()
-                        .year(.defaultDigits)
-                        .month(.abbreviated)
-                        .day(.twoDigits)
-                        .hour(.defaultDigits(amPM: .abbreviated))
-                        .minute(.twoDigits)
-                        .timeZone(.exemplarLocation)
-                        .weekday(.wide)
-                        .locale(.init(identifier: "fr_FR")),
-                               textStyle: .caption)
-                    .foregroundColor(.mint)
-                    
-                    // customized system clock, in English
-                    AstroClock(formatter: Date.FormatStyle()
-                        .year(.defaultDigits)
-                        .month(.abbreviated)
-                        .day(.twoDigits)
-                        .hour(.defaultDigits(amPM: .abbreviated))
-                        .minute(.twoDigits)
-                        .second(.twoDigits)
-                        .timeZone(.exemplarLocation)
-                        .weekday(.wide),
-                               textStyle: .caption)
-                }
-                Spacer()
-            }
+            
+            // standard Astro Clock, without day of year
+            AstroClock(verbatimFormatter: AstroClock.astroTime)
+            
+            // standard Astro Clock, with day of year and UTC suffix
+            AstroClock(verbatimFormatter: AstroClock.astroDayTime, suffix: " UTC")
+            
+            // standard system day and time format
+            AstroClock(formatter: Date.FormatStyle())
+            
+            // customized system clock, in French
+            AstroClock(formatter: Date.FormatStyle()
+                .year(.defaultDigits)
+                .month(.abbreviated)
+                .day(.twoDigits)
+                .hour(.defaultDigits(amPM: .abbreviated))
+                .minute(.twoDigits)
+                .timeZone(.exemplarLocation)
+                .weekday(.wide)
+                .locale(.init(identifier: "fr_FR")),
+                       textStyle: .caption)
+            .foregroundColor(.mint)
+            
+            // customized system clock, in English
+            AstroClock(formatter: Date.FormatStyle()
+                .year(.defaultDigits)
+                .month(.abbreviated)
+                .day(.twoDigits)
+                .hour(.defaultDigits(amPM: .abbreviated))
+                .minute(.twoDigits)
+                .second(.twoDigits)
+                .timeZone(.exemplarLocation)
+                .weekday(.wide),
+                       textStyle: .caption)
         }
-        .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
+        .tileStyle()
     }
-
 }
 
 struct Timers: View {
     var body: some View {
-        VStack(alignment: .center){
-            HStack{
-                Text("Interval Timer").font(.subheadline)
-                Spacer()
-            }.padding(.bottom,4)
-                    IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), options: .all)
-                    IntervalTimer(targetDate: Date(), options: [.hour,.minute,.second]).foregroundColor(.mint)
-                    IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), formatter:(Date.IntervalFormatStyle()))
+        VStack(alignment: .center, spacing: 6){
+            TileTitle(name: "Interval Timer")
+            IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), options: .all)
+            IntervalTimer(targetDate: Date(), options: [.hour,.minute,.second]).foregroundColor(.mint)
+            IntervalTimer(targetDate: Date(timeIntervalSinceNow: 500000), formatter:(Date.IntervalFormatStyle()))
         }
-        .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
-
-    }
+        .tileStyle()    }
 }
 
 struct StatusTags: View {
     var body: some View {
         VStack(alignment: .center){
-            HStack{
-                Text("Status Tag").font(.subheadline)
-                Spacer()
-            }
+            TileTitle(name: "Status Tag")
             HStack(){
                 Tag(text:AstroStatus.off.description,status: .off)
                 Tag(text:AstroStatus.standby.description,status: .standby)
@@ -234,49 +203,40 @@ struct StatusTags: View {
                 Tag(text:AstroStatus.critical.description,status: .critical)
             }
         }
-        .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
+        .tileStyle()
     }
 }
 
-
 struct Tags: View {
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Tag").font(.subheadline)
-            HStack(alignment: .center){
-                Tag(text:"Hello")
-                Spacer()
-            }
+        VStack(alignment: .center){
+            TileTitle(name: "Tag")
+            Tag(text:"Hello")
         }
-        .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
+        .tileStyle()
     }
 }
 
 struct ClassificationBanners: View {
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Classification Banner").font(.subheadline)
-            
-                ClassificationBanner(.unclassified)
-                ClassificationBanner(.cui)
-                ClassificationBanner(.confidential)
-                ClassificationBanner(.secret)
-                ClassificationBanner(.topSecret)
-                ClassificationBanner(.topSecretSCI)
-            }
-            .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
+        VStack(alignment: .center){
+            TileTitle(name: "Classification Banner")
+            ClassificationBanner(.unclassified)
+            ClassificationBanner(.cui)
+            ClassificationBanner(.confidential)
+            ClassificationBanner(.secret)
+            ClassificationBanner(.topSecret)
+            ClassificationBanner(.topSecretSCI)
+        }
+        .tileStyle()
     }
 }
 
-
 struct ClassificationMarkers: View {
     var body: some View {
-        VStack{
+        VStack(alignment: .center){
+            TileTitle(name: "Classification Marker")
             HStack{
-                Text("Classification Marker").font(.subheadline)
-                Spacer()
-            }
-            HStack(){
                 ClassificationMarker(.unclassified)
                 ClassificationMarker(.cui)
                 ClassificationMarker(.confidential)
@@ -285,12 +245,9 @@ struct ClassificationMarkers: View {
                 ClassificationMarker(.topSecretSCI)
             }
         }
-        .padding().background(Color.astroUISecondaryBackground).cornerRadius(radius)
-
-        
+        .tileStyle()
     }
 }
-
 
 //// showing the entire view causes simulator to crash
 struct Components_Previews: PreviewProvider {
