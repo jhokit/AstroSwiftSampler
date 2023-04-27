@@ -28,6 +28,7 @@ class Astro_Swift_SamplerTests: XCTestCase {
         findColorsWithZeroComponents(AstroColorSamples.astroStatus)
         findColorsWithZeroComponents(AstroColorSamples.astroClassification)
         findColorsWithZeroComponents(AstroColorSamples.astroCore)
+        findColorsWithZeroComponents(AstroColorSamples.astroDataVis)
         // cannot test astroSemantic because it contains intentional zero (white) colors
     }
     
@@ -61,6 +62,7 @@ class Astro_Swift_SamplerTests: XCTestCase {
         findDuplicateColors(AstroColorSamples.astroStatus)
         findDuplicateColors(AstroColorSamples.astroClassification)
         findDuplicateColors(AstroColorSamples.astroCore)
+        findDuplicateColors(AstroColorSamples.astroDataVis)
         // cannot test astroSemantic because it contains intentional duplicates
     }
     
@@ -86,6 +88,26 @@ class Astro_Swift_SamplerTests: XCTestCase {
                 XCTAssertTrue(result.inserted, "duplicate color found named \(colorSample.name)")
                 print("testing \(colorSample.name)")
             }
+        }
+    }
+    
+    // Look for duplicates in a set of ColorSamples
+    func testColorsForUndifferentiated()  {
+        findUndifferentiatedColors(AstroColorSamples.astroStatusUI)
+        findUndifferentiatedColors(AstroColorSamples.astroDataVisUI)
+    }
+    
+    // Look for colors with undifferentiated light and dark components in a set of ColorSamples by attempting to add their color components (an array of CGFloats)
+    // to a Set. Set.insert hashes the array, and will return result == false if an identical hash is found
+    func findUndifferentiatedColors(_ sample:UIColorSample)   {
+        for colorSample in sample.colorVariants!{
+
+            let resolvedDarkColor = colorSample.uiColor.resolvedColor(with:UITraitCollection(userInterfaceStyle: .dark))
+            let resolvedLightColor = colorSample.uiColor.resolvedColor(with:UITraitCollection(userInterfaceStyle: .light))
+
+            let different = (resolvedDarkColor != resolvedLightColor)
+            XCTAssertTrue(different, "undifferentiated color found named \(colorSample.name)")
+            print("testing differentiation of \(colorSample.name)")
         }
     }
     
