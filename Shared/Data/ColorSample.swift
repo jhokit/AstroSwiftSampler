@@ -17,3 +17,13 @@ struct ColorSample:Identifiable
     var color:Color
     var colorVariants:[ColorSample]?
 }
+
+#if os (iOS)
+struct UIColorSample:Identifiable
+{
+    let id: UUID = UUID()
+    var name:String
+    var uiColor:UIColor
+    var colorVariants:[UIColorSample]?
+}
+#endif

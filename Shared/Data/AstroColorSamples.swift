@@ -214,5 +214,28 @@ struct AstroColorSamples
         ColorSample(name:"DataVis 8", color: Color.astroDataVis8),
     ])
 
+    #if os(iOS)
+    static var astroStatusUI:UIColorSample = UIColorSample(name: "Status Colors", uiColor: UIColor.astroStatusNormal, colorVariants: [
+        UIColorSample(name:"Off", uiColor: UIColor.astroStatusOff),
+        UIColorSample(name:"Standby", uiColor: UIColor.astroStatusStandby),
+        UIColorSample(name:"Normal", uiColor: UIColor.astroStatusNormal),
+        UIColorSample(name:"Caution", uiColor: UIColor.astroStatusCaution),
+        UIColorSample(name:"Serious", uiColor: UIColor.astroStatusSerious),
+        UIColorSample(name:"Critical", uiColor: UIColor.astroStatusCritical),
+    ])
+
+    static var astroDataVisUI:UIColorSample = UIColorSample(name: "DataVis Colors", uiColor: UIColor.astroDataVis1, colorVariants: [
+        UIColorSample(name:"DataVis 1", uiColor: UIColor.astroDataVis1),
+        UIColorSample(name:"DataVis 2", uiColor: UIColor.astroDataVis2),
+        UIColorSample(name:"DataVis 3", uiColor: UIColor.astroDataVis3),
+        UIColorSample(name:"DataVis 4", uiColor: UIColor.astroDataVis4),
+        UIColorSample(name:"DataVis 5", uiColor: UIColor.astroDataVis5),
+        UIColorSample(name:"DataVis 6", uiColor: UIColor.astroDataVis6),
+        UIColorSample(name:"DataVis 7", uiColor: UIColor.astroDataVis7),
+        UIColorSample(name:"DataVis 8", uiColor: UIColor.astroDataVis8),
+    ])
+#endif
+
+
 }
 

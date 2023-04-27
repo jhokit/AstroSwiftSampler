@@ -102,7 +102,7 @@ extension View {
         return self
             .padding()
             .background(Color.astroUISecondaryBackground)
-            .cornerRadius(6)
+            .cornerRadius(Sizes.cornerRadius)
     }
 }
 
@@ -127,7 +127,7 @@ struct Progress: View {
         // Two kinds of progress
         VStack(alignment: .center){
             TileTitle(name: "Progress")
-            ProgressView("Determinite", value: progressValue, total: progressTotal)
+            ProgressView("Determinate", value: progressValue, total: progressTotal)
             ProgressView()
         }.tileStyle()
     }
