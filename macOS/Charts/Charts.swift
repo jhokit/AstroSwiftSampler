@@ -10,10 +10,10 @@ import Charts
 
 struct Charts: View {
     @AppStorage("seriesDisplayCountKey") var seriesDisplayCount = 4
-
+    
     var body: some View {
         ScrollView{
-            VStack{
+            LazyVGrid(columns:[GridItem(.adaptive(minimum: 500))]){ // as many 500 width columns as will fit
                 VStack{
                     Text("Bar")
                     BarChart().frame(height:300)
@@ -60,8 +60,8 @@ struct Charts: View {
                 Text("6 Series").tag(6)
                 Text("7 Series").tag(7)
                 Text("8 Series").tag(8)
+            }
         }
-}
     }
 }
 

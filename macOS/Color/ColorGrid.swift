@@ -13,11 +13,11 @@ struct ColorGrid: View {
 
     var body: some View {
         
-        let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 3)
         NavigationStack{
+            
             ScrollView{
                 
-                LazyVGrid(columns:columns){
+                LazyVGrid(columns:[GridItem(.adaptive(minimum: 250))]){ // as many 250 width columns as will fit 
                     Section("Semantic"){
                         if let colorVariants = AstroColorSamples.astroSemantic.colorVariants
                         {
@@ -84,8 +84,8 @@ private struct ColorVariantGrid: View {
     let item: ColorSample
     var body: some View {
                 
-        
         let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 1)
+        
         ScrollView{
             LazyVGrid(columns:columns){
                 if let colorVariants = item.colorVariants
